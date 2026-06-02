@@ -1,0 +1,20 @@
+# Stellar Asset Configuration for JADA
+# Project: The Deficit Deleter
+[DOCUMENTATION]
+ORG_NAME = "Jada"
+ORG_URL = "https://doaflo55.github.io
+[[CURRENCIES]]
+code = "JADA"
+issuer = "GBX16T3CIKBTGRJZQHSNSP2GLIQ7EDGOPXPJCQULVI4NOCWVSGGNP4FU"
+name = "Jada Token"
+status = "live"
+display_decimals = 7
+is_asset_anchored = true
+anchor_asset_type = "asset_instrument"
+[[CURRENCIES]]
+code = "rwaXMR"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIO7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "Real World Asset XMR"
+desc = "Vault asset backed by XMR infrastructure."
+status = "live"
