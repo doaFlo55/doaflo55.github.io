@@ -6,7 +6,7 @@ ORG_NAME = "Floss Integrations and Securities LLC"
 ORG_URL = "https://doaflo55.github.io/"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
 ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
-ORG_DESCRIPTION = "independent holdings/securities and servicing entity" 
+ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
 
 # 2. Currency Documentation
 
@@ -24,24 +24,24 @@ code = "USDJBTC"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJ BTC Token"
-desc = "A specialized token designated for Reserve Holdings/exchange within the Stellar ecosystem."
+desc = "A specialized token designated for Reserve Holdings. Official anchoring integration is in development."
 status = "live"
-is_asset_anchored = true
+is_asset_anchored = false
 
 [[CURRENCIES]]
 code = "USDJSOL"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJ SOL Token"
-desc = "A token specifically engineered for pooling, liquidity provision, and earning rewards."
+desc = "A token specifically engineered for pooling, liquidity provision, and earning rewards. Official anchoring integration is in development."
 status = "live"
-is_asset_anchored = true
+is_asset_anchored = false
 
 [[CURRENCIES]]
-code = "RWAXMR"
+code = "rwaXMR"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "RWA XMR Token"
-desc = "A Real World Asset (RWA) token from cross-chain mining operations and seamless conversion to native Stellar assets."
+desc = "A Real World Asset (RWA) token from cross-chain mining operations and seamless conversion to native Stellar assets. Official anchoring integration is in development."
 status = "live"
-is_asset_anchored = true
+is_asset_anchored = false
