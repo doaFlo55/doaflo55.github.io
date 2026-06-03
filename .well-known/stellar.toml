@@ -45,3 +45,13 @@ name = "RWA XMR Token"
 desc = "A Real World Asset (RWA) token from cross-chain mining operations and seamless conversion to native Stellar assets. Official anchoring integration is in development."
 status = "live"
 is_asset_anchored = false
+
+[[CURRENCIES]]
+code = "eXCH"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "expanded XCH (chia)"
+desc = "An elevated and expanded token version of XCH built on stellar for exchanges and trades."
+status = "live"
+is_asset_anchored = false
+
