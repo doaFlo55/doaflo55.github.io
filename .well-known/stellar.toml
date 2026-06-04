@@ -64,3 +64,54 @@ desc = "An elevated and expanded token version of XCH built on stellar for excha
 status = "live"
 is_asset_anchored = false
 
+# PLINK & PLYNK Policy Protocol
+# All assets operate on the native Stellar Network. 
+
+[POLICY_DEFINITION]
+DESCRIPTION = "PLINK: Foundational identifying tokens. PLYNK: Active yield-generating engine pools. PLANK: Specialized Refund Mechanism (rwaXRM) for direct protocol recovery."
+
+[[CURRENCIES]]
+code = "JADA"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+distributor = "GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM"
+name = "JADA TOKEN"
+desc = "PLINK Protocol: Valuation Ceiling. Automatic execution."
+
+[[CURRENCIES]]
+code = "USDjBTC"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+distributor = "GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM"
+name = "USDjBTC TOKEN"
+desc = "PLINK Protocol: Foundation/Identifying (BTC-Anchor). Automatic execution."
+
+[[CURRENCIES]]
+code = "USDjSOL"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+distributor = "GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM"
+name = "USDjSOL TOKEN"
+desc = "PLYNK Protocol: Yield/Staking Engine. Manual execution: Audit/Deposit Required."
+
+[[CURRENCIES]]
+code = "rwaXMR"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+distributor = "GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM"
+name = "rwaXMR TOKEN"
+desc = "PLYNK Protocol: Yielding Engine Pool. Manual execution: Audit/Deposit Required."
+
+[[CURRENCIES]]
+code = "rwaXRM"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+distributor = "GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM"
+name = "rwaXRM TOKEN"
+desc = "PLANK Protocol: Refund Mechanism (Protective Flank). Automatic execution."
+
+[[CURRENCIES]]
+code = "eXCH"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+distributor = "GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM"
+name = "eXCH TOKEN"
+desc = "PLYNK Protocol: Mining-Farming Rewards Pool. Manual execution: Audit/Deposit Required."
+
+# --- MAPPED LIQUIDITY POOL METRICS ---
+
+
