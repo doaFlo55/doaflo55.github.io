@@ -114,4 +114,33 @@ desc = "PLYNK Protocol: Mining-Farming Rewards Pool. Manual execution: Audit/Dep
 
 # --- MAPPED LIQUIDITY POOL METRICS ---
 
+[[POOLS]]
+pair = "eXCH / rwaXMR"
+liquidity_pool_id = "LARNSE5F2C63DFCT3IUQNIOUG7TBUPMJX2FBY7EX5SSXGTKLFZ5NRTTW"
+desc = "PROOF OF WORK POOL(mining + farming) - All assets are pooled within StellarX app. Parameters are public. Exchange rates are verifiable automatically based on deposit or Equivalent native XLM or My other pooled or conversion/Native Tokens."
+
+[[POOLS]]
+pair = "JADA / USDjSOL"
+liquidity_pool_id = "LAWVK3UZX5V4SNDP7I72CM426RHU5DQMYQNG7RMOTWYBYERCSTPN6VGF"
+desc = "STEAKING POOL AND CONVERSTIVE PAYOUT DESIGNATED BY USD - All assets are pooled within StellarX app. Parameters are public. Exchange rates are verifiable automatically based on deposit or Equivalent native XLM or My other pooled or conversion/Native Tokens."
+
+[[POOLS]]
+pair = "XLM / USDjBTC"
+liquidity_pool_id = "COMING SOON"
+desc = "REMASTERED BTC VAULTED BY DEPOSIT ANCHORED OFF CHAIN - All assets are pooled within StellarX app. Parameters are public. Exchange rates are verifiable automatically based on deposit or Equivalent native XLM or My other pooled or conversion/Native Tokens."
+
+[[POOLS]]
+pair = "XLM / eXCH"
+liquidity_pool_id = "LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU"
+desc = "NATIVE CONVERSION OF EXPANDED/REMASTERED CHIA TOKEN (XCH) ANCHORED OFF CHAIN -All assets are pooled within StellarX app. Parameters are public. Exchange rates are verifiable automatically based on deposit or Equivalent native XLM or My other pooled or conversion/Native Tokens."
+
+[[POOLS]]
+pair = "XLM / rwaXMR"
+liquidity_pool_id = "LCJYYS6MMEOCIYKLOFXR4TYXJSUAJAMAXOIIBFMDH7XAG4QYKH734SB6"
+desc = "NATIVE CONVERSION TO MY RWA XMR ANCHORED OFF CHAIN- All assets are pooled within StellarX app. Parameters are public. Exchange rates are verifiable automatically based on deposit or Equivalent native XLM or My other pooled or conversion/Native Tokens."
+
+[[POOLS]]
+pair = "rwaXMR / rwaXRM"
+liquidity_pool_id = "LDIDI5DSRKWTHQMQHGR44J3JLLD67AIOEHVRQCGI5NBL3ORLGO75455S"
+desc = "RATIO 1 TO 1 PLANK PAYMENT PAIR POOL- All assets are pooled within StellarX app. Parameters are public. Exchange rates are verifiable automatically based on deposit or Equivalent native XLM or My other pooled or conversion/Native Tokens."
 
