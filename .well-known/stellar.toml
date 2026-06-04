@@ -47,6 +47,15 @@ status = "live"
 is_asset_anchored = false
 
 [[CURRENCIES]]
+code = "rwaXRM"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "Refunded rwaXRM"
+desc = "The one to one direct representation of rwaXMR for refund or return transactions. This token was specifically minted for a refund or return mechanism transaction that has been verified and working. Users can utilize this asset to facilitate their own purchase and refund cycles directly within the established liquidity pool, designed to provide stability because of the volatility that surrounds the Monero token and market fluctuation."
+status = "live"
+is_asset_anchored = false
+
+[[CURRENCIES]]
 code = "eXCH"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
