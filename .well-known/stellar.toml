@@ -14,14 +14,6 @@ NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
 ACCOUNTS = ["GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"]
 SIGNING_KEY = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 
-# --- ORGANIZATION ---
-[DOCUMENTATION]
-ORG_NAME = "Floss Integrations and Securities LLC"
-ORG_URL = "https://doaflo55.github.io/"
-ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
-ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
-ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
-
 # --- ASSETS ---
 [[CURRENCIES]]
 code = "JADA"
