@@ -1,3 +1,13 @@
+# Stellar.toml for Floss Integrations and Securities LLC
+
+# 1. Organization Documentation
+[DOCUMENTATION]
+ORG_NAME = "Floss Integrations and Securities LLC"
+ORG_URL = "https://doaflo55.github.io/"
+ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
+ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
+ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
+
 # --- GLOBAL IDENTIFIERS ---
 VERSION = "2.0.0"
 NETWORK_PASSPHRASE = "Public Global Stellar Network ; September 2015"
