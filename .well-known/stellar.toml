@@ -7,7 +7,6 @@ ORG_URL = "https://doaflo55.github.io/"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
 ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
 ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
-GRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 
 # --- ASSETS ---
 [[CURRENCIES]]
