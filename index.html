@@ -51,14 +51,12 @@
             <h2>Media & Asset Synchronization</h2>
             <p><em>Access the official asset collection on OpenSea.</em></p>
             
-            <!-- Direct OpenSea Collection Link -->
             <div style="margin: 20px 0;">
                 <a href="https://opensea.io/collection/do-flo-let-me-get-it-ingle-pckge" target="_blank" style="background-color: #2081e2; color: white; padding: 15px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">
                     View Collection on OpenSea
                 </a>
             </div>
 
-            <!-- Burn Address Instructions -->
             <div style="margin: 20px 0; padding: 15px; border: 1px solid #e74c3c; border-radius: 8px;">
                 <h3 style="color: #e74c3c;">Burn Protocol</h3>
                 <p>Need to burn Bitcoin? Trust the process. Send it to my burn address below:</p>
@@ -68,7 +66,6 @@
                 </p>
             </div>
 
-            <!-- Featured Player -->
             <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
         </div>
 
@@ -84,7 +81,53 @@
             </ul>
         </div>
 
-        <!-- Liquidity Pools Section -->
+        <!-- 1. Official Currencies Defined -->
+        <div class="widget-box" style="text-align: left;">
+            <h3>Official Currencies</h3>
+            <pre style="background: #2c3e50; padding: 15px; border-radius: 8px; border: 1px solid #7f8c8d; overflow-x: auto; color: #ecf0f1; font-family: 'Courier New', Courier, monospace;"><code>
+[[CURRENCIES]]
+code = "JADA"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+name = "JADA TOKEN"
+
+[[CURRENCIES]]
+code = "USDJBTC"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+name = "USDJBTC TOKEN"
+
+[[CURRENCIES]]
+code = "USDJSOL"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+name = "USDJSOL TOKEN"
+
+[[CURRENCIES]]
+code = "rwaXMR"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+name = "RWA XMR TOKEN"
+
+[[CURRENCIES]]
+code = "rwaXRM"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+name = "REFUNDED RWAXRM"
+
+[[CURRENCIES]]
+code = "eXCH"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+name = "EXPANDED XCH TOKEN"
+            </code></pre>
+        </div>
+
+        <!-- 2. Protocol Section -->
+        <div class="widget-box" style="text-align: left;">
+            <h3>Official Protocol Configuration</h3>
+            <pre style="background: #2c3e50; padding: 10px; border-radius: 5px; overflow-x: auto; border: 1px solid #7f8c8d;"><code>
+VERSION = "2.5.0"
+NETWORK = "Public Global Stellar Network ; September 2015"
+ACCOUNTS = ["GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"]
+            </code></pre>
+        </div>
+
+        <!-- 3. Active Liquidity Pools -->
         <div class="widget-box">
             <h3>Active Liquidity Pools</h3>
             <p style="font-size: 0.9em; color: #bdc3c7;"><em>Click an ID to view on StellarExpert</em></p>
@@ -93,127 +136,21 @@
                     <tr>
                         <th>Pair</th>
                         <th>Liquidity Pool ID</th>
-                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>eXCH / rwaXMR</td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LARNSE5F2C63DFCT3IUQNIOUG7TBUPMJX2FBY7EX5SSXGTKLFZ5NRTTW" target="_blank"><code>LARNSE5F2C63DFCT3IUQNIOUG7TBUPMJX2FBY7EX5SSXGTKLFZ5NRTTW</code></a></td>
-                        <td>PROOF OF WORK POOL(mining + farming)</td>
-                    </tr>
-                    <tr>
-                        <td>JADA / USDJSOL</td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LAWVK3UZX5V4SNDP7I72CM426RHU5DQMYQNG7RMOTWYBYERCSTPN6VGF" target="_blank"><code>LAWVK3UZX5V4SNDP7I72CM426RHU5DQMYQNG7RMOTWYBYERCSTPN6VGF</code></a></td>
-                        <td>STEAKING POOL AND CONVERSTIVE PAYOUT DESIGNATED BY USD</td>
-                    </tr>
-                    <tr>
-                        <td>XLM / eXCH</td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU" target="_blank"><code>LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU</code></a></td>
-                        <td>NATIVE CONVERSION OF EXPANDED/REMASTERED CHIA TOKEN (XCH)</td>
-                    </tr>
-                    <tr>
-                        <td>XLM / rwaXMR</td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LCJYYS6MMEOCIYKLOFXR4TYXJSUAJAMAXOIIBFMDH7XAG4QYKH734SB6" target="_blank"><code>LCJYYS6MMEOCIYKLOFXR4TYXJSUAJAMAXOIIBFMDH7XAG4QYKH734SB6</code></a></td>
-                        <td>NATIVE CONVERSION TO RWA XMR</td>
-                    </tr>
-                    <tr>
-                        <td>rwaXMR / rwaXRM</td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LDIDI5DSRKWTHQMQHGR44J3JLLD67AIOEHVRQCGI5NBL3ORLGO75455S" target="_blank"><code>LDIDI5DSRKWTHQMQHGR44J3JLLD67AIOEHVRQCGI5NBL3ORLGO75455S</code></a></td>
-                        <td>RATIO 1 TO 1 PLANK PAYMENT PAIR POOL</td>
-                    </tr>
+                    <tr><td>eXCH / rwaXMR</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LARNSE5F2C63DFCT3IUQNIOUG7TBUPMJX2FBY7EX5SSXGTKLFZ5NRTTW" target="_blank"><code>LARNSE...NRTTW</code></a></td></tr>
+                    <tr><td>JADA / USDJSOL</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LAWVK3UZX5V4SNDP7I72CM426RHU5DQMYQNG7RMOTWYBYERCSTPN6VGF" target="_blank"><code>LAWVK3...PN6VGF</code></a></td></tr>
+                    <tr><td>XLM / eXCH</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU" target="_blank"><code>LBOIY6...M6VU</code></a></td></tr>
+                    <tr><td>XLM / rwaXMR</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LCJYYS6MMEOCIYKLOFXR4TYXJSUAJAMAXOIIBFMDH7XAG4QYKH734SB6" target="_blank"><code>LCJYYS...34SB6</code></a></td></tr>
+                    <tr><td>rwaXMR / rwaXRM</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LDIDI5DSRKWTHQMQHGR44J3JLLD67AIOEHVRQCGI5NBL3ORLGO75455S" target="_blank"><code>LDIDI5...455S</code></a></td></tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- Global Identifiers Section -->
-        <div class="widget-box" style="text-align: left;">
-            <h3>Project Configuration Identifiers</h3>
-            <pre style="background: #2c3e50; padding: 10px; border-radius: 5px; overflow-x: auto; border: 1px solid #7f8c8d;"><code>
-VERSION = "2.5.0"
-NETWORK = "Public Global Stellar Network ; September 2015"
-ACCOUNTS = ["GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"]
-            </code></pre>
-        </div>
-        
-        <!-- Full TOML Protocol Display -->
-        <div class="widget-box" style="text-align: left;">
-            <h3>Official Protocol Configuration (stellar.toml)</h3>
-            <pre style="background: #2c3e50; padding: 15px; border-radius: 8px; border: 1px solid #7f8c8d; overflow-x: auto; color: #ecf0f1; font-family: 'Courier New', Courier, monospace;"><code>
-# Stellar.toml for Floss Integrations and Securities LLC
-
-# 1. Organization Documentation
-[DOCUMENTATION]
-ORG_NAME = "Floss Integrations and Securities LLC"
-ORG_URL = "https://doaflo55.github.io/"
-ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
-ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
-ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
-
-# --- ASSETS ---
-[[CURRENCIES]]
-code = "JADA"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "JADA TOKEN"
-desc = "PLINK Protocol: Valuation Ceiling. High-value, high-rarity asset."
-status = "live"
-is_asset_anchored = false
-
-[[CURRENCIES]]
-code = "USDJBTC"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "USDJBTC TOKEN"
-desc = "PLINK Protocol: Foundation/Identifying (BTC-Anchor)."
-status = "live"
-is_asset_anchored = false
-
-[[CURRENCIES]]
-code = "USDJSOL"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "USDJSOL TOKEN"
-desc = "PLYNK Protocol: Yield/Staking Engine. Manual execution: Audit/Deposit Required."
-status = "live"
-is_asset_anchored = false
-
-[[CURRENCIES]]
-code = "rwaXMR"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "RWA XMR TOKEN"
-desc = "PLYNK Protocol: Yielding Engine Pool. Cross-chain mining operations."
-status = "live"
-is_asset_anchored = false
-
-[[CURRENCIES]]
-code = "rwaXRM"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "REFUNDED RWAXRM"
-desc = "PLANK Protocol: Refund Mechanism (Protective Flank)."
-status = "live"
-is_asset_anchored = false
-
-[[CURRENCIES]]
-code = "eXCH"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "EXPANDED XCH TOKEN"
-desc = "PLYNK Protocol: Mining-Farming Rewards Pool."
-status = "live"
-is_asset_anchored = false
-            </code></pre>
-        </div>
-
+        <!-- Mailing List Widget -->
         <div class="widget-box">
-            <h2>Asset Policy & Protocol</h2>
-            <p><em>Transparency and verification for the Doa Floss ecosystem.</em></p>
-            <div style="text-align: left; background: #2c3e50; padding: 15px; border-radius: 8px; border: 1px solid #7f8c8d;">
-                <h3>Policy Designation</h3>
-                <p>All assets issued under this domain are managed according to the official protocol defined in our <code>stellar.toml</code> file.</p>
-            </div>
+            <div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=54&amp;posted_by=artist_8579729&pwc[design]=default&pwc[background_color]=%23333333&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="https://www.reverbnation.com/band-promotion/how-to-sell-music-on-itunes?utm_campaign=a_features_distribution&utm_medium=widget&utm_source=HTML5_Fan_Collector&utm_content=widgetfooter_Sell your beats online at ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Sell your beats online at ReverbNation.com</a></center></div></div>
         </div>
 
         <div class="widget-box" style="margin-top: 50px; font-size: 0.8em; color: #7f8c8d;">
