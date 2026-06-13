@@ -5,7 +5,8 @@ ORG_URL = "https://doaflo55.github.io/"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
 ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
 ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
-ORG_PHYSICAL_ADDRESS = "Charleston SC, United States" 
+ORG_PHYSICAL_ADDRESS = "Charleston SC, United States"
+ORG_LOGO = "Under Construction"
 
 # --- Assets ---
 
@@ -20,7 +21,7 @@ is_asset_anchored = false
 
 [[CURRENCIES]]
 code = "USDJBTC"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJBTC TOKEN"
 desc = "PLINK Protocol: Foundation/Identifying (BTC-Anchor)."
