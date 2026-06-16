@@ -21,7 +21,6 @@ name = "USDJBTC TOKEN"
 desc = "PLINK Protocol designation: Foundation/Identifying (BTC-Anchor)."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "USDJSOL"
@@ -31,7 +30,6 @@ name = "USDJSOL TOKEN"
 desc = "PLINK Protocol designation: Yield/Staking Engine."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "rwaXMR"
@@ -41,7 +39,6 @@ name = "RwA XMR TOKEN"
 desc = "PLINK Protocol designation: Yielding Engine Pool."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "eXCH"
@@ -51,7 +48,6 @@ name = "EXPANDED XCH TOKEN"
 desc = "PLINK Protocol designation: Mining-Farming Rewards Pool."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "BTCXD"
@@ -61,7 +57,6 @@ name = "BTCXD TOKEN"
 desc = "The Laughing Bitcoin"
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "GWEIMOG"
@@ -71,7 +66,6 @@ name = "GWEIMOG TOKEN"
 desc = "Protocol designation: MOG ecosystem integration."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "MOGLMN"
@@ -81,7 +75,6 @@ name = "MOGLMN TOKEN"
 desc = "Protocol designation: MOG Lumens integration."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "MOGLETH"
@@ -91,7 +84,6 @@ name = "MOGLETH TOKEN"
 desc = "Protocol designation: MOG Ethereum bridge."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
 
 [[CURRENCIES]]
 code = "BXMz"
@@ -101,4 +93,3 @@ name = "BXMz TOKEN"
 desc = "Protocol designation: Secured BXM variant."
 is_asset_anchored = false
 status = "live"
-is_unlimited = true
