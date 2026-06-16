@@ -1,23 +1,18 @@
-# 1. Organization Documentation
+# General Information
+ACCOUNTS = ["GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"]
+
 [DOCUMENTATION]
 ORG_NAME = "Floss Integrations and Securities LLC"
 ORG_URL = "https://doaflo55.github.io/"
-ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
-ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
+ORG_LOGO = "https://doaflo55.github.io/logo.png"
 ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
 ORG_PHYSICAL_ADDRESS = "Charleston SC, United States"
-ORG_LOGO = "Under Construction"
+ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
+ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
 
-# --- Assets ---
-
-[[CURRENCIES]]
-code = "JADA"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "JADA TOKEN"
-desc = "PLINK Protocol: Valuation Ceiling. High-value, high-rarity asset."
-status = "live"
-is_asset_anchored = false
+[[PRINCIPALS]]
+name = "Doa Floss"
+email = "contact@doaflo55.github.io"
 
 [[CURRENCIES]]
 code = "USDJBTC"
@@ -25,8 +20,8 @@ issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJBTC TOKEN"
 desc = "PLINK Protocol: Foundation/Identifying (BTC-Anchor)."
-status = "live"
 is_asset_anchored = false
+status = "live"
 
 [[CURRENCIES]]
 code = "USDJSOL"
@@ -34,8 +29,8 @@ issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJSOL TOKEN"
 desc = "PLINK Protocol: Yield/Staking Engine. Manual execution: Audit/Deposit Required."
-status = "live"
 is_asset_anchored = false
+status = "live"
 
 [[CURRENCIES]]
 code = "rwaXMR"
@@ -43,17 +38,8 @@ issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "RwA XMR TOKEN"
 desc = "PLINK Protocol: Yielding Engine Pool. Cross-chain mining operations."
-status = "live"
 is_asset_anchored = false
-
-[[CURRENCIES]]
-code = "rwaXRW"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "REFUNDED RWAXRW"
-desc = "PLINK Protocol: Refund Mechanism (Protective Flank)."
 status = "live"
-is_asset_anchored = false
 
 [[CURRENCIES]]
 code = "eXCH"
@@ -61,8 +47,8 @@ issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "EXPANDED XCH TOKEN"
 desc = "PLINK Protocol: Mining-Farming Rewards Pool."
-status = "live"
 is_asset_anchored = false
+status = "live"
 
 [[CURRENCIES]]
 code = "BTCXD"
@@ -70,5 +56,5 @@ issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "BTCXD TOKEN"
 desc = "The Laughing Bitcoin"
-status = "live"
 is_asset_anchored = false
+status = "live"
