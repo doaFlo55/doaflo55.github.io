@@ -6,7 +6,7 @@ ORG_NAME = "Floss Integrations and Securities LLC"
 ORG_URL = "https://doaflo55.github.io/"
 ORG_LOGO = "Under Construction"
 ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
-ORG_PHYSICAL_ADDRESS = "Charleston SC, United States"
+ORG_PHYSICAL_ADDRESS = "South Carolina, United States"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
 ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
 
@@ -17,6 +17,7 @@ email = "contact@doaflo55.github.io"
 [[CURRENCIES]]
 code = "USDJBTC"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+home_domain = "doaflo55.github.io"
 display_decimals = 7
 name = "USDJBTC TOKEN"
 desc = "PLINK Protocol designation: Foundation/Identifying (BTC-Anchor)."
@@ -26,6 +27,7 @@ status = "live"
 [[CURRENCIES]]
 code = "USDJSOL"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+home_domain = "doaflo55.github.io"
 display_decimals = 7
 name = "USDJSOL TOKEN"
 desc = "PLINK Protocol designation: Yield/Staking Engine. Manual execution: Audit/Deposit Required."
@@ -35,6 +37,7 @@ status = "live"
 [[CURRENCIES]]
 code = "rwaXMR"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+home_domain = "doaflo55.github.io"
 display_decimals = 7
 name = "RwA XMR TOKEN"
 desc = "PLINK Protocol designation: Yielding Engine Pool. Cross-chain mining operations."
@@ -44,6 +47,7 @@ status = "live"
 [[CURRENCIES]]
 code = "eXCH"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+home_domain = "doaflo55.github.io"
 display_decimals = 7
 name = "EXPANDED XCH TOKEN"
 desc = "PLINK Protocol designation: Mining-Farming Rewards Pool."
@@ -53,6 +57,7 @@ status = "live"
 [[CURRENCIES]]
 code = "BTCXD"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+home_domain = "doaflo55.github.io"
 display_decimals = 7
 name = "BTCXD TOKEN"
 desc = "The Laughing Bitcoin"
