@@ -1,10 +1,9 @@
-# General Information
 ACCOUNTS = ["GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"]
 
 [DOCUMENTATION]
 ORG_NAME = "Floss Integrations and Securities LLC"
 ORG_URL = "https://doaflo55.github.io"
-ORG_LOGO = "doaflo55.github.io/1781608075958~2.png"
+ORG_LOGO = "https://doaflo55.github.io/1781608075958~2.png"
 ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
 ORG_PHYSICAL_ADDRESS = "SC, United States"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
@@ -22,24 +21,30 @@ name = "USDJBTC TOKEN"
 desc = "PLINK Protocol designation: Foundation/Identifying (BTC-Anchor)."
 is_asset_anchored = false
 status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_usdjbtc.png"
 
 [[CURRENCIES]]
 code = "USDJSOL"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJSOL TOKEN"
-desc = "PLINK Protocol designation: Yield/Staking Engine. Manual execution: Audit/Deposit Required."
+desc = "PLINK Protocol designation: Yield/Staking Engine."
 is_asset_anchored = false
 status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_usdjsol.png"
 
 [[CURRENCIES]]
 code = "rwaXMR"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "RwA XMR TOKEN"
-desc = "PLINK Protocol designation: Yielding Engine Pool. Cross-chain mining operations."
+desc = "PLINK Protocol designation: Yielding Engine Pool."
 is_asset_anchored = false
 status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_rwaxmr.png"
 
 [[CURRENCIES]]
 code = "eXCH"
@@ -49,6 +54,8 @@ name = "EXPANDED XCH TOKEN"
 desc = "PLINK Protocol designation: Mining-Farming Rewards Pool."
 is_asset_anchored = false
 status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_exch.png"
 
 [[CURRENCIES]]
 code = "BTCXD"
@@ -58,3 +65,5 @@ name = "BTCXD TOKEN"
 desc = "The Laughing Bitcoin"
 is_asset_anchored = false
 status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_btcxd.png"
