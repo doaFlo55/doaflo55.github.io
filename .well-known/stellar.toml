@@ -3,7 +3,6 @@ ACCOUNTS = ["GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"]
 [DOCUMENTATION]
 ORG_NAME = "Floss Integrations and Securities LLC"
 ORG_URL = "https://doaflo55.github.io"
-ORG_LOGO = "https://doaflo55.github.io/1781608075958~2.png"
 ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
 ORG_PHYSICAL_ADDRESS = "SC, United States"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
@@ -22,8 +21,6 @@ desc = "PLINK Protocol designation: Foundation/Identifying (BTC-Anchor)."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_usdjbtc.png"
-network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "USDJSOL"
@@ -34,8 +31,6 @@ desc = "PLINK Protocol designation: Yield/Staking Engine."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_usdjsol.png"
-network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "rwaXMR"
@@ -46,8 +41,6 @@ desc = "PLINK Protocol designation: Yielding Engine Pool."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_rwaxmr.png"
-network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "eXCH"
@@ -58,8 +51,6 @@ desc = "PLINK Protocol designation: Mining-Farming Rewards Pool."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_exch.png"
-network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "BTCXD"
@@ -70,8 +61,6 @@ desc = "The Laughing Bitcoin"
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_btcxd.png"
-network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "GWEIMOG"
@@ -82,8 +71,6 @@ desc = "Protocol designation: MOG ecosystem integration."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_gweimog.png"
-network = "Ethereum Network"
 
 [[CURRENCIES]]
 code = "MOGLMN"
@@ -94,8 +81,6 @@ desc = "Protocol designation: MOG Lumens integration."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_moglmn.png"
-network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "MOGLETH"
@@ -106,8 +91,6 @@ desc = "Protocol designation: MOG Ethereum bridge."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_mogleth.png"
-network = "Solana Network"
 
 [[CURRENCIES]]
 code = "BXMz"
@@ -118,5 +101,3 @@ desc = "Protocol designation: Secured BXM variant."
 is_asset_anchored = false
 status = "live"
 is_unlimited = true
-image = "https://doaflo55.github.io/logo_bxmz.png"
-network = "Base/Op Network"
