@@ -23,6 +23,7 @@ is_asset_anchored = false
 status = "live"
 is_unlimited = true
 image = "https://doaflo55.github.io/logo_usdjbtc.png"
+network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "USDJSOL"
@@ -34,6 +35,7 @@ is_asset_anchored = false
 status = "live"
 is_unlimited = true
 image = "https://doaflo55.github.io/logo_usdjsol.png"
+network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "rwaXMR"
@@ -45,6 +47,7 @@ is_asset_anchored = false
 status = "live"
 is_unlimited = true
 image = "https://doaflo55.github.io/logo_rwaxmr.png"
+network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "eXCH"
@@ -56,6 +59,7 @@ is_asset_anchored = false
 status = "live"
 is_unlimited = true
 image = "https://doaflo55.github.io/logo_exch.png"
+network = "Stellar Network"
 
 [[CURRENCIES]]
 code = "BTCXD"
@@ -67,3 +71,52 @@ is_asset_anchored = false
 status = "live"
 is_unlimited = true
 image = "https://doaflo55.github.io/logo_btcxd.png"
+network = "Stellar Network"
+
+[[CURRENCIES]]
+code = "GWEIMOG"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "GWEIMOG TOKEN"
+desc = "Protocol designation: MOG ecosystem integration."
+is_asset_anchored = false
+status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_gweimog.png"
+network = "Ethereum Network"
+
+[[CURRENCIES]]
+code = "MOGLMN"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "MOGLMN TOKEN"
+desc = "Protocol designation: MOG Lumens integration."
+is_asset_anchored = false
+status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_moglmn.png"
+network = "Stellar Network"
+
+[[CURRENCIES]]
+code = "MOGLETH"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "MOGLETH TOKEN"
+desc = "Protocol designation: MOG Ethereum bridge."
+is_asset_anchored = false
+status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_mogleth.png"
+network = "Solana Network"
+
+[[CURRENCIES]]
+code = "BXMz"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "BXMz TOKEN"
+desc = "Protocol designation: Secured BXM variant."
+is_asset_anchored = false
+status = "live"
+is_unlimited = true
+image = "https://doaflo55.github.io/logo_bxmz.png"
+network = "Base/Op Network"
