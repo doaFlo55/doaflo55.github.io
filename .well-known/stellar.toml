@@ -12,12 +12,6 @@ ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
 name = "Doa Floss"
 email = "contact@doaflo55.github.io"
 
-[[VALIDATORS]]
-ALIAS = "STLRDOA"
-DISPLAY_NAME = "Doa Floss Validator"
-PUBLIC_KEY = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-HOST = "https://doaflo55.github.io"
-
 [[CURRENCIES]]
 code = "USDJBTC"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
