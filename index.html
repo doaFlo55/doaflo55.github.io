@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doa Floss</title>
+    <!-- AudioMotion Library for high-performance visualization -->
     <script src="https://cdn.jsdelivr.net/npm/audiomotion-analyzer@4.0.0/dist/audiomotion-analyzer.min.js"></script>
     <style>
         body { font-family: sans-serif; background: #000; color: #fff; line-height: 1.6; }
@@ -32,13 +33,32 @@
 
         <div class="widget-box">
             <h2>Floss Integrations & Securities: The Intersection of Sound and System</h2>
+            
+            <!-- Visualizer Container -->
             <div id="visualizer-container"></div>
+            
+            <!-- Audio Element for Visualization & Download -->
             <audio id="audio-element" src="YOUR_SONG_FILE.mp3" crossorigin="anonymous" controls style="width: 100%; margin-bottom: 10px;"></audio>
             <a href="YOUR_SONG_FILE.mp3" download="DoaFloss_Song.mp3" style="display:block; margin-bottom:20px; color:#e67e22; font-weight:bold;">Download Free Song</a>
+
             <p style="color: #bdc3c7; font-size: 0.95em;">
                 We love math, and we are dedicated to changing the world. The only way we can truly connect is by reaching out and touching you with music. We recognize that keeping everything aligned is the challenge of our time—this is why we have unified our music player with our asset architecture. Together, they equal a singular, cohesive force.
             </p>
+
             <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
+            
+            <div style="margin-top: 20px;">
+                <div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=53&amp;posted_by=artist_8579729&pwc[design]=default&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:4px;font-family:Arial;"><center><a href="https://www.reverbnation.com/band-promotion/epk-electronic-press-kits?utm_campaign=a_features_rpk&utm_medium=widget&utm_source=HTML5_Press&utm_content=widgetfooter_Free EPK from ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free EPK from ReverbNation.com</a></center></div></div>
+            </div>
+
+            <div style="margin-top: 15px; padding: 5px; border-top: 1px solid #7f8c8d; font-size: 12px; display: flex; justify-content: center; gap: 15px;">
+                <a href="https://www.reverbnation.com/DoaFloss" target="_blank">ReverbNation</a>
+                <a href="https://www.bandlab.com/doa_floss" target="_blank">BandLab</a>
+                <a href="https://www.beatstars.com/floss" target="_blank">BeatStars</a>
+                <a href="https://x.com/X_officialDoa" target="_blank">Twitter</a>
+                <a href="https://youtube.com/@doafloss?si=7nE320U8pYYymp0_" target="_blank">Youtube</a>
+                <a href="https://www.instagram.com/doafloss?igsh=MWFxb3pkd2VuYXY1cg==" target="_blank">Instagram</a>
+            </div>
         </div>
 
         <div class="widget-box">
@@ -82,6 +102,8 @@ PLaNK: Protocol - Ledger - Atonement - Number - Knowledge
 [SOLANA NETWORK]
 - MOGLETH (Y): MOG Ethereum Bridge (3.3% AYP)
 - WRMz (Y): Solana Wrapped Staked USDJSOL
+
+*Index Tier reflects priority alignment within the infrastructure.
             </code></pre>
         </div>
 
@@ -92,18 +114,22 @@ PLaNK: Protocol - Ledger - Atonement - Number - Knowledge
             <div style="margin-top: 15px;">
                 <a href="https://opensea.io/0xe057fdcec8a64e50f56e38168b344449a755a1e8" style="color: #e74c3c; font-weight: bold; text-decoration: underline;" target="_blank">View Burn Activity on OpenSea</a>
             </div>
+            
             <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #ecf0f1;">
                 <h2>Asset Management & Verification</h2>
+                <p>Access your assets and manage your portfolio via the LOBSTR Wallet:</p>
                 <a href="https://lobstr.co/" target="_blank" style="background-color: #e67e22; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: bold;">Download LOBSTR Wallet</a>
             </div>
         </div>
 
+        <!-- Initialize Visualizer Script -->
         <script>
             const container = document.getElementById('visualizer-container');
             const audioSource = document.getElementById('audio-element');
+            
             const audioMotion = new AudioMotionAnalyzer(container, {
                 source: audioSource,
-                mode: 1,
+                mode: 1, // 'bars' mode
                 barSpace: 0.5,
                 ledBars: true
             });
