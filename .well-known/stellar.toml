@@ -1,13 +1,10 @@
-# Stellar Info File (SEP-0001)
-
 VERSION = "2.0.0"
-ACCOUNTS = ["GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"]
 
 [DOCUMENTATION]
 ORG_NAME = "Floss Integrations and Securities LLC"
 ORG_URL = "https://doaflo55.github.io"
 ORG_LOGO = "https://doaflo55.github.io/1781608075958~2.png"
-ORG_DESCRIPTION = "High-value digital assets and integration services for the Stellar ecosystem."
+ORG_DESCRIPTION = "A High-Value Correcting and Holding Exchange, Self Custody Anchored digital asset integration securities services for the Stellar ecosystem with Expansive Automatic Protocals for Conversions and the Decentralization Utility "
 ORG_PHYSICAL_ADDRESS = "SC, United States"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
 ORG_SUPPORT_EMAIL = "contact@doaflo55.github.io"
@@ -21,7 +18,7 @@ code = "USDJBTC"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJBTC TOKEN"
-desc = "PLINK Protocol designation: Foundation/Identifying (BTC-Anchor). This token is a 1:1 collection of the US BTC Reserve, including all future purchases of Bitcoin by the US, and incorporates a personal contribution of BTC into the reserve supply."
+desc = "PLINK Protocol designation: Foundation/Identifying (BTC-Anchor)."
 is_asset_anchored = false
 status = "live"
 
@@ -30,7 +27,7 @@ code = "USDJSOL"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJSOL TOKEN"
-desc = "PLINK Protocol designation: Yield/Staking Engine. Similar to a staked jitoSOL, but maintained cross-chain and pooled for high-yield earning opportunities within the Stellar network."
+desc = "PLINK Protocol designation: Yield/Staking Engine."
 is_asset_anchored = false
 status = "live"
 
@@ -39,7 +36,7 @@ code = "rwaXMR"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "RwA XMR TOKEN"
-desc = "PLINK Protocol designation: Yielding Engine Pool. A self-custody cross-chain mining asset, bridged with recycled silver value and decentralization."
+desc = "PLINK Protocol designation: Yielding Engine Pool."
 is_asset_anchored = false
 status = "live"
 
@@ -48,7 +45,7 @@ code = "eXCH"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "EXPANDED XCH TOKEN"
-desc = "PLINK Protocol designation: Mining-Farming Rewards Pool. A recalculated XCH Chia token synthetic with USD backing, designed for pooled exchanges and rewards within StellarX farming/pooling."
+desc = "PLINK Protocol designation: Mining-Farming Rewards Pool."
 is_asset_anchored = false
 status = "live"
 
@@ -57,7 +54,7 @@ code = "BTCXD"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "BTCXD TOKEN"
-desc = "The Laughing Bitcoin: A memed asset now pooling on Stellar, offering a highly inflated and creative finance perspective."
+desc = "The Laughing Bitcoin: A memed asset now pooling on Stellar."
 is_asset_anchored = false
 status = "live"
 
@@ -66,7 +63,7 @@ code = "MOGLMN"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "MOGLMN TOKEN"
-desc = "Protocol designation: MOG Lumens integration. A Stellar cosmic token backed for the community, utilizing a triple-chain pool design native to XLM swaps."
+desc = "Protocol designation: MOG Lumens integration."
 is_asset_anchored = false
 status = "live"
 
@@ -75,6 +72,6 @@ code = "OPLZ"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "OPLZ TOKEN"
-desc = "PLYNK Protocol designation: Wrapped MOGLMN. Also functions as an Ethereum-wrapped Optimism token, maintaining parity across the Stellar and Ethereum networks."
+desc = "PLYNK Protocol designation: Wrapped MOGLMN/Optimism parity."
 is_asset_anchored = false
 status = "live"
