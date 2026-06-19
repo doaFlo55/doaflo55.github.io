@@ -5,50 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doa Floss</title>
     <style>
-        /* White Theme Adjustments */
-        body { font-family: sans-serif; background: #ffffff; color: #333; line-height: 1.6; }
+        body { font-family: sans-serif; background: #000; color: #ccc; line-height: 1.6; }
         .container { max-width: 800px; margin: 0 auto; padding: 20px; }
         .header-section { text-align: center; margin-bottom: 30px; }
-        .header-top { font-size: 1.2em; color: #777; margin-bottom: 5px; }
-        .header-main { font-size: 2.5em; color: #000; margin: 0; }
+        .header-top { font-size: 1.2em; color: #666; margin-bottom: 5px; }
+        .header-main { font-size: 2.5em; color: #fff; margin: 0; }
+        .widget-box { background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px; }
+        h1, h2, h3 { color: #fff; }
         
-        /* Widget Boxes */
-        .widget-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px; }
-        h1, h2, h3 { color: #000; }
-        
-        /* Links */
-        a { color: #2980b9; text-decoration: none; border-bottom: 1px solid #2980b9; }
-        a:hover { color: #000; border-bottom: 1px solid #000; }
-        
-        /* Pools */
-        .pool-link { color: #27ae60 !important; border-bottom: 1px solid #27ae60 !important; }
-        .pool-link:hover { color: #000 !important; border-bottom: 1px solid #000 !important; }
+        /* Links: Blue default, Green for pools */
+        a { color: #3498db; text-decoration: none; border-bottom: 1px solid #3498db; }
+        a:hover { color: #fff; border-bottom: 1px solid #fff; }
+        .pool-link { color: #2ecc71 !important; border-bottom: 1px solid #2ecc71 !important; }
+        .pool-link:hover { color: #fff !important; border-bottom: 1px solid #fff !important; }
         
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; color: #333; }
+        th, td { padding: 10px; border: 1px solid #333; text-align: left; color: #ccc; }
+        button { background: #111; color: #fff; border: 1px solid #444; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #222; }
+        pre { background: rgba(0, 0, 0, 0.4); padding: 15px; border-radius: 8px; border: 1px solid #333; color: #aaa; overflow-x: auto; font-size: 0.9em; }
         
-        /* Buttons */
-        button { background: #333; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        button:hover { background: #000; }
-        
-        /* Declaration Box - Height adjusted to ~60% */
-        .declaration-box { 
-            background: #fff; 
-            padding: 15px; 
-            border-radius: 5px; 
-            border: 1px solid #ddd; 
-            max-width: 600px; 
-            margin: 0 auto; 
-            max-height: 240px; 
-            overflow-y: auto; 
-            color: #333; 
-            font-size: 0.95em; 
-        }
-        
-        /* Burn Widget */
-        .burn-widget { border: 1px solid #c0392b !important; background: #fff5f5 !important; }
-        .btn-gold { background: #d35400 !important; color: white !important; border: none !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; }
-        .btn-default { background: #ddd; color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
+        /* Burn Protocol & Gold Buttons */
+        .burn-widget { border: 1px solid #e74c3c !important; background: rgba(255, 255, 255, 0.05); }
+        .btn-gold { background: #e67e22 !important; color: white !important; border: none !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; margin-right: 10px; }
+        .btn-default { background: #222; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
+        .button-group { display: flex; flex-wrap: wrap; gap: 10px; }
     </style>
 </head>
 <body>
@@ -59,7 +40,7 @@
         </div>
 
         <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-        <tv-ticker-tape symbols="CRYPTOCAP:SOL,CRYPTOCAP:OP,CRYPTOCAP:BTC,CRYPTOCAP:MOG,CRYPTOCAP:XLM,CRYPTOCAP:USDC,CRYPTOCAP:CBETH,COINBASE:ETHUSD,COINBASE:BTCUSD,COINBASE:JITOSOLUSDC,COINBASE:MOGUSDC,COINBASE:XLMUSD,CRYPTOCAP:XMR,CRYPTOCAP:XCH" line-chart-type="Line" theme="light" symbol-url="Doaflo55.github.io" style="width: 100%"></tv-ticker-tape>
+        <tv-ticker-tape symbols="CRYPTOCAP:SOL,CRYPTOCAP:OP,CRYPTOCAP:BTC,CRYPTOCAP:MOG,CRYPTOCAP:XLM,CRYPTOCAP:USDC,CRYPTOCAP:CBETH,COINBASE:ETHUSD,COINBASE:BTCUSD,COINBASE:JITOSOLUSDC,COINBASE:MOGUSDC,COINBASE:XLMUSD,CRYPTOCAP:XMR,CRYPTOCAP:XCH" line-chart-type="Line" theme="dark" symbol-url="Doaflo55.github.io" style="width: 100%"></tv-ticker-tape>
 
         <div class="widget-box">
             <h2>The Architecture of Unified Values & Media Synchronization</h2>
@@ -67,7 +48,7 @@
                 <button onclick="speakText()">🔊 Listen to Declaration</button>
             </div>
             
-            <div id="declarationText" class="declaration-box">
+            <div id="declarationText" style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; border: 1px solid #333; max-width: 600px; margin: 0 auto; max-height: 400px; overflow-y: auto; color: #aaa; font-size: 0.95em;">
                 <p>D.O.A. Floss is building the private-sector equivalent of a national reserve infrastructure. By integrating our creative media output with a high-precision, self-custody exchange architecture, we have created an audited ecosystem where liquidity providers can participate in a system that is as resilient as the assets it holds.</p>
             </div>
             
@@ -97,18 +78,18 @@
         </div>
 
         <div class="widget-box burn-widget">
-            <h3 style="color: #c0392b;">Burn Protocol</h3>
-            <p>Need to burn Bitcoin? Trust the process.</p>
-            <code style="display: block; margin: 10px 0; padding: 10px; background: #fff; color: #2980b9; border: 1px solid #ddd; word-break: break-all;">0xe057fdcec8a64e50f56e38168b344449a755a1e8</code>
+            <h3 style="color: #fff;">Burn Protocol</h3>
+            <p style="color: #ccc;">Need to burn Bitcoin? Trust the process.</p>
+            <code style="display: block; margin: 10px 0; padding: 10px; background: #000; color: #3498db; border: 1px solid #333; word-break: break-all;">0xe057fdcec8a64e50f56e38168b344449a755a1e8</code>
             <a href="https://opensea.io/0xe057fdcec8a64e50f56e38168b344449a755a1e8" target="_blank">View Burn Activity on OpenSea</a>
             
-            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #ddd;">
-                <h2 style="color: #000;">Asset Management & Verification</h2>
-                <div style="display: flex; gap: 10px;">
+            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #333;">
+                <h2 style="color: #fff;">Asset Management & Verification</h2>
+                <div class="button-group">
                     <a href="https://lobstr.co/" target="_blank" class="btn-gold">Download LOBSTR Wallet</a>
                     <a href="https://stellarx.com/" target="_blank" class="btn-gold">Visit StellarX</a>
                 </div>
-                <p style="margin-top: 15px;">Download our official stellar.toml file here:</p>
+                <p style="color: #ccc; margin-top: 15px;">Download our official stellar.toml file here:</p>
                 <a href="/.well-known/stellar.toml" download="stellar.toml" class="btn-default">Download stellar.toml</a>
             </div>
         </div>
