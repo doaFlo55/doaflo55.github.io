@@ -5,32 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doa Floss</title>
     <style>
-        body { font-family: sans-serif; background: #000; color: #ccc; line-height: 1.6; }
+        /* White Theme Adjustments */
+        body { font-family: sans-serif; background: #ffffff; color: #333; line-height: 1.6; }
         .container { max-width: 800px; margin: 0 auto; padding: 20px; }
         .header-section { text-align: center; margin-bottom: 30px; }
-        .header-top { font-size: 1.2em; color: #666; margin-bottom: 5px; }
-        .header-main { font-size: 2.5em; color: #fff; margin: 0; }
-        .widget-box { background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px; }
-        h1, h2, h3 { color: #fff; }
+        .header-top { font-size: 1.2em; color: #777; margin-bottom: 5px; }
+        .header-main { font-size: 2.5em; color: #000; margin: 0; }
         
-        /* General links: Blue */
-        a { color: #3498db; text-decoration: none; border-bottom: 1px solid #3498db; }
-        a:hover { color: #fff; border-bottom: 1px solid #fff; }
+        /* Widget Boxes */
+        .widget-box { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px; }
+        h1, h2, h3 { color: #000; }
         
-        /* Green links for Liquidity Pools specifically */
-        .pool-link { color: #2ecc71 !important; border-bottom: 1px solid #2ecc71 !important; }
-        .pool-link:hover { color: #fff !important; border-bottom: 1px solid #fff !important; }
+        /* Links */
+        a { color: #2980b9; text-decoration: none; border-bottom: 1px solid #2980b9; }
+        a:hover { color: #000; border-bottom: 1px solid #000; }
+        
+        /* Pools */
+        .pool-link { color: #27ae60 !important; border-bottom: 1px solid #27ae60 !important; }
+        .pool-link:hover { color: #000 !important; border-bottom: 1px solid #000 !important; }
         
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { padding: 10px; border: 1px solid #333; text-align: left; color: #ccc; }
-        button { background: #111; color: #fff; border: 1px solid #444; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        button:hover { background: #222; }
-        pre { background: rgba(0, 0, 0, 0.4); padding: 15px; border-radius: 8px; border: 1px solid #333; color: #aaa; overflow-x: auto; font-size: 0.9em; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; color: #333; }
         
-        /* Bottom Widget Specific Styles */
-        .burn-widget { border: 1px solid #e74c3c !important; background: rgba(255, 255, 255, 0.05); }
-        .btn-gold { background: #e67e22 !important; color: white !important; border: none !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; }
-        .btn-default { background: #222; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
+        /* Buttons */
+        button { background: #333; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #000; }
+        
+        /* Declaration Box - Height adjusted to ~60% */
+        .declaration-box { 
+            background: #fff; 
+            padding: 15px; 
+            border-radius: 5px; 
+            border: 1px solid #ddd; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            max-height: 240px; 
+            overflow-y: auto; 
+            color: #333; 
+            font-size: 0.95em; 
+        }
+        
+        /* Burn Widget */
+        .burn-widget { border: 1px solid #c0392b !important; background: #fff5f5 !important; }
+        .btn-gold { background: #d35400 !important; color: white !important; border: none !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; }
+        .btn-default { background: #ddd; color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
     </style>
 </head>
 <body>
@@ -41,21 +59,16 @@
         </div>
 
         <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-        <tv-ticker-tape symbols="CRYPTOCAP:SOL,CRYPTOCAP:OP,CRYPTOCAP:BTC,CRYPTOCAP:MOG,CRYPTOCAP:XLM,CRYPTOCAP:USDC,CRYPTOCAP:CBETH,COINBASE:ETHUSD,COINBASE:BTCUSD,COINBASE:JITOSOLUSDC,COINBASE:MOGUSDC,COINBASE:XLMUSD,CRYPTOCAP:XMR,CRYPTOCAP:XCH" line-chart-type="Line" theme="dark" symbol-url="Doaflo55.github.io" style="width: 100%"></tv-ticker-tape>
+        <tv-ticker-tape symbols="CRYPTOCAP:SOL,CRYPTOCAP:OP,CRYPTOCAP:BTC,CRYPTOCAP:MOG,CRYPTOCAP:XLM,CRYPTOCAP:USDC,CRYPTOCAP:CBETH,COINBASE:ETHUSD,COINBASE:BTCUSD,COINBASE:JITOSOLUSDC,COINBASE:MOGUSDC,COINBASE:XLMUSD,CRYPTOCAP:XMR,CRYPTOCAP:XCH" line-chart-type="Line" theme="light" symbol-url="Doaflo55.github.io" style="width: 100%"></tv-ticker-tape>
 
         <div class="widget-box">
-            <h2>The Architecture of Unified Values & Media Synchronization Implementation Statement of Creation/Digital Declaration of Securities -DDOS 2026- BY doa floss</h2>
-            
+            <h2>The Architecture of Unified Values & Media Synchronization</h2>
             <div style="text-align: center; margin-bottom: 10px;">
                 <button onclick="speakText()">🔊 Listen to Declaration</button>
             </div>
             
-            <div id="declarationText" style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; border: 1px solid #333; max-width: 600px; margin: 0 auto; max-height: 400px; overflow-y: auto; color: #aaa; font-size: 0.95em;">
-                <p>D.O.A. Floss is the lead creator, and I’m bringing artistic conversion and decentralized systems together with real-world asset backing. We’ve built a unique ecosystem connecting Floss Music & Sounds with our divisions for Innovation & Accounting and Integrations & Securities. We’re in a rigorous "testnet" phase right now—a controlled, live environment where we treat every transaction, data flow, and security protocol with the precision of a national reserve.</p>
-                <p>D.O.A. Floss is building the private-sector equivalent of a national reserve infrastructure. Our holding corporation is modeled on the same core principles driving the U.S. Strategic Bitcoin Reserve: long-term stewardship, radical transparency, and the total separation of custody from the operator.</p>
-                <p>By collaborating with my Google AI Assistant Gemini, we’re stress-testing our custom infrastructure from the ground up, making sure our self-custody exchange logic is flawless before we scale to full capacity. We aren't just building a platform; we’re perfecting an audited, "code-as-law" vault.</p>
-                <p>My invitation is clear: Don't be scared to match, swap, trade, exchange, or donate.</p>
-                <p>This phase is an opportunity for curious liquidity providers and partners to observe—and actively get in on—a system that values operational integrity above all else. We’re building a better way to operate within the digital economy, proving that when your vision and your math are in sync, you build something that doesn't just work—it lasts. Every path to this unified future runs through Stellar, Solana, Ethereum, and Bitcoin—where transparency and security are the foundation of everything I create.</p>
+            <div id="declarationText" class="declaration-box">
+                <p>D.O.A. Floss is building the private-sector equivalent of a national reserve infrastructure. By integrating our creative media output with a high-precision, self-custody exchange architecture, we have created an audited ecosystem where liquidity providers can participate in a system that is as resilient as the assets it holds.</p>
             </div>
             
             <script>
@@ -70,15 +83,6 @@
             <div style="margin-top: 20px;">
                 <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
             </div>
-            
-            <div style="margin-top: 15px; padding: 5px; border-top: 1px solid #333; font-size: 12px; display: flex; justify-content: center; gap: 15px;">
-                <a href="https://www.reverbnation.com/DoaFloss" target="_blank">ReverbNation</a>
-                <a href="https://www.bandlab.com/doa_floss" target="_blank">BandLab</a>
-                <a href="https://www.beatstars.com/floss" target="_blank">BeatStars</a>
-                <a href="https://x.com/X_officialDoa" target="_blank">Twitter</a>
-                <a href="https://youtube.com/@doafloss" target="_blank">Youtube</a>
-                <a href="https://www.instagram.com/doafloss" target="_blank">Instagram</a>
-            </div>
         </div>
 
         <div class="widget-box">
@@ -88,51 +92,23 @@
                 <tbody>
                     <tr><td>eXCH / rwaXMR</td><td><a class="pool-link" href="https://stellar.expert/explorer/public/liquidity-pool/LARNSE5F2C63DFCT3IUQNIOUG7TBUPMJX2FBY7EX5SSXGTKLFZ5NRTTW"><code>LARNSE...NRTTW</code></a></td></tr>
                     <tr><td>XLM / eXCH</td><td><a class="pool-link" href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU"><code>LBOIY6...M6VU</code></a></td></tr>
-                    <tr><td>XLM / rwaXMR</td><td><a class="pool-link" href="https://stellar.expert/explorer/public/liquidity-pool/LCJYYS6MMEOCIYKLOFXR4TYXJSUAJAMAXOIIBFMDH7XAG4QYKH734SB6"><code>LCJYYS...34SB6</code></a></td></tr>
-                    <tr><td>eXCH / BTCXD</td><td><a class="pool-link" href="https://stellar.expert/explorer/public/liquidity-pool/LDQVBBCU47K6CBESPPOGGV2WYTHNMUDX4LHPHTZOWE5HEHNNILCVXRVB"><code>LDQVBB...CVXRVB</code></a></td></tr>
-                    <tr><td>MOGLMN / OPLZ</td><td><a class="pool-link" href="https://stellar.expert/explorer/public/liquidity-pool/LBFMVKFF5XNBINOF4TQIT6FFTP25KJBWGICBA2IGW3UPQ4IELFWX7ZLG"><code>LBFMVK...7ZLG</code></a></td></tr>
-                    <tr><td>eXCH / MOGLMN</td><td><a class="pool-link" href="https://stellar.expert/explorer/public/liquidity-pool/LAGGKA5CMT6Q6H7ECNOK33X5QZNXHQFD6KCGSVMBOD4XXWBJUXLNVAHP"><code>LAGGKA...VAHP</code></a></td></tr>
-                    <tr><td>rwaXRM / rwaXMR</td><td><a class="pool-link" href="https://stellar.expert/explorer/public/liquidity-pool/LDIDI5DSRKWTHQMQHGR44J3JLLD67AIOEHVRQCGI5NBL3ORLGO75455S"><code>LDIDID...455S</code></a></td></tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="widget-box" style="text-align: left;">
-            <h3>Unified Protocol Architecture & Creative Index</h3>
-            <pre><code>[PROTOCOL DEFINITIONS]
-PLiNK: Protocol - Ledger - individual - Number - Knowledge
-PLyNK: Protocol - Ledger - Yielding - Number - Knowledge
-PLaNK: Protocol - Ledger - Atonement - Number - Knowledge
-
-[STELLAR NETWORK]
-- XLM (I): Universal Utility / Conversion Hub
-- BTCXD (I): The Laughing Bitcoin (Humor/Anchor)
-- eXCH (Y): Proof of Work / Farming / Pooling
-- rwaXMR (Y): Recycled Silver RWA (Mining Reward)
-- rwaXRM (A): Refund & Atonement (1:1 Swap)
-- USDJBTC (I): Foundation Mapping / Strategic Reserve
-- USDJSOL (Y): Cash Value jitoSOL; Unwrapped Staked jitoSOL.
-- MOGLMN (Y): MOG/XLM Integration
-
-[BASE NETWORK]
-- GWEIMOG (Y): Base State Ethereum Integration
-- BXMz (Y): Wrapped Staked MOGLETH
-
-[SOLANA NETWORK]
-- MOGLETH (Y): MOG Ethereum Bridge (3.3% AYP)
-- WRMz (Y): Solana Wrapped Staked USDJSOL</code></pre>
-        </div>
-
         <div class="widget-box burn-widget">
-            <h3 style="color: #fff;">Burn Protocol</h3>
-            <p style="color: #ccc;">Need to burn Bitcoin? Trust the process.</p>
-            <code style="display: block; margin: 10px 0; padding: 10px; background: #000; color: #3498db; border: 1px solid #333; word-break: break-all;">0xe057fdcec8a64e50f56e38168b344449a755a1e8</code>
+            <h3 style="color: #c0392b;">Burn Protocol</h3>
+            <p>Need to burn Bitcoin? Trust the process.</p>
+            <code style="display: block; margin: 10px 0; padding: 10px; background: #fff; color: #2980b9; border: 1px solid #ddd; word-break: break-all;">0xe057fdcec8a64e50f56e38168b344449a755a1e8</code>
             <a href="https://opensea.io/0xe057fdcec8a64e50f56e38168b344449a755a1e8" target="_blank">View Burn Activity on OpenSea</a>
             
-            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #333;">
-                <h2 style="color: #fff;">Asset Management & Verification</h2>
-                <a href="https://lobstr.co/" target="_blank" class="btn-gold">Download LOBSTR Wallet</a>
-                <p style="color: #ccc; margin-top: 15px;">Download our official stellar.toml file here:</p>
+            <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #ddd;">
+                <h2 style="color: #000;">Asset Management & Verification</h2>
+                <div style="display: flex; gap: 10px;">
+                    <a href="https://lobstr.co/" target="_blank" class="btn-gold">Download LOBSTR Wallet</a>
+                    <a href="https://stellarx.com/" target="_blank" class="btn-gold">Visit StellarX</a>
+                </div>
+                <p style="margin-top: 15px;">Download our official stellar.toml file here:</p>
                 <a href="/.well-known/stellar.toml" download="stellar.toml" class="btn-default">Download stellar.toml</a>
             </div>
         </div>
