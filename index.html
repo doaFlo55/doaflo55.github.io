@@ -31,7 +31,13 @@
         <div class="widget-box">
             <h2>The Architecture of Unified Values & Media Synchronization Implementation Statement of Creation/Digital Declaration of Securities -DDOS 2026- BY doa floss</h2>
             
-            <div style="background: #0d161d; padding: 15px; border-radius: 5px; border: 1px solid #34495e; max-width: 600px; margin: 0 auto; max-height: 400px; overflow-y: auto; color: #bdc3c7; font-size: 0.95em;">
+            <div style="text-align: center; margin-bottom: 10px;">
+                <button onclick="speakText()" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                    🔊 Listen to Declaration
+                </button>
+            </div>
+            
+            <div id="declarationText" style="background: #0d161d; padding: 15px; border-radius: 5px; border: 1px solid #34495e; max-width: 600px; margin: 0 auto; max-height: 400px; overflow-y: auto; color: #bdc3c7; font-size: 0.95em;">
                 <p>D.O.A. Floss is the lead creator, and I’m bringing artistic conversion and decentralized systems together with real-world asset backing. We’ve built a unique ecosystem connecting Floss Music & Sounds with our divisions for Innovation & Accounting and Integrations & Securities. We’re in a rigorous "testnet" phase right now—a controlled, live environment where we treat every transaction, data flow, and security protocol with the precision of a national reserve.</p>
                 
                 <p>D.O.A. Floss is building the private-sector equivalent of a national reserve infrastructure. Our holding corporation is modeled on the same core principles driving the U.S. Strategic Bitcoin Reserve: long-term stewardship, radical transparency, and the total separation of custody from the operator. By integrating our creative media output with a high-precision, self-custody exchange architecture, we have created an audited ecosystem where liquidity providers can participate in a system that is as resilient as the assets it holds. We are not just building an exchange; we are building a secure, verifiable vault for the next generation of digital value.</p>
@@ -50,15 +56,20 @@
                 <p><strong>Sovereign Reserve Logic:</strong> We run this with the discipline of a national reserve. My security isn't an add-on; it’s the environment.</p>
                 <p><strong>Immutable Commitment:</strong> This is the constitution for my business. By engaging, you’re locking in with the mission to redefine how we interact with value. We build, we verify, and we sustain. We love math, and we are dedicated to changing the world. The only way we can truly connect is by reaching out and touching you with music. We recognize that keeping everything aligned is the challenge of our time—this is why we have unified our music player with our asset architecture. Together, they equal a singular, cohesive force.</p>
             </div>
+            
+            <script>
+                function speakText() {
+                    window.speechSynthesis.cancel();
+                    const text = document.getElementById("declarationText").innerText;
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    window.speechSynthesis.speak(utterance);
+                }
+            </script>
 
             <div style="margin-top: 20px;">
                 <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
             </div>
             
-            <div style="margin-top: 20px;">
-                <div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=53&amp;posted_by=artist_8579729&pwc[design]=default&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe></div>
-            </div>
-
             <div style="margin-top: 15px; padding: 5px; border-top: 1px solid #7f8c8d; font-size: 12px; display: flex; justify-content: center; gap: 15px;">
                 <a href="https://www.reverbnation.com/DoaFloss" target="_blank">ReverbNation</a>
                 <a href="https://www.bandlab.com/doa_floss" target="_blank">BandLab</a>
