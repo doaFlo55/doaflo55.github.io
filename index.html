@@ -5,19 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doa Floss</title>
     <style>
-        body { font-family: sans-serif; background: #000; color: #ccc; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        /* Background Void Motion Effect */
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: #000000; 
+            background-image: radial-gradient(white, rgba(255,255,255,.2), transparent 40%),
+                              radial-gradient(white, rgba(255,255,255,.1), transparent 30%),
+                              radial-gradient(white, rgba(255,255,255,.05), transparent 20%);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            animation: star-drift 60s linear infinite;
+            color: #ccc; 
+            font-family: sans-serif; 
+            line-height: 1.6; 
+        }
+
+        @keyframes star-drift {
+            from { background-position: 0 0, 40px 60px, 130px 270px; }
+            to { background-position: 1000px 1000px, 1040px 1060px, 1130px 1270px; }
+        }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; background: rgba(0, 0, 0, 0.7); border-radius: 8px; }
         .header-section { text-align: center; margin-bottom: 30px; }
         .header-top { font-size: 1.2em; color: #666; margin-bottom: 5px; }
         .header-main { font-size: 2.5em; color: #fff; margin: 0; }
         .widget-box { background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px; }
         h1, h2, h3 { color: #fff; }
         
-        /* General links: Blue */
         a { color: #3498db; text-decoration: none; border-bottom: 1px solid #3498db; }
         a:hover { color: #fff; border-bottom: 1px solid #fff; }
         
-        /* Green links for Liquidity Pools specifically */
         .pool-link { color: #2ecc71 !important; border-bottom: 1px solid #2ecc71 !important; }
         .pool-link:hover { color: #fff !important; border-bottom: 1px solid #fff !important; }
         
@@ -27,7 +45,6 @@
         button:hover { background: #222; }
         pre { background: rgba(0, 0, 0, 0.4); padding: 15px; border-radius: 8px; border: 1px solid #333; color: #aaa; overflow-x: auto; font-size: 0.9em; }
         
-        /* Bottom Widget Specific Styles */
         .burn-widget { border: 1px solid #e74c3c !important; background: rgba(255, 255, 255, 0.05); }
         .btn-gold { background: #e67e22 !important; color: white !important; border: none !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; }
         .btn-default { background: #222; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
@@ -42,6 +59,12 @@
 
         <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
         <tv-ticker-tape symbols="CRYPTOCAP:SOL,CRYPTOCAP:OP,CRYPTOCAP:BTC,CRYPTOCAP:MOG,CRYPTOCAP:XLM,CRYPTOCAP:USDC,CRYPTOCAP:CBETH,COINBASE:ETHUSD,COINBASE:BTCUSD,COINBASE:JITOSOLUSDC,COINBASE:MOGUSDC,COINBASE:XLMUSD,CRYPTOCAP:XMR,CRYPTOCAP:XCH" line-chart-type="Line" theme="dark" symbol-url="Doaflo55.github.io" style="width: 100%"></tv-ticker-tape>
+
+        <div class="widget-box" style="text-align: center;">
+            <h3 style="color: #fff; margin-top: 0;">Exchange On-Ramp (XLM)</h3>
+            <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=false&amount=19.99&amountFiat=19.99&backgroundColor=2B2B35&darkMode=true&from=usdcbase&fromFiat=usd&horizontal=true&isFiat=true&lang=en-US&link_id=05ca257813d852&locales=false&logo=true&primaryColor=00bbc2&to=xlm&toFiat=xlm&toTheMoon=true' style="height: 205px; width: 100%; border: none"></iframe>
+            <script defer type='text/javascript' src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
+        </div>
 
         <div class="widget-box">
             <h2>The Architecture of Unified Values & Media Synchronization Implementation Statement of Creation/Digital Declaration of Securities -DDOS 2026- BY doa floss</h2>
@@ -81,7 +104,8 @@
             </div>
         </div>
         
-<div class="widget_iframe" style="display:inline-block;width:100%;height:350px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=51&amp;posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="https://www.reverbnation.com/band-promotion/widgets?utm_campaign=a_features_widgets&utm_medium=widget&utm_source=HTML5_Video_Player&utm_content=widgetfooter_Upload your music for free at ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Upload your music for free at ReverbNation.com</a></center></div></div>
+        <div class="widget_iframe" style="display:inline-block;width:100%;height:350px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=51&amp;posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="https://www.reverbnation.com/band-promotion/widgets?utm_campaign=a_features_widgets&utm_medium=widget&utm_source=HTML5_Video_Player&utm_content=widgetfooter_Upload your music for free at ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Upload your music for free at ReverbNation.com</a></center></div></div>
+        
         <div class="widget-box">
             <h3>Active Liquidity Pools</h3>
             <table>
@@ -98,7 +122,8 @@
             </table>
         </div>
         
-<div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=53&amp;posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="https://www.reverbnation.com/band-promotion/widgets?utm_campaign=a_features_widgets&utm_medium=widget&utm_source=HTML5_Press&utm_content=widgetfooter_Free music player widget at ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free music player widget at ReverbNation.com</a></center></div></div>
+        <div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=53&amp;posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="https://www.reverbnation.com/band-promotion/widgets?utm_campaign=a_features_widgets&utm_medium=widget&utm_source=HTML5_Press&utm_content=widgetfooter_Free music player widget at ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Free music player widget at ReverbNation.com</a></center></div></div>
+        
         <div class="widget-box" style="text-align: left;">
             <h3>Unified Protocol Architecture & Creative Index</h3>
             <pre><code>[PROTOCOL DEFINITIONS]
@@ -126,48 +151,7 @@ PLaNK: Protocol - Ledger - Atonement - Number - Knowledge
 - MOGLETH (Y): MOG Ethereum Bridge (3.3% AYP) unwrapped eth/op/Mog used to create BXMz (MOG UTILITY ENHANCED)
 - WRMz (Y): Solana Wrapped Staked USDJSOL (7% AYP)</code></pre>
         </div>
-
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <style>
-        body { background-color: #1a1a1a; color: #00bbc2; font-family: 'Courier New', Courier, monospace; padding: 20px; }
-        .command-center { max-width: 800px; margin: auto; border: 1px solid #333; padding: 20px; border-radius: 8px; }
-        h2 { border-bottom: 1px solid #00bbc2; padding-bottom: 10px; }
-        .asset-list { margin-top: 20px; }
-        .network-section { margin-bottom: 30px; }
-    </style>
-</head>
-<body>
-
-<div class="command-center">
-    <h2>DOAFLOSS COMMAND CENTER</h2>
-    
-    <!-- ChangeNOW Widget -->
-    <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=false&amount=19.99&amountFiat=19.99&backgroundColor=2B2B35&darkMode=true&from=usdcbase&fromFiat=usd&horizontal=true&isFiat=true&lang=en-US&link_id=05ca257813d852&locales=false&logo=true&primaryColor=00bbc2&to=xlm&toFiat=xlm&toTheMoon=true' style="height: 205px; width: 100%; border: none"></iframe>
-    <script defer type='text/javascript' src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
-
-    <!-- Asset Registry from 1000005991.png -->
-    <div class="asset-list">
-        <div class="network-section">
-            <h3>[STELLAR NETWORK]</h3>
-            <p>XLM, BTCXD, eXCH, rwaXMR, rwaXRM, USDJBTC, USDJSOL, MOGLMN</p>
-        </div>
-        <div class="network-section">
-            <h3>[BASE NETWORK]</h3>
-            <p>GWEIMOG, MOGLETH, BXMz</p>
-        </div>
-        <div class="network-section">
-            <h3>[SOLANA NETWORK]</h3>
-            <p>GWEIMOG, MOGLETH, WRMz</p>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
-
+        
         <div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:0;padding:0;border:0;"><iframe class="widget_iframe" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=54&amp;posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe><div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;"><center><a href="https://www.reverbnation.com/band-promotion/promoteit?utm_campaign=a_features_promote_it&utm_medium=widget&utm_source=HTML5_Fan_Collector&utm_content=widgetfooter_Learn how to get your music noticed at ReverbNation.com" target="_blank" style="text-decoration:none;color:#444;">Learn how to get your music noticed at ReverbNation.com</a></center></div></div>
 
         <div class="widget-box burn-widget">
