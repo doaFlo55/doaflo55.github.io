@@ -163,6 +163,18 @@
 
     <p><em>Getting Started Note: Once you select your wallet, fund it with your chosen asset to begin swapping. Remember: your assets live on their respective networks.</em></p>
 </div>
+<script>function showWallets(type) {
+    // Hide both lists initially
+    document.getElementById('desktop-wallets').style.display = 'none';
+    document.getElementById('mobile-wallets').style.display = 'none';
+    
+    // Show the selected list
+    if (type === 'desktop') {
+        document.getElementById('desktop-wallets').style.display = 'block';
+    } else if (type === 'mobile') {
+        document.getElementById('mobile-wallets').style.display = 'block';
+    }
+}
 
 
         <div class="widget-box" style="text-align: center;">
