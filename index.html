@@ -118,6 +118,53 @@
             </table>
         </div>
 
+        <div class="wallet-section">
+    <h3>Pick Your Poison: Payment Options 💀⚗️</h3>
+    
+    <div class="toggle-container">
+        <button onclick="showWallets('desktop')">💻 Desktop</button>
+        <button onclick="showWallets('mobile')">📱 Mobile</button>
+    </div>
+
+    <!-- Highly Recommended (Always visible) -->
+    <div class="recommended">
+        <h4>Highly Recommended</h4>
+        <ul>
+            <li><strong>Coinbase Wallet (Android)</strong> — Base Chain (EVM Compatible)</li>
+            <li><strong>LOBSTR</strong> — Stellar Network (Non-EVM)</li>
+        </ul>
+    </div>
+
+    <!-- Toggleable Content -->
+    <div id="desktop-wallets" class="wallet-list" style="display: none;">
+        <h4>Desktop Options</h4>
+        <ul>
+            <li><strong>MetaMask</strong> — Multi-Chain (EVM Compatible)</li>
+            <li><strong>Uniswap Wallet</strong> — Multi-Chain (EVM Compatible)</li>
+        </ul>
+    </div>
+
+    <div id="mobile-wallets" class="wallet-list" style="display: none;">
+        <h4>Mobile Options</h4>
+        <ul>
+            <li><strong>Coinbase Exchange</strong> — Base Chain (EVM Compatible)</li>
+            <li><strong>Trust Wallet</strong> — Multi-Chain (EVM Compatible)</li>
+            <li><strong>Phantom Wallet</strong> — Multi-Chain (Solana Native + EVM Compatible)</li>
+        </ul>
+    </div>
+
+    <!-- Specialty Section -->
+    <div class="specialty">
+        <h4>Specialty Wallet Options</h4>
+        <ul>
+            <li><strong>NOW Wallet</strong> — Multi-Chain (Universal, EVM Compatible). Create your own self-custodial Web3 identity.</li>
+        </ul>
+    </div>
+
+    <p><em>Getting Started Note: Once you select your wallet, fund it with your chosen asset to begin swapping. Remember: your assets live on their respective networks.</em></p>
+</div>
+
+
         <div class="widget-box" style="text-align: center;">
             <h3 style="color: #fff; margin-top: 0;">Exchange On-Ramp (XLM)</h3>
             <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=false&amount=19.99&amountFiat=19.99&backgroundColor=2B2B35&darkMode=true&from=usdcbase&fromFiat=usd&horizontal=true&isFiat=true&lang=en-US&link_id=05ca257813d852&locales=false&logo=true&primaryColor=00bbc2&to=xlm&toFiat=xlm&toTheMoon=true' style="height: 350px; width: 100%; border: none"></iframe>
