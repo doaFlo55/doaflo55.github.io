@@ -63,7 +63,7 @@ code = "MOGLMN"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "MOGLMN"
-desc = "This token is the cornerstone of achievement. seamless interoperability between independent direct and efficient cross-protocol functionality, this MOG/LUMEN ensures that your assets move fluidly through the network, supported by our holding standards and a commitment to the communities and digital exchanges."
+desc = "This token is the cornerstone of achievement. seamless interoperability between independent direct and efficient cross-protocol platforms, this MOG/LUMEN ensures that your assets move fluidly through the network, supported by our holding standards and a commitment to the communities of digital exchanges."
 is_asset_anchored = false
 status = "live"
 
