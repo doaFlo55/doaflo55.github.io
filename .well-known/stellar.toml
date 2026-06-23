@@ -36,7 +36,7 @@ code = "rwaXMR"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "RwaXMR"
-desc = "This token functions as an advanced real-world asset integration engine. It is specifically designed to bridge privacy-adjacent digital assets with open blockchain ledgers by leveraging recycled commodities like silver and copper for advanced financial utility while benefiting from our rigorous security standards and audited institutional infrastructure."
+desc = "This token functions as an advanced real-world integration asset. It is specifically designed to bridge privacy-adjacent digital assets with open blockchain ledgers by leveraging recycled commodities like silver and copper for advanced financial utility while benefiting from our rigorous security standards and audited institutional infrastructure."
 is_asset_anchored = false
 status = "live"
 
@@ -72,6 +72,6 @@ code = "OPLZ"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "OPLZ"
-desc = "Stellar Optimisim a wrapped asset, this token ensures perfect synchronization between diverse chain networks & pools. It provides the necessary infrastructure to maintain cross-chain stability and compatibility, offering users a reliable gateway to optimize their asset performance through a well-governed and highly secure digital framework for decentralized commerce."
+desc = "Stellar Optimisim. A wrapped and expanded asset, this token ensures perfect synchronization between diverse chain networks & pools. It provides the necessary infrastructure to maintain cross-chain stability and compatibility, offering users a reliable gateway to optimize their asset performance through a well-governed and highly secure digital framework for decentralized commerce."
 is_asset_anchored = false
 status = "live"
