@@ -23,15 +23,6 @@ is_asset_anchored = false
 status = "live"
 
 [[CURRENCIES]]
-code = "USDJSOL"
-issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
-display_decimals = 7
-name = "USDJSOL"
-desc = "Our primary yield and staking engine, this asset is optimized to distribute liquidity efficiently and annually. It allows participants to engage in high-speed, secure wrapped/staking and pooling/swapping activities, fostering growth and long-term participation while maintaining the integrity and robust settlement speeds that the Stellar network is globally renowned for providing. AYP 7%."
-is_asset_anchored = false
-status = "live"
-
-[[CURRENCIES]]
 code = "rwaXMR"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
