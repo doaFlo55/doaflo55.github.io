@@ -28,7 +28,8 @@ code = "rwaXMR"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "RwaXMR"
-desc = "This token functions as an advanced real-world integration asset. It is specifically designed to bridge privacy-adjacent digital assets with open blockchain ledgers by leveraging recycled commodities like silver and copper for advanced financial utility while benefiting from our rigorous security standards and audited institutional infrastructure."
+image_url = "Screenshot_20260625-182923.png"
+desc = "This coin functions as an advanced real-world integration asset. It is specifically designed to bridge privacy-adjacent digital assets with open blockchain ledgers by leveraging recycled commodities like silver and copper for advanced financial utility while benefiting from our rigorous security standards and audited institutional infrastructure."
 is_asset_anchored = false
 status = "live"
 
