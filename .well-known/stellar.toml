@@ -38,6 +38,7 @@ code = "eXCH"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "eXCH"
+image_url = "Screenshot_20260625-183539.png"
 desc = "Designed as the central utility for our farming ecosystem, this token facilitates the fair and transparent distribution of rewards to all active network participants. It powers our operational incentive structures, ensuring that contributors are properly recognized within a stable, high-performance environment built for scale and sustainability at a very low cost."
 is_asset_anchored = false
 status = "live"
