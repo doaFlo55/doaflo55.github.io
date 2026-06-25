@@ -18,6 +18,7 @@ code = "USDJBTC"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "USDJBTC"
+image_url = "Screenshot_20260528-182752.png"
 desc = "This token specifically serves as a foundational digital anchor for the USG providing stable and secure Bitcoin Backed synthetic liquidity from the amount held in the SBR (Strategic Bitcoin Reserve)  It is engineered to facilitate reliable and identifiable real world value for institutional-grade participants, ensuring that your digital holdings remain integrated within a transparent, high-performance financial framework designed for modern asset management."
 is_asset_anchored = false
 status = "live"
