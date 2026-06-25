@@ -46,6 +46,7 @@ code = "BTCXD"
 issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
 display_decimals = 7
 name = "BTCXD"
+image_url = "Screenshot_20260625-180859.png"
 desc = "This asset represents a unique, community-centric digital store of value. THE LAUGHING BITCOIN is leveraging the high-speed settlement capabilities of the Stellar network, it transforms traditional meme assets into a functional pooling mechanism that provides efficient, low-latency transaction processing for a globally distributed and highly active user base."
 is_asset_anchored = false
 status = "live"
