@@ -2,81 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DoA FLOSS | Stealth Infrastructure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOA FLOSS | Unified Protocol</title>
     <style>
-        body { margin: 0; background: #0a0a0a; color: #ccc; font-family: sans-serif; }
-        
-        /* The Header Dashboard Bar */
-        .dash-nav { 
-            background: #000; border-bottom: 1px solid #333; 
-            padding: 10px 20px; display: flex; gap: 20px; font-size: 0.9em;
+        body { 
+            margin: 0; padding: 20px; 
+            background: #050505; 
+            background-image: radial-gradient(#111 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #aaa; font-family: 'Segoe UI', sans-serif; line-height: 1.6;
         }
-        .dash-nav a { color: #888; text-decoration: none; }
-        .dash-nav a:hover { color: #fff; }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1, h2, h3 { color: #fff; margin-top: 30px; }
+        a { color: #3498db; text-decoration: none; border-bottom: 1px solid #3498db; }
         
-        .main-container { max-width: 900px; margin: 20px auto; padding: 0 20px; }
-        
-        /* Consistent with your ReverbNation "look" */
-        .header-section { margin-bottom: 30px; }
-        .song-row { 
-            background: #111; padding: 15px; margin-bottom: 5px; 
-            display: flex; justify-content: space-between; border: 1px solid #222;
-        }
-        
-        /* Command Hub */
+        /* Unified Command Hub */
         .command-hub { 
-            background: #161616; padding: 15px; border: 1px solid #333; 
-            display: flex; gap: 15px; margin-bottom: 20px;
+            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+            background: #111; padding: 20px; border-top: 2px solid #333; border-bottom: 2px solid #333;
+            margin-bottom: 30px;
         }
+        button { 
+            background: #000; color: #fff; border: 1px solid #444; 
+            padding: 10px 15px; cursor: pointer; font-weight: bold; 
+        }
+        button:hover { background: #222; }
+        
+        /* Clean Sections */
+        .section { margin-bottom: 40px; }
+        pre { background: #000; padding: 15px; border: 1px solid #222; color: #888; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { padding: 10px; border-bottom: 1px solid #222; text-align: left; }
+        
+        #desktop-wallets, #mobile-wallets { display: none; margin-top: 10px; }
     </style>
 </head>
 <body>
-
-    <div class="dash-nav">
-        <strong>DoA FLOSS</strong>
-        <a href="#">Dashboard</a>
-        <a href="#">Content</a>
-        <a href="#">Tools</a>
-        <a href="#">Promote</a>
-        <a href="#">Opportunities</a>
-        <a href="#">Distribution</a>
-    </div>
-
-    <div class="main-container">
-        <div class="header-section">
-            <h1>DoA FLOSS</h1>
+    <div class="container">
+        <div style="text-align: center;">
+            <h1>DOA FLOSS</h1>
             <p>Architecture of Unified Values & Media Synchronization</p>
         </div>
 
         <div class="command-hub">
-            <button onclick="speakText()">🔊 Declaration</button>
-            <button onclick="toggleSection('payments')">💳 Payment Hub</button>
-            <button onclick="toggleSection('pools')">💧 Liquidity Pools</button>
-            <button onclick="toggleSection('archive')">📦 Archive Access</button>
+            <button onclick="speakText()">🔊 Listen to Declaration</button>
+            <button onclick="toggleView('desktop-wallets')">💻 Desktop Wallets</button>
+            <button onclick="toggleView('mobile-wallets')">📱 Mobile Wallets</button>
         </div>
 
-        <div id="payments" style="display:none;">
-            <h3>Payment & Exchange</h3>
-            </div>
-
-        <div id="pools" style="display:none;">
-            <h3>Active Liquidity Nodes</h3>
-            <div class="song-row"><span>eXCH / SLVR</span> <a href="#">Trade</a></div>
-            <div class="song-row"><span>XLM / eXCH</span> <a href="#">Trade</a></div>
+        <div class="section" id="declarationText">
+            <h2>Digital Declaration of Securities (DDOS 2026)</h2>
+            <p>Doa Floss is the lead creator, building the private-sector equivalent of a national reserve infrastructure. Our holding corporation is modeled on the same core principles driving the U.S. Strategic Bitcoin Reserve: long-term stewardship, radical transparency, and the total separation of custody from the operator.</p>
         </div>
 
-        <div id="archive" style="display:none;">
-            <h3>Official Documents</h3>
-            <pre>[PROTOCOL DEFINITIONS] ... </pre>
+        <div class="section">
+            <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small"></iframe>
         </div>
+
+        <div id="desktop-wallets"><h3>Desktop Options</h3><p>MetaMask, Uniswap Wallet</p></div>
+        <div id="mobile-wallets"><h3>Mobile Options</h3><p>Coinbase, Trust Wallet, Phantom</p></div>
+
+        <div class="section">
+            <h3>Active Liquidity Pools</h3>
+            <table>
+                <tr><td>eXCH / SLVR</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LCQOMANBVMYXL3QXZGE5TMFU3BLICQQP42GXP4YFYCQI5REH2CF4KZO4">View Pool</a></td></tr>
+                <tr><td>XLM / eXCH</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU">View Pool</a></td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>On-Ramp</h3>
+            <iframe src='https://changenow.io/embeds/exchange-widget/v2/widget.html?amount=21.99&backgroundColor=000000&darkMode=true&from=usdcbase&to=xlm&primaryColor=00ffdb' style="height: 356px; width: 100%; border: none"></iframe>
+        </div>
+
+        <div class="section">
+            <h3>Protocol Architecture</h3>
+            <pre><code>[STELLAR] XLM, BTCXD, eXCH, USDJBTC, MOGLMN
+[BASE] GWEIMOG, MOGLETH, BXMz
+[SOLANA] WRMz</code></pre>
+        </div>
+
+        <footer style="text-align: center; font-size: 0.8em; margin-top: 50px;">
+            &copy; 2026 DOA FLOSS. All Rights Reserved.
+        </footer>
     </div>
 
     <script>
-        function toggleSection(id) {
+        function speakText() {
+            window.speechSynthesis.cancel();
+            const text = document.getElementById("declarationText").innerText;
+            window.speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+        }
+        function toggleView(id) {
             const el = document.getElementById(id);
             el.style.display = (el.style.display === 'block') ? 'none' : 'block';
         }
-        function speakText() { /* logic */ }
     </script>
 </body>
 </html>
