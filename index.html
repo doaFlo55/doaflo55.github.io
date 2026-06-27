@@ -5,98 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do∆💀🪽Floss | Dashboard</title>
     <style>
-        body { margin: 0; background: #0a0a0a; color: #ccc; font-family: sans-serif; line-height: 1.6; }
+        body { margin: 0; background: #0a0a0a; color: #ccc; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; }
         
-        /* Dashboard Nav Header */
-        .dash-nav { background: #000; border-bottom: 1px solid #222; padding: 15px; display: flex; gap: 10px; justify-content: center; position: sticky; top: 0; z-index: 1000; flex-wrap: wrap; }
-        button { background: #1a1a1a; color: #fff; border: 1px solid #444; padding: 10px 15px; cursor: pointer; font-size: 12px; font-weight: bold; }
+        /* Mirroring ReverbNation Dashboard Header */
+        .dash-nav { background: #000; border-bottom: 1px solid #222; padding: 12px 20px; display: flex; gap: 25px; font-size: 13px; align-items: center; justify-content: center; position: sticky; top: 0; z-index: 1000; }
+        .dash-nav a { color: #888; text-decoration: none; cursor: pointer; text-transform: uppercase; font-weight: bold; }
+        .dash-nav a:hover { color: #fff; }
+        
+        .container { max-width: 900px; margin: 20px auto; padding: 0 20px; }
+        h1, h2, h3 { color: #fff; }
+        
+        /* Replicating the "Tool" Area */
+        .tool-section { padding: 20px 0; border-bottom: 1px solid #222; }
+        button { background: #1a1a1a; color: #fff; border: 1px solid #444; padding: 8px 16px; cursor: pointer; border-radius: 2px; font-size: 12px; }
         button:hover { background: #333; }
         
-        .container { max-width: 900px; margin: 20px auto; padding: 20px; }
-        .hidden-section { display: none; margin-bottom: 30px; padding: 20px; border: 1px solid #222; background: #050505; }
-        
-        h1, h2, h3 { color: #fff; }
+        /* Links & Tables */
         a { color: #3498db; text-decoration: none; }
-        table { width: 100%; border-collapse: collapse; }
-        td, th { padding: 10px; border: 1px solid #333; }
-        pre { background: #000; padding: 15px; overflow-x: auto; color: #888; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        td, th { padding: 10px; border-bottom: 1px solid #222; text-align: left; }
+        pre { background: #000; padding: 15px; border: 1px solid #333; color: #888; overflow-x: auto; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
-    <!-- Top Command Hub -->
     <div class="dash-nav">
-        <button onclick="toggle('declaration')">DECLARATION</button>
-        <button onclick="toggle('music')">MUSIC</button>
-        <button onclick="toggle('assets')">ASSETS</button>
-        <button onclick="toggle('pools')">POOLS</button>
-        <button onclick="toggle('payments')">PAYMENTS</button>
-        <button onclick="toggle('burn')">BURN</button>
-        <button onclick="toggle('support')">SUPPORT</button>
+        <a href="#declaration">Declaration</a>
+        <a href="#assets">Assets</a>
+        <a href="#pools">Pools</a>
+        <a href="#payments">Payments</a>
+        <a href="#burn">Burn</a>
     </div>
 
     <div class="container">
-        
-        <div id="declaration" class="hidden-section">
-            <h2>DDOS 2026 Declaration</h2>
-            <p id="declText">Doa Floss is the lead creator, building the private-sector equivalent of a national reserve infrastructure... (Full declaration text remains here).</p>
-            <button onclick="speakText()">🔊 Listen</button>
+        <div id="declaration" class="tool-section">
+            <h1>DOA FLOSS</h1>
+            <div id="declarationText">
+                <p>Doa Floss is the lead creator, building a private-sector equivalent of a national reserve infrastructure. By collaborating with my Google AI Assistant Gemini, we’re stress-testing our custom infrastructure from the ground up, making sure our self-custody exchange logic is flawless.</p>
+            </div>
+            <button onclick="speakText()">🔊 Listen to Declaration</button>
+            <div style="margin-top:20px;">
+                <iframe width="100%" height="265" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1" frameborder="0"></iframe>
+            </div>
         </div>
 
-        <div id="music" class="hidden-section">
-            <iframe width="100%" height="265" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1" frameborder="0"></iframe>
-        </div>
-
-        <div id="assets" class="hidden-section">
-            <h3>Live Asset Tracker</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px;">
-                <a href="https://stellarchain.io/assets/XLM-native">XLM</a>
-                <a href="https://stellar.expert/explorer/public/asset/BTCXD-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU">BTCXD</a>
+        <div id="assets" class="tool-section">
+            <h3>Live Asset Tracker 📉</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://stellarchain.io/assets/XLM-native">XLM</a> | 
+                <a href="https://stellar.expert/explorer/public/asset/BTCXD-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU">BTCXD</a> |
                 <a href="https://stellar.expert/explorer/public/asset/eXCH-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU">eXCH</a>
             </div>
         </div>
 
-        <div id="pools" class="hidden-section">
+        <div id="pools" class="tool-section">
             <h3>Active Liquidity Pools</h3>
             <table>
-                <tr><td>eXCH / SLVR</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LCQOMANBVMYXL3QXZGE5TMFU3BLICQQP42GXP4YFYCQI5REH2CF4KZO4">View</a></td></tr>
-                <tr><td>XLM / eXCH</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU">View</a></td></tr>
+                <tr><td>eXCH / SLVR</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LCQOMANBVMYXL3QXZGE5TMFU3BLICQQP42GXP4YFYCQI5REH2CF4KZO4">View Pool</a></td></tr>
+                <tr><td>XLM / eXCH</td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU">View Pool</a></td></tr>
             </table>
         </div>
 
-        <div id="payments" class="hidden-section">
-            <h3>Payment & On-Ramp</h3>
-            <button onclick="showWallets('desktop')">💻 Desktop</button>
-            <button onclick="showWallets('mobile')">📱 Mobile</button>
-            <div id="desktop-wallets" style="display:none;">MetaMask, Uniswap</div>
-            <div id="mobile-wallets" style="display:none;">Coinbase, Trust, Phantom</div>
-            <iframe src='https://changenow.io/embeds/exchange-widget/v2/widget.html?amount=21.99&backgroundColor=000000&darkMode=true&from=usdcbase&to=xlm&primaryColor=00ffdb' style="height: 356px; width: 100%; border: none; margin-top:10px;"></iframe>
+        <div id="payments" class="tool-section">
+            <h3>Payment Options & On-Ramp</h3>
+            <iframe src='https://changenow.io/embeds/exchange-widget/v2/widget.html?amount=21.99&backgroundColor=000000&darkMode=true&from=usdcbase&to=xlm&primaryColor=00ffdb' style="height: 356px; width: 100%; border: none"></iframe>
         </div>
 
-        <div id="burn" class="hidden-section">
+        <div id="burn" class="tool-section">
             <h3>Burn Protocol</h3>
-            <code>0xe057fdcec8a64e50f56e38168b344449a755a1e8</code>
+            <code style="background:#000; padding:10px; display:block;">0xe057fdcec8a64e50f56e38168b344449a755a1e8</code>
         </div>
-
-        <div id="support" class="hidden-section">
-            <h3>Support Hub</h3>
-            <pre>[PROTOCOL DEFINITIONS] ...</pre>
-            <img src="Screenshot_20260621-213541.png" width="100">
-        </div>
-
     </div>
 
     <script>
-        function toggle(id) {
-            const el = document.getElementById(id);
-            el.style.display = (el.style.display === 'block') ? 'none' : 'block';
-        }
-        function showWallets(type) {
-            document.getElementById('desktop-wallets').style.display = (type === 'desktop') ? 'block' : 'none';
-            document.getElementById('mobile-wallets').style.display = (type === 'mobile') ? 'block' : 'none';
-        }
         function speakText() {
-            window.speechSynthesis.speak(new SpeechSynthesisUtterance(document.getElementById("declText").innerText));
+            window.speechSynthesis.cancel();
+            window.speechSynthesis.speak(new SpeechSynthesisUtterance(document.getElementById("declarationText").innerText));
         }
     </script>
 </body>
