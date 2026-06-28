@@ -210,6 +210,25 @@
     </p>
 </div>
 
+        <div class="pronunciation-guide" style="color: #fff; margin-top: 20px;">
+    <h3 style="color: #fff;">Asset Pronunciation/Translation</h3>
+    <ul style="list-style: none; padding: 0;">
+        <li>eXCH: (E-XCH) <button onclick="playAudio('E X C H')">Translate to Audio 🔊</button></li>
+        <li>MOGLMN: (mog-luh-min) <button onclick="playAudio('mog luh min')">Translate to Audio 🔊</button></li>
+        <li>BTCXD: (the laughing Bitcoin) <button onclick="playAudio('the laughing Bitcoin')">Translate to Audio 🔊</button></li>
+        <li>OPLZ: (opals) <button onclick="playAudio('opals')">Translate to Audio 🔊</button></li>
+    </ul>
+</div>
+
+<script>
+function playAudio(text) {
+    // This uses the browser's voice engine, which is the most reliable way 
+    // to ensure it says exactly what you want for these unique assets.
+    const msg = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(msg);
+}
+</script>
+
 
         <div class="wallet-section">
             <h3>Pick Your Poison: Payment Options 💀⚗️</h3>
