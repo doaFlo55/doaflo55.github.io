@@ -202,42 +202,94 @@
 
     </table>
 </div>
-        <div class="widget-box">
-            <h3>Liquidity Transparency Index (July 2026)</h3>
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; margin-top: 10px; color: #ccc;">
-                    <thead>
-                        <tr style="background: rgba(255,255,255,0.1);">
-                            <th style="padding: 10px; border: 1px solid #333;">Asset Pair</th>
-                            <th style="padding: 10px; border: 1px solid #333;">Market Rate</th>
-                            <th style="padding: 10px; border: 1px solid #333;">Range (Low–High)</th>
-                            <th style="padding: 10px; border: 1px solid #333;">Logic (B)</th>
-                            <th style="padding: 10px; border: 1px solid #333;">% Range</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>**BTC/BTCXD**</td><td>$60,768.94</td><td>$59.6k–$61k</td><td>1.9</td><td>0.105–0.110%</td></tr>
-                        <tr><td>**ETH/MOGLMN**</td><td>$1,629.05</td><td>$1.6k–$1.64k</td><td>0.0003125/0.46125</td><td>0.065–0.069%</td></tr>
-                        <tr><td>**Silver/SLVR**</td><td>$1.89</td><td>$1.85–$1.95</td><td>10/1</td><td>9.8%–10.2%</td></tr>
-                        <tr><td>**PYUSD/OPLZ**</td><td>$0.9998</td><td>$0.999–$1.002</td><td>39/1–38.4/1</td><td>0.188–0.192</td></tr>
-                        <tr><td>**XLM/eXCH**</td><td>$0.1972</td><td>$0.193–$0.203</td><td>40,000/1</td><td>0.038–0.042%</td></tr>
-                        <tr><td>**Based MOG**</td><td>$0.000000105</td><td>$0.000000103–$0.000000107</td><td>10,000,000/1</td><td>0.48–0.52%</td></tr>
-                        <tr><td>**MOG Coin**</td><td>$0.000000105</td><td>$0.000000103–$0.000000107</td><td>1,000,000/1</td><td>0.051–0.054%</td></tr>
-                    </tbody>
-                </table>
-            </div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doa Floss Ledger V51</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+        .dashboard-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .divider {
+            border-top: 1px solid #444;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            color: #ccc;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #333;
+            text-align: left;
+        }
+        th {
+            background-color: #222;
+        }
+        .iframe-wrapper {
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #000;
+        }
+        h2 { color: #007bff; }
+    </style>
+</head>
+<body>
 
-            <h4 style="margin-top: 20px;">Transparency Verification Guidelines</h4>
-            <ul style="font-size: 0.9em; color: #aaa;">
-                <li><strong>Formula:</strong> (Market Rate × Conversion B) = Liquidity Result</li>
-                <li><strong>Dynamic Stability:</strong> PYUSD range (38.4–39) maintains the peg against OPLZ.</li>
-                <li><strong>Audit Integrity:</strong> 1.9 BTC APFC reserve is static and excluded from pool calculations.</li>
-                <li><strong>Validation:</strong> Mappings verified annually on July 4th.</li>
-            </ul>
-            <p style="font-size: 0.8em; color: #666; text-align: center;"> RESULT ⭐🔗🔗 Over 50k btc earned at over 50k per coin💱💸 3.6 to 5 billion in gas dust potentially recovered ⭐🤯⛽🔗🔗</p>
+    <div class="dashboard-card">
+        <h2>Liquidity Ledger - July 2026 V51</h2>
+        <div class="divider"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Regulated Tokens (Asset)</th>
+                    <th>Conversion Rate A</th>
+                    <th>Pool Pair Percent</th>
+                    <th>Conversion Rate B</th>
+                    <th>Made Tokens (Custom)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>BTC ($60,467.00)</td><td>1</td><td>0.00107958</td><td>1.9</td><td>BTCXD, eXCH</td></tr>
+                <tr><td>ETH ($1,627.54)</td><td>1</td><td>0.00067751</td><td>0.0003125 / 0.46125</td><td>MOGLMN</td></tr>
+                <tr><td>Silver Gram ($1.87)</td><td>1</td><td>10%</td><td>10/1</td><td>1.40625 SLVR, 375 eXCH</td></tr>
+                <tr><td>PYUSD ($0.9996)</td><td>1.94975</td><td>-</td><td>39/1, 38.4/1</td><td>OPLZ</td></tr>
+                <tr><td>XLM ($0.2012)</td><td>1</td><td>0.0004</td><td>40,000/1</td><td>eXCH</td></tr>
+                <tr><td>Based MOG ($0.000000105)</td><td>5 Trillion</td><td>0.5</td><td>10,000,000/1</td><td>MOGLMN, eXCH</td></tr>
+                <tr><td>MOG Coin ($0.000000105)</td><td>$0.000000105</td><td>0.0525</td><td>1,000,000/1</td><td>MOGLMN, eXCH</td></tr>
+                <tr><td>Silver USD (Troy Ounce)</td><td>1</td><td>None</td><td>-</td><td>1g digital = 1 oz real Troy</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>Live Ledger Feed</h2>
+        <div class="divider"></div>
+        <div class="iframe-wrapper">
+            <iframe onLoad="var c=this;window.addEventListener('message',function({data,source}){if(c&&source===c.contentWindow&&data.widget===c.src)c.style.height=data.height+'px'},false);" src="https://stellar.expert/widget/public/account/balances/GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM" style="border:none;overflow:hidden;max-width:100%; min-width:300px;max-height:100%;min-height:200px;width:100%"></iframe>
         </div>
+    </div>
 
+</body>
+</html>
 
+            
  <h2 style="color: #fff;">Asset Management & Verification</h2>
 <a href="https://lobstr.co/" target="_blank" class="btn-lobstr">Download LOBSTR Wallet</a>
 
