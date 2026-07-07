@@ -3,7 +3,6 @@ VERSION = "2.0.0"
 [DOCUMENTATION]
 ORG_NAME = "Floss Integrations and Securities LLC"
 ORG_URL = "https://doaflo55.github.io"
-ORG_LOGO = "https://doaflo55.github.io/1781608075958~2.png"
 ORG_DESCRIPTION = "A High-Value Correcting and Holding Exchange, Self Custody Anchored digital asset integration securities services for the Stellar ecosystem with Expansive Automatic Protocals for Conversions and the Decentralization Utility "
 ORG_PHYSICAL_ADDRESS = "SC, United States"
 ORG_OFFICIAL_EMAIL = "contact@doaflo55.github.io"
@@ -60,5 +59,14 @@ display_decimals = 7
 name = "OPLZ"
 image_url = "1782415065082.png"
 desc = "Stellar Optimism. A wrapped and expanded asset, this token ensures perfect synchronization between diverse chain networks & pools. It provides the necessary infrastructure to maintain cross-chain stability and compatibility, offering users a reliable gateway to optimize their asset performance through a well-governed and highly secure digital framework for decentralized commerce."
+is_asset_anchored = false
+status = "live"
+
+[[CURRENCIES]]
+code = "paypXL"
+issuer = "GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU"
+display_decimals = 7
+name = "paypXL"
+desc = "A Larger wrapped Style PYUSD stable token built for Stellars larger On-Chain USD transactions and extra stabilty to the already recognized PYUSD token. swappable for eXCH and Many others in the ecosystem."
 is_asset_anchored = false
 status = "live"
