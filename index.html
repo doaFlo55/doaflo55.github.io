@@ -6,43 +6,25 @@
         :root { --bg-color: #000; --card-bg: #121212; --border-color: #333; --text-color: #fff; }
         body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Courier New', monospace; margin: 0; padding: 20px; }
         
-        .dashboard-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 15px;
-            max-width: 1400px;
-            margin: auto;
-        }
-
+        .dashboard-container { display: grid; grid-template-columns: 2fr 1fr; gap: 15px; max-width: 1400px; margin: auto; }
         .card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; }
         .large-block { grid-row: span 3; }
         
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         td { padding: 8px; border: 1px solid #333; color: #ccc; }
-        strong { color: #fff; }
         
-        /* Command Center Layout */
         .right-column { display: flex; flex-direction: column; gap: 15px; }
         .button-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-        
-        .stellar-btn { 
-            background: #1a1a1a; 
-            border: 1px solid #444; 
-            color: #fff; 
-            padding: 10px; 
-            text-align: center; 
-            cursor: pointer; 
-            font-size: 11px; 
-            text-transform: uppercase;
-            transition: all 0.2s;
-        }
-        .stellar-btn:hover { background: #333; border-color: #777; }
-        
-        /* Defensive Node Style */
+        .stellar-btn { background: #1a1a1a; border: 1px solid #444; color: #fff; padding: 10px; text-align: center; cursor: pointer; font-size: 11px; text-transform: uppercase; }
+        .stellar-btn:hover { background: #333; }
         .ddos-btn { border-color: #800 !important; color: #f00 !important; }
-
-        button { background: #000; color: #fff; border: 1px solid var(--border-color); padding: 10px 20px; cursor: pointer; transition: all 0.2s; margin-top: 10px; width: 100%; }
+        
+        .modal { display: none; position: fixed; top: 10%; left: 25%; width: 50%; background: #000; border: 2px solid #fff; padding: 20px; z-index: 100; color: #fff; max-height: 80vh; overflow-y: auto; }
+        .close-btn { cursor: pointer; color: red; float: right; font-weight: bold; }
+        
+        button { background: #000; color: #fff; border: 1px solid var(--border-color); padding: 10px 20px; cursor: pointer; width: 100%; margin-top: 10px; }
         button:hover { background: #fff; color: #000; }
+        a { color: #888; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -51,48 +33,62 @@
     <div class="card large-block">
         <h2>STEALTH TRACK: AUDIT REGISTRY</h2>
         <table>
-            <tr><td><strong>eXCH / XLM</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU" style="color:#aaa;"><code>LBOIY6...M6VU</code></a></td></tr>
-            <tr><td><strong>BTC / PYUSD</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LAEVIPNRWKFJSGDQOKHECVQWXP6UMSLS2ZSBLMOCT3GLPKNPSCTQB53J" style="color:#aaa;"><code>LAEVIPNR...QB53J</code></a></td></tr>
-            <tr><td><strong>PYUSD / paypXL</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBT6AFAALVDQRJOLIG5PQGCDOVQ54NG6P2JAWNSEMUKJLZYD2KHUVZB7" style="color:#aaa;"><code>LBT6AFAA...UVZB7</code></a></td></tr>
-            <tr><td><strong>PYUSD / SLVR</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LAT3DWG7BDZG7Q6ZACVX6I2O7UPMYO57PHNTGGG56HDE65V57MG3LSDC" style="color:#aaa;"><code>LAT3DWG7...3LSDC</code></a></td></tr>
-            <tr><td><strong>PYUSD / eURC</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LCDC5YUYCZLEQ4WFY46FOHL6YJEORXB272XISDWXNRXUJFHVSJ53FPYO" style="color:#aaa;"><code>LCDC5YUY...FPYO</code></a></td></tr>
-            <tr><td><strong>PYUSD / RIO</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LDVCJSIGCLCAL4K62CLU5USFT3XZE5VCUVPPT7X5O2XGUWUPWWZR5B5L" style="color:#aaa;"><code>LDVCJSIG...ZR5B5L</code></a></td></tr>
-            <tr><td><strong>eXCH / BTCXD</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LDQVBBCU47K6CBESPPOGGV2WYTHNMUDX4LHPHTZOWE5HEHNNILCVXRVB" style="color:#aaa;"><code>LDQVBB...CVXRVB</code></a></td></tr>
-            <tr><td><strong>eXCH / paypXL</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LCYMPYJM7RT6EY4CX4PFRL2LDSI45EX26BYTGI4UH4MUROE4BIEQL7KU" style="color:#aaa;"><code>LCYMPYJM...EQL7KU</code></a></td></tr>
-            <tr><td><strong>eXCH / MOGLMN</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LAGGKA5CMT6Q6H7ECNOK33X5QZNXHQFD6KCGSVMBOD4XXWBJUXLNVAHP" style="color:#aaa;"><code>LAGGKA...VAHP</code></a></td></tr>
-            <tr><td><strong>OPLZ / MOGLMN</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBCKPRL4HIOYJ34Y5Y2B4N2ZIGP3T346B34GZ24S3H24JHK34ZNKJ75A" style="color:#aaa;"><code>LBCKPRL4...KJ75A</code></a></td></tr>
-            <tr><td><strong>yXLM / PYUSD</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBYLXLMPYUSDC65U43X7U6V4G35H7G25X4H7G25X4H7G25X4H7G25X4H" style="color:#aaa;"><code>LBYLXLM...25X4H</code></a></td></tr>
-            <tr><td><strong>GOLD / PYUSD</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LAGOLD25PYUSD46G3H7G25X4H7G25X4H7G25X4H7G25X4H7G25X4H7G25" style="color:#aaa;"><code>LAGOLD...25X4H</code></a></td></tr>
-            <tr><td><strong>USDC / paypXL</strong></td><td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBUSDC25PAYPXL46G3H7G25X4H7G25X4H7G25X4H7G25X4H7G25X4H7G25" style="color:#aaa;"><code>LBUSDC...25X4H</code></a></td></tr>
-        </table>
+            </table>
     </div>
 
     <div class="right-column">
         <div class="card">
             <h2>ASSET LAB</h2>
             <div class="button-grid">
+                <div class="stellar-btn ddos-btn" onclick="document.getElementById('ddos-modal').style.display='block'">DDoS</div>
                 <div class="stellar-btn">XLM</div><div class="stellar-btn">PYUSD</div>
                 <div class="stellar-btn">BTC</div><div class="stellar-btn">SLVR</div>
                 <div class="stellar-btn">yXLM</div><div class="stellar-btn">eXCH</div>
                 <div class="stellar-btn">MOGLMN</div><div class="stellar-btn">OPLZ</div>
-                <div class="stellar-btn">paypXL</div><div class="stellar-btn">BTCXD</div>
-                <div class="stellar-btn ddos-btn">DDoS</div>
             </div>
         </div>
-
+        
         <div class="card" style="padding: 0; overflow: hidden;">
             <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-            <tv-ticker-tape symbols="CRYPTOCAP:SOL,CRYPTOCAP:OP,CRYPTOCAP:BTC,CRYPTOCAP:MOG,CRYPTOCAP:XLM,CRYPTOCAP:USDC,CRYPTOCAP:CBETH,COINBASE:ETHUSD,COINBASE:BTCUSD,COINBASE:JITOSOLUSDC,COINBASE:MOGUSDC,COINBASE:XLMUSD,CRYPTOCAP:XMR,CRYPTOCAP:XCH" line-chart-type="Line" theme="dark" symbol-url="Doaflo55.github.io" style="width: 100%"></tv-ticker-tape>
+            <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="dark" style="width: 100%"></tv-ticker-tape>
         </div>
-
+        
         <div class="card">
             <h2>WIZARD</h2>
-            <button>Play Track</button>
-            <button>Verify Audit: 95%</button>
-            <button>Verify Audit: 96.85%</button>
+            <div style="margin-top: 20px;">
+                <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
+            </div>
+            <div style="margin-top: 15px; padding: 5px; border-top: 1px solid #333; font-size: 12px; display: flex; justify-content: center; gap: 15px;">
+                <a href="https://www.reverbnation.com/DoaFloss" target="_blank">ReverbNation</a>
+                <a href="https://www.bandlab.com/doa_floss" target="_blank">BandLab</a>
+                <a href="https://www.beatstars.com/floss" target="_blank">BeatStars</a>
+                <a href="https://x.com/X_officialDoa" target="_blank">Twitter</a>
+                <a href="https://youtube.com/@doafloss" target="_blank">Youtube</a>
+                <a href="https://www.instagram.com/doafloss" target="_blank">Instagram</a>
+            </div>
         </div>
     </div>
 </div>
+
+<div id="ddos-modal" class="modal">
+    <span class="close-btn" onclick="this.parentElement.style.display='none'">[CLOSE]</span>
+    <h2>Digital Declaration of Securities - DDoS 2026</h2>
+    <div style="text-align: center; margin-bottom: 10px;">
+        <button onclick="speakText()">🔊 Listen to Declaration</button>
+    </div>
+    <div id="declarationText" style="background: rgba(0,0,0,0.3); padding: 15px; border: 1px solid #333; color: #aaa; font-size: 0.95em;">
+        <p>Doa Floss is the lead creator, and a very talented musician bringing artistic conversion and decentralized systems together with real-world asset backing...</p>
+    </div>
+</div>
+
+<script>
+    function speakText() {
+        window.speechSynthesis.cancel();
+        const text = document.getElementById("declarationText").innerText;
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+    }
+</script>
 
 </body>
 </html>
