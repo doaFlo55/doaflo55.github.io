@@ -3,283 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do∆💀🪽Floss</title>
+    <title>DOA FLOSS | Command Center</title>
     <style>
-        /* Background Void Motion Effect */
-        body { 
-            margin: 0; 
-            padding: 0; 
-            background: #000000; 
-            background-image: radial-gradient(white, rgba(255,255,255,.2), transparent 40%),
-                              radial-gradient(white, rgba(255,255,255,.1), transparent 30%),
-                              radial-gradient(white, rgba(255,255,255,.05), transparent 20%);
-            background-size: 550px 550px, 350px 350px, 250px 250px;
-            background-position: 0 0, 40px 60px, 130px 270px;
-            animation: star-drift 60s linear infinite;
-            color: #ccc; 
-            font-family: sans-serif; 
-            line-height: 1.6; 
-        }
-
-        @keyframes star-drift {
-            from { background-position: 0 0, 40px 60px, 130px 270px; }
-            to { background-position: 1000px 1000px, 1040px 1060px, 1130px 1270px; }
-        }
-
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; background: rgba(0, 0, 0, 0.7); border-radius: 8px; }
-        .header-section { text-align: center; margin-bottom: 30px; }
-        .header-top { font-size: 1.2em; color: #666; margin-bottom: 5px; }
-        .header-main { font-size: 2.5em; color: #fff; margin: 0; }
-        .widget-box { background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 8px; border: 1px solid #333; margin-bottom: 20px; }
-        h1, h2, h3 { color: #fff; }
+        :root { --bg-color: #000; --card-bg: #121212; --border-color: #333; --text-color: #fff; }
+        body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Courier New', monospace; margin: 0; padding: 20px; }
         
-        a { color: #3498db; text-decoration: none; border-bottom: 1px solid #3498db; }
-        a:hover { color: #fff; border-bottom: 1px solid #fff; }
-        
-        .pool-link { color: #2ecc71 !important; border-bottom: 1px solid #2ecc71 !important; }
-        .pool-link:hover { color: #fff !important; border-bottom: 1px solid #fff !important; }
+        .dashboard-container { display: grid; grid-template-columns: 2fr 1fr; gap: 15px; max-width: 1400px; margin: auto; }
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; }
+        .large-block { grid-row: span 3; }
         
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { padding: 10px; border: 1px solid #333; text-align: left; color: #ccc; }
-        button { background: #111; color: #fff; border: 1px solid #444; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        button:hover { background: #222; }
-        pre { background: rgba(0, 0, 0, 0.4); padding: 15px; border-radius: 8px; border: 1px solid #333; color: #aaa; overflow-x: auto; font-size: 0.9em; }
+        td { padding: 8px; border: 1px solid #333; color: #ccc; }
         
-        .burn-widget { border: 1px solid #e74c3c !important; background: rgba(255, 255, 255, 0.05); }
-        .btn-lobstr { background: #00bbc2 !important; color: white !important; border: none !important; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; }
-        .btn-default { background: #222; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; }
+        .right-column { display: flex; flex-direction: column; gap: 15px; }
+        .button-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .stellar-btn { background: #1a1a1a; border: 1px solid #444; color: #fff; padding: 10px; text-align: center; cursor: pointer; font-size: 11px; text-transform: uppercase; transition: 0.2s; }
+        .stellar-btn:hover { background: #333; border-color: #777; }
+        .ddos-btn { border-color: #800 !important; color: #f00 !important; }
+        .burn-btn { border: 2px solid #ff4500 !important; color: #ff4500 !important; font-weight: bold; grid-column: span 2; margin-top: 10px; }
+        
+        .modal { display: none; position: fixed; top: 10%; left: 25%; width: 50%; background: #000; border: 2px solid #fff; padding: 20px; z-index: 100; color: #fff; max-height: 80vh; overflow-y: auto; }
+        .close-btn { cursor: pointer; color: red; float: right; font-weight: bold; }
+        
+        button { background: #000; color: #fff; border: 1px solid var(--border-color); padding: 10px 20px; cursor: pointer; width: 100%; margin-top: 10px; }
+        button:hover { background: #fff; color: #000; }
+        a { color: #888; text-decoration: none; }
+        footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #444; border-top: 1px solid #222; padding-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header-section">
-            <div class="header-top">FLOSS INTEGRATIONS & SECURITIES</div>
-            <h1 class="header-main">DOA FLOSS</h1>
-        </div>
 
-        <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-        <tv-ticker-tape symbols="CRYPTOCAP:SOL,CRYPTOCAP:OP,CRYPTOCAP:BTC,CRYPTOCAP:MOG,CRYPTOCAP:XLM,CRYPTOCAP:USDC,CRYPTOCAP:CBETH,COINBASE:ETHUSD,COINBASE:BTCUSD,COINBASE:JITOSOLUSDC,COINBASE:MOGUSDC,COINBASE:XLMUSD,CRYPTOCAP:XMR,CRYPTOCAP:XCH" line-chart-type="Line" theme="dark" symbol-url="Doaflo55.github.io" style="width: 100%"></tv-ticker-tape>
+<div class="dashboard-container">
+    <div class="card large-block">
+        <h2>STEALTH TRACK: AUDIT REGISTRY</h2>
+        <table>
+            <!-- Audit Data -->
+        </table>
+    </div>
 
-        <div class="widget-box">
-            <h2>The Architecture of Unified Values & Media Synchronization Implementation Statement of Creation/Digital Declaration of Securities -DDOS 2026- BY doa floss</h2>
-            
-            <div style="text-align: center; margin-bottom: 10px;">
-                <button onclick="speakText()">🔊 Listen to Declaration</button>
-            </div>
-            
-            <div id="declarationText" style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 5px; border: 1px solid #333; max-width: 600px; margin: 0 auto; max-height: 400px; overflow-y: auto; color: #aaa; font-size: 0.95em;">
-                <p>Doa Floss is the lead creator, and a very talented musician bringing artistic conversion and decentralized systems together with real-world asset backing. We’ve built a unique ecosystem connecting Floss Music & Soundz with our Innovative & Accounting Integrations plus Protocol Securities of StellarChain. We’re in a rigorous "testnet" phase right now—a controlled, live environment where we treat every transaction, data flow, and security protocol with the precision of a national reserve.</p>
-                <p>Doa Floss is building the private-sector equivalent of a national reserve infrastructure. Our holding corporation is modeled on the same core principles driving the U.S. Strategic Bitcoin Reserve: long-term stewardship, radical transparency, and the total separation of custody from the operator.</p>
-                <p>By collaborating with my Google AI Assistant Gemini, we’re stress-testing our custom infrastructure from the ground up, making sure our self-custody exchange logic is flawless before we scale to full capacity.</p>
-                <p>My invitation is clear: Don't be scared to match, swap, trade, exchange, or donate.</p>
-                <p>This phase is an opportunity for curious liquidity providers and partners to observe—and actively get in on—a system that values operational integrity above all else. We’re building a better way to operate within the digital economy, proving that when your vision and your math are in sync, you build something that doesn't just work—it lasts. Every path to this unified future runs through Stellar, Solana, Ethereum, and Bitcoin—where transparency and security are the foundation of everything I create.</p>
-            </div>
-            
-            <script>
-                function speakText() {
-                    window.speechSynthesis.cancel();
-                    const text = document.getElementById("declarationText").innerText;
-                    const utterance = new SpeechSynthesisUtterance(text);
-                    window.speechSynthesis.speak(utterance);
-                }
-            </script>
-
-            <div style="margin-top: 20px;">
-                <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
-            </div>
-            
-            <div style="margin-top: 15px; padding: 5px; border-top: 1px solid #333; font-size: 12px; display: flex; justify-content: center; gap: 15px;">
-                <a href="https://www.reverbnation.com/DoaFloss" target="_blank">ReverbNation</a>
-                <a href="https://www.bandlab.com/doa_floss" target="_blank">BandLab</a>
-                <a href="https://www.beatstars.com/floss" target="_blank">BeatStars</a>
-                <a href="https://x.com/X_officialDoa" target="_blank">Twitter</a>
-                <a href="https://youtube.com/@doafloss" target="_blank">Youtube</a>
-                <a href="https://www.instagram.com/doafloss" target="_blank">Instagram</a>
+    <div class="right-column">
+        <div class="card">
+            <h2>ASSET LAB</h2>
+            <div class="button-grid">
+                <div class="stellar-btn" onclick="document.getElementById('ann-modal').style.display='block'">ANNOUNCEMENTS</div>
+                <div class="stellar-btn" onclick="document.getElementById('signup-modal').style.display='block'">SIGN UP</div>
+                <div class="stellar-btn" onclick="document.getElementById('qr-modal').style.display='block'">QR</div>
+                <div class="stellar-btn ddos-btn" onclick="document.getElementById('ddos-modal').style.display='block'">DDoS</div>
+                <div class="stellar-btn">XLM</div><div class="stellar-btn">PYUSD</div>
+                <div class="stellar-btn">BTC</div><div class="stellar-btn">SLVR</div>
+                <div class="stellar-btn">yXLM</div><div class="stellar-btn">eXCH</div>
+                <div class="stellar-btn">MOGLMN</div><div class="stellar-btn">OPLZ</div>
+                <div class="stellar-btn burn-btn">BURN🔥</div>
             </div>
         </div>
-
-        <h2 style="text-align: center; color: #fff;">Announcements</h2>
-
-<div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:10px 0;padding:0;border:0;">
-    <iframe src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=53&amp;posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe>
-    <div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;text-align:center;">
-        <a href="https://www.reverbnation.com/band-promotion/widgets" target="_blank" style="text-decoration:none;color:#444;">Announcements & Press</a>
+        
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+            <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="dark" style="width: 100%"></tv-ticker-tape>
+        </div>
+        
+        <div class="card">
+            <h2>WIZARD</h2>
+            <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
+        </div>
     </div>
 </div>
 
-<div class="widget_iframe" style="display:inline-block;width:100%;height:185px;margin:10px 0;padding:0;border:0;">
-    <iframe src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=54&amp;posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="100%" frameborder="0" scrolling="no" style="width:0px;min-width:100%;max-width:100%;"></iframe>
-    <div class="footer_branding" style="margin-top:-5px;font-size:10px;font-family:Arial;text-align:center;">
-        <a href="https://www.reverbnation.com/band-promotion/epk-electronic-press-kits" target="_blank" style="text-decoration:none;color:#444;">Join the Mailing List</a>
+<!-- MODALS -->
+<div id="qr-modal" class="modal">
+    <span class="close-btn" onclick="this.parentElement.style.display='none'">[CLOSE]</span>
+    <h2 style="text-align: center;">Payment QR Nodes</h2>
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; padding: 20px;">
+        <div style="width: 120px;"><p style="font-size: 0.7em; text-align: center;">PayPal</p><img src="Screenshot_20260621-213541.png" style="width: 100%;"></div>
+        <div style="width: 120px;"><p style="font-size: 0.7em; text-align: center;">Cash App</p><img src="Screenshot_20260621-221843.png" style="width: 100%;"></div>
     </div>
 </div>
 
-        <div class="widget-box">
-    <h3>Live Asset Tracker</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 8px; margin-bottom: 20px;">
-        <a href="https://stellar.expert/explorer/public/asset/BTCXD-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU" style="text-decoration: none; color: #4fa8ff; font-weight: bold; font-size: 0.9em;">
-            <div style="background: #1a1a1a; padding: 10px; border: 1px solid #333; text-align: center; border-radius: 4px;">BTCXD</div>
-        </a>
-        <a href="https://stellar.expert/explorer/public/asset/eXCH-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU" style="text-decoration: none; color: #4fa8ff; font-weight: bold; font-size: 0.9em;">
-            <div style="background: #1a1a1a; padding: 10px; border: 1px solid #333; text-align: center; border-radius: 4px;">eXCH</div>
-        </a>
-        <a href="https://stellar.expert/explorer/public/asset/paypXL-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU" style="text-decoration: none; color: #4fa8ff; font-weight: bold; font-size: 0.9em;">
-            <div style="background: #1a1a1a; padding: 10px; border: 1px solid #333; text-align: center; border-radius: 4px;">paypXL</div>
-        </a>
-        <a href="https://stellar.expert/explorer/public/asset/MOGLMN-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU" style="text-decoration: none; color: #4fa8ff; font-weight: bold; font-size: 0.9em;">
-            <div style="background: #1a1a1a; padding: 10px; border: 1px solid #333; text-align: center; border-radius: 4px;">MOGLMN</div>
-        </a>
-        <a href="https://stellar.expert/explorer/public/asset/OPLZ-GBXI6T3CIKBTGRJZQHSNSP2GLIQ7EOGOPXPJEQULVI4MOCMVSGGNP4FU" style="text-decoration: none; color: #4fa8ff; font-weight: bold; font-size: 0.9em;">
-            <div style="background: #1a1a1a; padding: 10px; border: 1px solid #333; text-align: center; border-radius: 4px;">OPLZ</div>
-        </a>
-    </div>
-
-    <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
-
-    <table style="width: 100%; border-collapse: collapse; color: #ccc;">
-
-        <tr><td style="padding: 8px; border: 1px solid #333;"><strong>eXCH / XLM</strong></td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU"><code>LBOIY6...M6VU</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">BTC / PYUSD</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LAEVIPNRWKFJSGDQOKHECVQWXP6UMSLS2ZSBLMOCT3GLPKNPSCTQB53J"><code>LAEVIPNR...QB53J</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">PYUSD / paypXL</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LBT6AFAALVDQRJOLIG5PQGCDOVQ54NG6P2JAWNSEMUKJLZYD2KHUVZB7"><code>LBT6AFAA...UVZB7</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">PYUSD / SLVR</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LAT3DWG7BDZG7Q6ZACVX6I2O7UPMYO57PHNTGGG56HDE65V57MG3LSDC"><code>LAT3DWG7...3LSDC</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">PYUSD / eURC</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LCDC5YUYCZLEQ4WFY46FOHL6YJEORXB272XISDWXNRXUJFHVSJ53FPYO"><code>LCDC5YUY...FPYO</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">PYUSD / RIO</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LDVCJSIGCLCAL4K62CLU5USFT3XZE5VCUVPPT7X5O2XGUWUPWWZR5B5L"><code>LDVCJSIG...ZR5B5L</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">eXCH / BTCXD</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LDQVBBCU47K6CBESPPOGGV2WYTHNMUDX4LHPHTZOWE5HEHNNILCVXRVB"><code>LDQVBB...CVXRVB</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">eXCH / paypXL</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LCYMPYJM7RT6EY4CX4PFRL2LDSI45EX26BYTGI4UH4MUROE4BIEQL7KU"><code>LCYMPYJM...EQL7KU</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">eXCH / MOGLMN</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LAGGKA5CMT6Q6H7ECNOK33X5QZNXHQFD6KCGSVMBOD4XXWBJUXLNVAHP"><code>LAGGKA...VAHP</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">OPLZ / MOGLMN</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LBCKPRL4HIOYJ34Y5Y2B4N2ZIGP3T346B34GZ24S3H24JHK34ZNKJ75A"><code>LBCKPRL4...KJ75A</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">yXLM / PYUSD</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LBYLXLMPYUSDC65U43X7U6V4G35H7G25X4H7G25X4H7G25X4H7G25X4H"><code>LBYLXLM...25X4H</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">GOLD / PYUSD</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LAGOLD25PYUSD46G3H7G25X4H7G25X4H7G25X4H7G25X4H7G25X4H7G25"><code>LAGOLD...25X4H</code></a></td></tr>
-        <tr><td style="padding: 8px; border: 1px solid #333;">USDC / paypXL</td><td style="padding: 8px; border: 1px solid #333;"><a href="https://stellar.expert/explorer/public/liquidity-pool/LBUSDC25PAYPXL46G3H7G25X4H7G25X4H7G25X4H7G25X4H7G25X4H7G25"><code>LBUSDC...25X4H</code></a></td></tr>
-      
-    </table>
+<div id="ann-modal" class="modal">
+    <span class="close-btn" onclick="this.parentElement.style.display='none'">[CLOSE]</span>
+    <h2>Announcements</h2>
+    <iframe src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=53&posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="300" frameborder="0"></iframe>
 </div>
 
-        
- <h2 style="color: #fff;">Asset Management & Verification</h2>
-<a href="https://lobstr.co/" target="_blank" class="btn-lobstr">Download LOBSTR Wallet</a>
-
-<!-- Asset Addition Section -->
-<div class="asset-add-container" style="margin-top: 20px;">
-    <p style="color: yellow; margin-top: 10px;">
-        <strong>Note:</strong> You must swap your XLM for eXCH first. Then the other tokens are swappable for eXCH, our exchange asset.
-    </p>
+<div id="signup-modal" class="modal">
+    <span class="close-btn" onclick="this.parentElement.style.display='none'">[CLOSE]</span>
+    <h2>Join Mailing List</h2>
+    <iframe src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=54&posted_by=artist_8579729&pwc[design]=customized&pwc[background_color]=%23000000&pwc[size]=fit" width="100%" height="300" frameborder="0"></iframe>
 </div>
-        <div class="wallet-section">
-            <h3>Pick Your Poison: Payment Options 💀⚗️</h3>
-            
-            <div class="toggle-container">
-                <button onclick="showWallets('desktop')">💻 Desktop</button>
-                <button onclick="showWallets('mobile')">📱 Mobile</button>
-            </div>
 
-            <div class="recommended">
-                <h4>Highly Recommended</h4>
-                <ul>
-                    <li><strong>Coinbase🟦Wallet (Android)</strong> — Base Chain (EVM Compatible)</li>
-                    <li><strong>LOBSTR💧</strong> — Stellar Network (Non-EVM)</li>
-                </ul>
-            </div>
-
-            <div id="desktop-wallets" class="wallet-list" style="display: none;">
-                <h4>Desktop Options</h4>
-                <ul>
-                    <li><strong>MetaMask🦊</strong> — Multi-Chain (EVM Compatible)</li>
-                    <li><strong>Uniswap🦄Wallet</strong> — Multi-Chain (EVM Compatible)</li>
-                </ul>
-            </div>
-
-            <div id="mobile-wallets" class="wallet-list" style="display: none;">
-                <h4>Mobile Options</h4>
-                <ul>
-                    <li><strong>Coinbase🪙Exchange</strong> — Base Chain (EVM Compatible)</li>
-                    <li><strong>Trust🛡️Wallet</strong> — Multi-Chain (EVM Compatible)</li>
-                    <li><strong>Phantom👻Wallet</strong> — Multi-Chain (Solana Native + EVM Compatible)</li>
-                </ul>
-            </div>
-
-            <div class="specialty">
-                <h4>🔰Our Affiliated Specialty Wallet Options🔰</h4>
-                <ul>
-                    <li><strong>NOW Wallet</strong> — Multi-Chain (Universal, EVM Compatible). Create your own self-custodial Web3 identity.</li>
-                </ul>
-            </div>
-        
-        <div class="widget-box" style="text-align: center; min-height: 400px; position: relative;">
-            <h3 style="color: #fff; margin-top: 0;">♻️ChangeNow On-Ramp♻️</h3>
-            <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=false&amount=21.99&amountFiat&backgroundColor=2B2B35&darkMode=true&from=usdcbase&horizontal=true&isFiat=false&lang=en-US&link_id=05ca257813d852&locales=false&logo=true&primaryColor=00ffdb&to=xlm&toTheMoon=false' style="height: 356px; width: 100%; border: none"></iframe>
-            <script defer type='text/javascript' src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
-        </div>
-
-        <div class="widget-box" style="text-align: center;">
-            <h3>Official Business Support & Settlement Hub</h3>
-            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <div style="width: 120px;">
-                    <p style="font-size: 0.7em;">PayPal</p>
-                    <img src="Screenshot_20260621-213541.png" style="width: 100%;">
-                </div>
-                <div style="width: 120px;">
-                    <p style="font-size: 0.7em;">Cash App</p>
-                    <img src="Screenshot_20260621-221843.png" style="width: 100%;">
-                </div>
-                <div style="width: 120px;">
-                    <p style="font-size: 0.7em;">Direct Now QR</p>
-                    <img src="Screenshot_20260621-213609.png" style="width: 100%;">
-                </div>
-            </div>
-        </div>
-
-        <!-- Section 2: Unified Protocol Architecture -->
-    <h3>Unified Protocol Architecture & Creative Index</h3>
-    <pre style="white-space: pre-wrap; font-size: 0.85em; color: #ccc;">
-        
-[STELLAR NETWORK]
-        
-- XLM: Universal Utility / Conversion Hub / Stroop Stable / Onboarding
-- BTCXD: The Laughing Bitcoin (Humor/Anchor) or is it? Whats Funny 😆
-- eXCH: Proof of Work / Farming / Pooling Designated Node
-- USDJBTC: Face Value Foundation Mapping / USG Strategic BITCOIN Reserve (liquid XLM)
-- MOGLMN: MOG Coin/Lumen direct conversion through eXCH via network swap
-- OPLZ: Stellars Optimism Ledger Zion, utiltized the Op Stack through values minted & swapped on chain
-        
-[BASE NETWORK]
-        
-- GWEIMOG: Wrapped Basechain Ethereum/L2 OP/ GWEI / GAS / Rollup (annual/Quarterly)
-- MOGLETH: MOG Ethereum Bridge (3.3% AYP) unwrapped eth/op/Mog used to create BXMz (MOG UTILITY ENHANCED)
-- BXMz: Wrapped Staked MOGLETH/Eth/Op rollup. Mainnet State Dedicated(annual earn)
-
-[SOLANA NETWORK]
-        
-- GWEIMOG: Wrapped Basechain Ethereum/L2 OP/ GWEI / GAS / Rollup (annual/Quarterly)
-- MOGLETH: MOG Ethereum Bridge (3.3% AYP) unwrapped eth/op/Mog used to create BXMz (MOG UTILITY ENHANCED)
-- WRMz: Solana Wrapped Staked USDJSOL (7% AYP)
-    </pre>
-
-        
-            
-         <div class="widget-box burn-widget">
-            <h3 style="color: #fff;">Burn Protocol</h3>
-            <p style="color: #ccc;">Need to burn Bitcoin? Trust the process just send it to my burn address below.</p>
-            <code style="display: block; margin: 10px 0; padding: 10px; background: #000; color: #3498db; border: 1px solid #333; word-break: break-all;">0xe057fdcec8a64e50f56e38168b344449a755a1e8</code>
-            <a href="https://opensea.io/0xe057fdcec8a64e50f56e38168b344449a755a1e8" target="_blank">View Burn Activity on OpenSea</a>
-        
-        <!-- Mailing List Anchor -->
-        <div id="mailing-list-anchor" style="text-align: center; color: #666; font-size: 0.8em; margin-top: 30px; padding-bottom: 20px;">
-            &copy; 2026 DOA FLOSS. All Rights Reserved. <br>
-            Copyright Protected | Hosted by GitHub
-        </div>
+<div id="ddos-modal" class="modal">
+    <span class="close-btn" onclick="this.parentElement.style.display='none'">[CLOSE]</span>
+    <h2>Digital Declaration of Securities - DDoS 2026</h2>
+    <button onclick="speakText()">🔊 Listen to Declaration</button>
+    <div id="declarationText" style="background: rgba(0,0,0,0.3); padding: 15px; border: 1px solid #333; color: #aaa;">
+        <p>Doa Floss is the lead creator, and a very talented musician bringing artistic conversion and decentralized systems together with real-world asset backing. We’ve built a unique ecosystem connecting Floss Music & Soundz with our Innovative & Accounting Integrations plus Protocol Securities of StellarChain. We’re in a rigorous "testnet" phase right now—a controlled, live environment where we treat every transaction, data flow, and security protocol with the precision of a national reserve.</p>
     </div>
+</div>
 
-    <script>
-        function showWallets(type) {
-            document.getElementById('desktop-wallets').style.display = 'none';
-            document.getElementById('mobile-wallets').style.display = 'none';
-            if (type === 'desktop') {
-                document.getElementById('desktop-wallets').style.display = 'block';
-            } else if (type === 'mobile') {
-                document.getElementById('mobile-wallets').style.display = 'block';
-            }
-        }
-    </script>
+<footer>
+    2026 DOA FLOSS. All Rights Reserved. <br>
+    Copyright Protected | Hosted by GitHub
+</footer>
+
+<script>
+    function speakText() {
+        window.speechSynthesis.cancel();
+        const text = document.getElementById("declarationText").innerText;
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+    }
+</script>
+
 </body>
 </html>
