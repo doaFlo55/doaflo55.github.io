@@ -9,8 +9,11 @@
         .dashboard-container { display: grid; grid-template-columns: 2fr 1fr; gap: 15px; max-width: 1400px; margin: auto; }
         .card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; }
         
-        .account-title { font-family: 'Courier New', monospace; font-size: 0.9em; color: #888; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        .account-address { font-family: 'Courier New', monospace; font-size: 1.1em; color: #fff; word-break: break-all; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 10px; border-left: 3px solid #444; }
+        /* Centered Headers */
+        h2 { text-align: center; color: #fff; margin-top: 0; }
+        
+        .account-title { font-family: 'Courier New', monospace; font-size: 0.9em; color: #888; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
+        .account-address { font-family: 'Courier New', monospace; font-size: 1.1em; color: #fff; word-break: break-all; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 10px; border-left: 3px solid #444; text-align: center; }
         
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         td { padding: 8px; border: 1px solid #333; color: #ccc; }
@@ -63,9 +66,15 @@
                 <div class="stellar-btn burn-btn">BURN🔥</div>
             </div>
         </div>
+        
         <div class="card" style="padding: 0; overflow: hidden;">
             <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
             <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="dark" style="width: 100%"></tv-ticker-tape>
+        </div>
+
+        <div class="card">
+            <h2>WIZARD</h2>
+            <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
         </div>
     </div>
 </div>
