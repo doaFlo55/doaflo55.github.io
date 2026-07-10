@@ -8,43 +8,59 @@
         
         .dashboard-container { display: grid; grid-template-columns: 2fr 1fr; gap: 15px; max-width: 1400px; margin: auto; }
         .card { background: var(--card-bg); border: 1px solid var(--border-color); padding: 20px; }
-        .large-block { grid-row: span 3; }
         
+        /* Account Title Style */
+        .account-title { font-family: 'Courier New', monospace; font-size: 0.9em; color: #888; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .account-address { font-family: 'Courier New', monospace; font-size: 1.1em; color: #fff; word-break: break-all; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 10px; border-left: 3px solid #444; }
+        
+        /* Table Styles */
         table { width: 100%; border-collapse: collapse; margin-top: 15px; }
         td { padding: 8px; border: 1px solid #333; color: #ccc; }
+        strong { color: #fff; }
+        
+        /* Button Grids */
+        .button-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+        .blank-btn { height: 40px; border: 1px solid #333; background: #0a0a0a; cursor: pointer; }
+        .blank-btn:hover { background: #222; }
         
         .right-column { display: flex; flex-direction: column; gap: 15px; }
-        .button-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
         .stellar-btn { background: #1a1a1a; border: 1px solid #444; color: #fff; padding: 10px; text-align: center; cursor: pointer; font-size: 11px; text-transform: uppercase; }
-        .stellar-btn:hover { background: #333; }
         .ddos-btn { border-color: #800 !important; color: #f00 !important; }
+        .burn-btn { border: 2px solid #ff4500 !important; color: #ff4500 !important; font-weight: bold; grid-column: span 2; margin-top: 10px; }
         
-        .modal { display: none; position: fixed; top: 10%; left: 25%; width: 50%; background: #000; border: 2px solid #fff; padding: 20px; z-index: 100; color: #fff; max-height: 80vh; overflow-y: auto; }
-        .close-btn { cursor: pointer; color: red; float: right; font-weight: bold; }
-        
-        button { background: #000; color: #fff; border: 1px solid var(--border-color); padding: 10px 20px; cursor: pointer; width: 100%; margin-top: 10px; }
-        button:hover { background: #fff; color: #000; }
-        a { color: #888; text-decoration: none; }
+        footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #444; border-top: 1px solid #222; padding-top: 20px; }
     </style>
 </head>
 <body>
 
 <div class="dashboard-container">
-    <div class="card large-block">
+    <!-- LEFT: STEALTH TRACK -->
+    <div class="card">
+        <div class="account-title">Account</div>
+        <div class="account-address">GDL4IW2SBNV3XH24ZT3ZUSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM</div>
+        
         <h2>STEALTH TRACK: AUDIT REGISTRY</h2>
+        <div class="button-grid">
+            <div class="blank-btn"></div><div class="blank-btn"></div>
+            <div class="blank-btn"></div><div class="blank-btn"></div>
+        </div>
         <table>
-            </table>
+            <!-- Registry Rows -->
+        </table>
     </div>
 
+    <!-- RIGHT: COMMAND CENTER -->
     <div class="right-column">
         <div class="card">
-            <h2>ASSET LAB</h2>
-            <div class="button-grid">
-                <div class="stellar-btn ddos-btn" onclick="document.getElementById('ddos-modal').style.display='block'">DDoS</div>
-                <div class="stellar-btn">XLM</div><div class="stellar-btn">PYUSD</div>
-                <div class="stellar-btn">BTC</div><div class="stellar-btn">SLVR</div>
-                <div class="stellar-btn">yXLM</div><div class="stellar-btn">eXCH</div>
-                <div class="stellar-btn">MOGLMN</div><div class="stellar-btn">OPLZ</div>
+            <h2>CRYPTO CLAIMS</h2>
+            <div class="button-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="stellar-btn ddos-btn">DDoS</div>
+                <div class="stellar-btn">XLM</div>
+                <div class="stellar-btn">PYUSD</div><div class="stellar-btn">BTC</div>
+                <div class="stellar-btn">SLVR</div><div class="stellar-btn">yXLM</div>
+                <div class="stellar-btn">eXCH</div><div class="stellar-btn">MOGLMN</div>
+                <div class="stellar-btn">OPLZ</div><div class="stellar-btn">paypXL</div>
+                <div class="stellar-btn burn-btn">BURN🔥</div>
             </div>
         </div>
         
@@ -52,43 +68,13 @@
             <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
             <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="dark" style="width: 100%"></tv-ticker-tape>
         </div>
-        
-        <div class="card">
-            <h2>WIZARD</h2>
-            <div style="margin-top: 20px;">
-                <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
-            </div>
-            <div style="margin-top: 15px; padding: 5px; border-top: 1px solid #333; font-size: 12px; display: flex; justify-content: center; gap: 15px;">
-                <a href="https://www.reverbnation.com/DoaFloss" target="_blank">ReverbNation</a>
-                <a href="https://www.bandlab.com/doa_floss" target="_blank">BandLab</a>
-                <a href="https://www.beatstars.com/floss" target="_blank">BeatStars</a>
-                <a href="https://x.com/X_officialDoa" target="_blank">Twitter</a>
-                <a href="https://youtube.com/@doafloss" target="_blank">Youtube</a>
-                <a href="https://www.instagram.com/doafloss" target="_blank">Instagram</a>
-            </div>
-        </div>
     </div>
 </div>
 
-<div id="ddos-modal" class="modal">
-    <span class="close-btn" onclick="this.parentElement.style.display='none'">[CLOSE]</span>
-    <h2>Digital Declaration of Securities - DDoS 2026</h2>
-    <div style="text-align: center; margin-bottom: 10px;">
-        <button onclick="speakText()">🔊 Listen to Declaration</button>
-    </div>
-    <div id="declarationText" style="background: rgba(0,0,0,0.3); padding: 15px; border: 1px solid #333; color: #aaa; font-size: 0.95em;">
-        <p>Doa Floss is the lead creator, and a very talented musician bringing artistic conversion and decentralized systems together with real-world asset backing...</p>
-    </div>
-</div>
-
-<script>
-    function speakText() {
-        window.speechSynthesis.cancel();
-        const text = document.getElementById("declarationText").innerText;
-        const utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
-    }
-</script>
+<footer>
+    2026 DOA FLOSS. All Rights Reserved. <br>
+    Copyright Protected | Hosted by GitHub
+</footer>
 
 </body>
 </html>
