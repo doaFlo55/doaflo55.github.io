@@ -45,9 +45,6 @@
             padding: 20px; 
             margin-bottom: 15px;
         }
-
-        .full-width { grid-column: span 2; }
-        @media (max-width: 992px) { .full-width { grid-column: span 1; } }
         
         h2 { text-align: center; color: #fff; margin-top: 0; border-bottom: 1px dashed #333; padding-bottom: 10px; }
         h3 { color: var(--accent-gold); margin-top: 0; }
@@ -64,7 +61,7 @@
 
         .account-address { 
             font-family: 'Courier New', monospace; 
-            font-size: 1em; 
+            font-size: 0.95em; 
             color: #fff; 
             word-break: break-all; 
             margin-bottom: 20px; 
@@ -300,7 +297,7 @@
             <div class="account-address">
                 <a href="https://stellar.expert/explorer/public/account/GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM" target="_blank"
                    style="color: #FFD700; text-decoration: none; font-weight: bold; text-shadow: 0 0 8px #FFD700;">
-                   GDL4IW2SBNV3XH24ZT3ZUSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM
+                   GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM
                 </a>
             </div>
             
@@ -370,4 +367,62 @@
                             <li>Recommended Workspace: 64 GB</li>
                         </ul>
                     </div>
-                    <button class="btn btn-buy-all" onclick="triggerBuyAll()">BUY ALL / EVERYTHING ($79.99
+                    <button class="btn btn-buy-all" onclick="triggerBuyAll()">BUY ALL / EVERYTHING ($79.99)</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Stem Console Simulator -->
+        <div class="card">
+            <h2>48 kHz STEM CONSOLE PREVIEW</h2>
+            <p style="font-size: 0.8em; color: #888; text-align: center;">Simulate multi-track channel isolation included with the $79.99 Executive Pass.</p>
+            
+            <div class="stem-console">
+                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                    <button class="stem-btn" onclick="togglePlayAll()" id="masterPlayBtn">▶ PLAY DEMO MIX</button>
+                    <span style="color:var(--accent-gold); font-size:0.8em;">STATUS: 48.0 kHz / 24-BIT FLAC</span>
+                </div>
+
+                <div class="stem-track">
+                    <span>1. BEAT / INST</span>
+                    <input type="range" min="0" max="100" value="80" id="vol-beat">
+                    <button class="stem-btn" id="mute-beat" onclick="toggleMute('beat')">MUTE</button>
+                    <button class="stem-btn" id="solo-beat" onclick="toggleSolo('beat')">SOLO</button>
+                </div>
+
+                <div class="stem-track">
+                    <span>2. LEAD VOCAL</span>
+                    <input type="range" min="0" max="100" value="90" id="vol-vocal">
+                    <button class="stem-btn" id="mute-vocal" onclick="toggleMute('vocal')">MUTE</button>
+                    <button class="stem-btn" id="solo-vocal" onclick="toggleSolo('vocal')">SOLO</button>
+                </div>
+
+                <div class="stem-track">
+                    <span>3. ADLIBS</span>
+                    <input type="range" min="0" max="100" value="70" id="vol-adlib">
+                    <button class="stem-btn" id="mute-adlib" onclick="toggleMute('adlib')">MUTE</button>
+                    <button class="stem-btn" id="solo-adlib" onclick="toggleSolo('adlib')">SOLO</button>
+                </div>
+
+                <div class="stem-track">
+                    <span>4. FX / AMBIENCE</span>
+                    <input type="range" min="0" max="100" value="60" id="vol-fx">
+                    <button class="stem-btn" id="mute-fx" onclick="toggleMute('fx')">MUTE</button>
+                    <button class="stem-btn" id="solo-fx" onclick="toggleSolo('fx')">SOLO</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom A La Carte Builder -->
+        <div class="card">
+            <h2>A LA CARTE CUSTOM BUILDER</h2>
+            <p style="font-size:0.8em; color:#888; text-align:center;">Select individual assets. Cart automatically caps at the $79.99 Executive Ceiling.</p>
+            
+            <div class="builder-grid">
+                <div class="builder-item" onclick="toggleItem('item-mp3', 19.99)" id="item-mp3">
+                    <span>Standard Album (MP3)</span>
+                    <strong>$19.99</strong>
+                </div>
+                <div class="builder-item" onclick="toggleItem('item-wav', 29.99)" id="item-wav">
+                    
