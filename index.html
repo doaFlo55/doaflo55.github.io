@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floss Integrations & Securities LLC | Dashboard</title>
+    <title>Floss Integrations & Securities LLC | Command Center</title>
     <style>
         :root { 
-            --bg-color: #000; 
+            --bg-color: #000000; 
             --card-bg: #121212; 
-            --border-color: #333; 
-            --text-color: #fff; 
-            --neon-link: #0ff; 
+            --border-color: #333333; 
+            --text-color: #ffffff; 
+            --neon-link: #00ffff; 
             --accent-gold: #FFD700;
             --accent-green: #00ff66;
             --bandlab-red: #ff3344;
         }
 
-        * { box-sizing: border-box; }
+        * { 
+            box-sizing: border-box; 
+            -webkit-tap-highlight-color: transparent;
+        }
 
         body { 
             background-color: var(--bg-color); 
             color: var(--text-color); 
-            font-family: 'Courier New', monospace; 
+            font-family: 'Courier New', Courier, monospace; 
             margin: 0; 
-            padding: 20px; 
-            overflow-x: hidden; 
+            padding: 15px; 
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
         
         .dashboard-container { 
@@ -37,6 +41,7 @@
 
         @media (max-width: 992px) {
             .dashboard-container { grid-template-columns: 1fr; }
+            body { padding: 10px; }
         }
 
         .card { 
@@ -44,15 +49,42 @@
             border: 1px solid var(--border-color); 
             padding: 20px; 
             margin-bottom: 15px;
+            content-visibility: auto;
+            contain-intrinsic-size: 200px;
         }
         
-        h2 { text-align: center; color: #fff; margin-top: 0; font-size: 1.1em; }
+        h2 { 
+            text-align: center; 
+            color: #fff; 
+            margin-top: 0; 
+            font-size: 1.1em; 
+            letter-spacing: 1px;
+        }
         
-        .account-title { font-family: 'Courier New', monospace; font-size: 0.9em; color: #888; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
-        .account-address { font-family: 'Courier New', monospace; font-size: 1.1em; color: #fff; word-break: break-all; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 10px; border-left: 3px solid #444; text-align: center; }
+        .account-title { 
+            font-family: 'Courier New', monospace; 
+            font-size: 0.85em; 
+            color: #888; 
+            margin-bottom: 5px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            text-align: center; 
+        }
+
+        .account-address { 
+            font-family: 'Courier New', monospace; 
+            font-size: 0.95em; 
+            color: #fff; 
+            word-break: break-all; 
+            margin-bottom: 20px; 
+            background: rgba(255,255,255,0.04); 
+            padding: 12px; 
+            border-left: 3px solid var(--accent-gold); 
+            text-align: center; 
+        }
         
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; }
-        td { padding: 8px; border: 1px solid #333; color: #ccc; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.88em; }
+        td { padding: 10px; border: 1px solid #222; color: #ccc; }
         strong { color: #fff; }
         a { color: var(--neon-link); text-decoration: none; text-shadow: 0 0 5px var(--neon-link); }
         
@@ -60,18 +92,20 @@
         
         /* Slim Toggle Storefront */
         .store-toggle-bar {
-            background: #1a1a1a;
+            background: #181818;
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
-            padding: 12px;
+            padding: 14px;
             text-align: center;
             cursor: pointer;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.9em;
+            font-size: 0.88em;
+            user-select: none;
+            transition: background 0.15s ease;
         }
-        .store-toggle-bar:hover { background: #332a00; }
+        .store-toggle-bar:active, .store-toggle-bar:hover { background: #2a2200; }
         
         .store-panel { display: none; margin-top: 10px; border-top: 1px dashed #333; padding-top: 15px; }
         .store-panel.active { display: block; }
@@ -79,16 +113,36 @@
         .slim-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 15px; }
         @media (max-width: 768px) { .slim-tiers { grid-template-columns: 1fr; } }
         
-        .slim-tier-box { background: #080808; border: 1px solid #333; padding: 12px; font-size: 0.8em; text-align: center; }
-        .slim-tier-box.featured { border-color: var(--accent-gold); }
+        .slim-tier-box { background: #080808; border: 1px solid #222; padding: 12px; font-size: 0.8em; text-align: center; }
+        .slim-tier-box.featured { border-color: var(--accent-gold); background: #0e0c00; }
 
-        .btn { background: #1a1a1a; border: 1px solid #444; color: #fff; padding: 8px; text-align: center; cursor: pointer; font-size: 0.8em; font-family: 'Courier New', monospace; text-transform: uppercase; width: 100%; margin-top: 8px; }
-        .btn:hover { background: #333; border-color: var(--accent-gold); color: var(--accent-gold); }
-        .btn-buy-all { background: #332a00; border: 1px solid var(--accent-gold); color: var(--accent-gold); font-weight: bold; }
+        .btn { 
+            background: #1a1a1a; 
+            border: 1px solid #444; 
+            color: #fff; 
+            padding: 10px; 
+            text-align: center; 
+            cursor: pointer; 
+            font-size: 0.8em; 
+            font-family: 'Courier New', monospace; 
+            text-transform: uppercase; 
+            width: 100%; 
+            margin-top: 8px; 
+            transition: all 0.15s ease;
+        }
+        .btn:hover, .btn:active { background: #333; border-color: var(--accent-gold); color: var(--accent-gold); }
+        
+        .btn-buy-all { 
+            background: #332a00; 
+            border: 1px solid var(--accent-gold); 
+            color: var(--accent-gold); 
+            font-weight: bold; 
+        }
+        .btn-buy-all:hover, .btn-buy-all:active { background: var(--accent-gold); color: #000; }
 
         .slim-builder { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 0.8em; margin-top: 10px; }
-        .builder-chip { background: #0a0a0a; border: 1px solid #222; padding: 8px; cursor: pointer; display: flex; justify-content: space-between; }
-        .builder-chip.selected { border-color: var(--neon-link); background: #001515; }
+        .builder-chip { background: #0a0a0a; border: 1px solid #222; padding: 10px; cursor: pointer; display: flex; justify-content: space-between; user-select: none; }
+        .builder-chip.selected { border-color: var(--neon-link); background: #001f1f; }
 
         /* BandLab Profile Card Styling */
         .bandlab-card {
@@ -98,40 +152,62 @@
         }
 
         .bandlab-avatar {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             border: 2px solid var(--bandlab-red);
             object-fit: cover;
             margin: 0 auto 10px auto;
             display: block;
-            box-shadow: 0 0 10px rgba(255, 51, 68, 0.4);
+            box-shadow: 0 0 15px rgba(255, 51, 68, 0.4);
+            background-color: #1a0000;
         }
 
         .btn-bandlab {
-            background: #220508;
+            background: #280508;
             border: 1px solid var(--bandlab-red);
-            color: #fff;
-            padding: 10px;
+            color: #ffffff;
+            padding: 12px;
             text-decoration: none;
             display: block;
             font-weight: bold;
             font-size: 0.85em;
             letter-spacing: 1px;
-            transition: all 0.2s ease;
+            border-radius: 2px;
+            transition: background 0.15s ease, box-shadow 0.15s ease;
         }
 
-        .btn-bandlab:hover {
+        .btn-bandlab:hover, .btn-bandlab:active {
             background: var(--bandlab-red);
-            color: #000;
-            box-shadow: 0 0 12px var(--bandlab-red);
+            color: #000000;
+            box-shadow: 0 0 15px var(--bandlab-red);
         }
 
         /* Modal */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: #0a0a0a; border: 2px solid var(--accent-gold); padding: 20px; max-width: 550px; width: 100%; font-size: 0.85em; }
+        .modal { 
+            display: none; 
+            position: fixed; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.88); 
+            z-index: 999; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 15px; 
+            backdrop-filter: blur(4px);
+        }
 
-        footer { text-align: center; margin-top: 40px; color: #444; border-top: 1px solid #222; padding-top: 20px; }
+        .modal-content { 
+            background: #0a0a0a; 
+            border: 2px solid var(--accent-gold); 
+            padding: 20px; 
+            max-width: 550px; 
+            width: 100%; 
+            font-size: 0.85em; 
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        footer { text-align: center; margin-top: 40px; color: #444; border-top: 1px solid #1a1a1a; padding-top: 20px; font-size: 0.8em; }
     </style>
 </head>
 <body>
@@ -141,10 +217,9 @@
     <!-- LEFT COLUMN -->
     <div>
         <div class="card">
-            <div class="account-title">FLOSS INTEGRATIONS & SECURITIES</div>
+            <div class="account-title">FLOSS INTEGRATIONS & SECURITIES LLC</div>
             <div class="account-address">
-                <a href="https://stellar.expert/explorer/public/account/GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM" 
-                   style="color: #FFD700; text-decoration: none; font-weight: bold; text-shadow: 0 0 8px #FFD700;">
+                <a href="https://stellar.expert/explorer/public/account/GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM" target="_blank" rel="noopener">
                    GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM
                 </a>
             </div>
@@ -152,13 +227,13 @@
             <h2>Active Liquidity Pool - eXCH</h2>
             <table>
                 <tr>
-                    <td><strong>eXCH / XLM</strong></td>
-                    <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU"><code>LBOIY6...M6VU</code></a></td>
+                    <td><strong>eXCH / XLM Pool</strong></td>
+                    <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU" target="_blank" rel="noopener"><code>LBOIY6...M6VU</code></a></td>
                 </tr>
             </table>
         </div>
 
-        <!-- SLIM LINE STORE MODULE (Collapsible) -->
+        <!-- SLIM LINE STORE MODULE -->
         <div class="card">
             <div class="store-toggle-bar" onclick="toggleStore()">
                 ⚡ DIRECT CATALOG & STORE (CLICK TO EXPAND) ⚡
@@ -196,12 +271,12 @@
                     <div class="builder-chip" onclick="toggleItem('signed', 10.00)" id="c-signed"><span>Signed Card</span><strong>$10.00</strong></div>
                 </div>
 
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:15px; background:#050505; padding:10px; border:1px solid #333;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:15px; background:#050505; padding:10px; border:1px solid #222;">
                     <div>
                         <span style="font-size:0.75em; color:#888;">TOTAL:</span>
                         <span id="slimTotal" style="color:var(--accent-green); font-weight:bold; font-size:1.2em;">$0.00</span>
                     </div>
-                    <button class="btn btn-buy-all" style="width:auto; padding:8px 15px; margin:0;" onclick="openReceipt()">CHECKOUT / RECEIPT</button>
+                    <button class="btn btn-buy-all" style="width:auto; padding:8px 16px; margin:0;" onclick="openReceipt()">CHECKOUT / RECEIPT</button>
                 </div>
             </div>
         </div>
@@ -214,16 +289,18 @@
             <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="dark" style="width: 100%"></tv-ticker-tape>
         </div>
 
-        <!-- BANDLAB PROFILE SECTION -->
+        <!-- BANDLAB PROFILE CARD -->
         <div class="card bandlab-card">
             <h2>BANDLAB PROFILE</h2>
-            <!-- Place your profile photo image file path or URL below -->
-            <img src="https://www.bandlab.com/images/default-user-next.png" alt="Doa Floss BandLab" class="bandlab-avatar" id="bandlabAvatar">
-            <div style="font-weight:bold; color:#fff; font-size:0.9em; margin-bottom:3px;">DOA FLOSS</div>
+            <img src="https://picture.bandlab.com/user/avatar/doafloss.jpg" 
+                 onerror="this.onerror=null;this.src='https://www.reverbnation.com/widget_code/html_widget/artist_8579729';" 
+                 alt="Doa Floss BandLab" 
+                 class="bandlab-avatar">
+            <div style="font-weight:bold; color:#fff; font-size:0.95em; margin-bottom:3px;">DOA FLOSS 💀🪽</div>
             <div style="color:#aaa; font-size:0.75em; margin-bottom:12px;">Mobile Recording & Distribution Studio</div>
             
-            <!-- Replace 'YOUR_BANDLAB_USERNAME' with your exact BandLab handle -->
-            <a href="https://www.bandlab.com/doafloss" target="_blank" class="btn-bandlab">
+            <!-- Direct Web Link optimized for Mobile Chrome -->
+            <a href="https://www.bandlab.com/doafloss" target="_blank" rel="noopener" class="btn-bandlab">
                 🎧 LISTEN ON BANDLAB
             </a>
         </div>
@@ -239,24 +316,23 @@
 <!-- Modal -->
 <div class="modal" id="receiptModal">
     <div class="modal-content">
-        <h3 style="text-align:center; color:var(--accent-gold);">FLOSS INTEGRATIONS & SECURITIES LLC</h3>
-        <p style="text-align:center; color:#888; font-size:0.8em;">DIGITAL MASTER RECEIPT & USAGE CERTIFICATE</p>
+        <h3 style="text-align:center; color:var(--accent-gold); margin-top:0;">FLOSS INTEGRATIONS & SECURITIES LLC</h3>
+        <p style="text-align:center; color:#888; font-size:0.8em; margin-bottom:15px;">DIGITAL MASTER RECEIPT & USAGE CERTIFICATE</p>
         <p><strong>TX ID:</strong> <span id="recTxId" style="color:var(--neon-link);"></span></p>
         <p><strong>TIMESTAMP:</strong> <span id="recDate"></span></p>
         <p><strong>TOTAL PAID:</strong> <span id="recAmount" style="color:var(--accent-green); font-weight:bold;"></span></p>
-        <hr style="border-color:#333;">
-        <button class="btn" onclick="document.getElementById('receiptModal').style.display='none'">CLOSE</button>
+        <hr style="border-color:#222; margin:15px 0;">
+        <button class="btn" onclick="document.getElementById('receiptModal').style.display='none'">CLOSE WINDOW</button>
     </div>
 </div>
 
 <footer>
-    2026 DOA FLOSS. All Rights Reserved. <br>
+    2026 DOA FLOSS. All Rights Reserved.<br>
 </footer>
 
 <script>
     function toggleStore() {
-        const panel = document.getElementById('storePanel');
-        panel.classList.toggle('active');
+        document.getElementById('storePanel').classList.toggle('active');
     }
 
     let items = {};
@@ -271,8 +347,13 @@
 
     function toggleItem(id, price) {
         const el = document.getElementById('c-' + id);
-        if (items[id]) { delete items[id]; el.classList.remove('selected'); }
-        else { items[id] = price; el.classList.add('selected'); }
+        if (items[id]) { 
+            delete items[id]; 
+            el.classList.remove('selected'); 
+        } else { 
+            items[id] = price; 
+            el.classList.add('selected'); 
+        }
         updateSlimCart();
     }
 
