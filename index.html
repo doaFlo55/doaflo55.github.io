@@ -13,6 +13,7 @@
             --neon-link: #0ff; 
             --accent-gold: #FFD700;
             --accent-green: #00ff66;
+            --bandlab-red: #ff3344;
         }
 
         * { box-sizing: border-box; }
@@ -88,6 +89,43 @@
         .slim-builder { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 0.8em; margin-top: 10px; }
         .builder-chip { background: #0a0a0a; border: 1px solid #222; padding: 8px; cursor: pointer; display: flex; justify-content: space-between; }
         .builder-chip.selected { border-color: var(--neon-link); background: #001515; }
+
+        /* BandLab Profile Card Styling */
+        .bandlab-card {
+            background: linear-gradient(135deg, #18080a 0%, #0a0a0a 100%);
+            border: 1px solid var(--bandlab-red);
+            text-align: center;
+        }
+
+        .bandlab-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid var(--bandlab-red);
+            object-fit: cover;
+            margin: 0 auto 10px auto;
+            display: block;
+            box-shadow: 0 0 10px rgba(255, 51, 68, 0.4);
+        }
+
+        .btn-bandlab {
+            background: #220508;
+            border: 1px solid var(--bandlab-red);
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-bandlab:hover {
+            background: var(--bandlab-red);
+            color: #000;
+            box-shadow: 0 0 12px var(--bandlab-red);
+        }
 
         /* Modal */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999; justify-content: center; align-items: center; padding: 20px; }
@@ -176,6 +214,20 @@
             <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="dark" style="width: 100%"></tv-ticker-tape>
         </div>
 
+        <!-- BANDLAB PROFILE SECTION -->
+        <div class="card bandlab-card">
+            <h2>BANDLAB PROFILE</h2>
+            <!-- Place your profile photo image file path or URL below -->
+            <img src="https://www.bandlab.com/images/default-user-next.png" alt="Doa Floss BandLab" class="bandlab-avatar" id="bandlabAvatar">
+            <div style="font-weight:bold; color:#fff; font-size:0.9em; margin-bottom:3px;">DOA FLOSS</div>
+            <div style="color:#aaa; font-size:0.75em; margin-bottom:12px;">Mobile Recording & Distribution Studio</div>
+            
+            <!-- Replace 'YOUR_BANDLAB_USERNAME' with your exact BandLab handle -->
+            <a href="https://www.bandlab.com/doafloss" target="_blank" class="btn-bandlab">
+                🎧 LISTEN ON BANDLAB
+            </a>
+        </div>
+
         <div class="card">
             <h2>DOA FLOSS (CREATOR)</h2>
             <iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_8579729?widget_id=55&pwc[included_songs]=1&context_type=page_object&spoid=artist_8579729&pwc[size]=small" style="width: 100%; height: 265px; border: none; display: block;"></iframe>
@@ -220,7 +272,7 @@
     function toggleItem(id, price) {
         const el = document.getElementById('c-' + id);
         if (items[id]) { delete items[id]; el.classList.remove('selected'); }
-        else { items[id] = price; el.classList.add('string', 'selected'); }
+        else { items[id] = price; el.classList.add('selected'); }
         updateSlimCart();
     }
 
