@@ -3,488 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floss Integrations &amp; Securities LLC | Command Center</title>
+    <title>Floss Integrations & Securities LLC | Command Center</title>
     <style>
-        :root {
-            --bg-page: #ffffff;
-            --bg-surface: #ffffff;
-            --bg-subtle: #f8fafc;
-            --bg-hover: #f1f5f9;
-            --border-light: #e2e8f0;
-            --border-strong: #cbd5e1;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #64748b;
-            --accent-navy: #0f172a;
-            --accent-blue: #1d4ed8;
-            --accent-blue-hover: #1e40af;
-            --accent-gold: #b45309;
-            --accent-gold-bg: #fffbeb;
-            --accent-crimson: #b91c1c;
-            --accent-crimson-bg: #fef2f2;
+        :root { 
+            --bg-color: #000000; 
+            --card-bg: #121212; 
+            --border-color: #333333; 
+            --text-color: #ffffff; 
+            --neon-link: #00ffff; 
+            --accent-gold: #FFD700;
+            --accent-green: #00ff66;
+            --bandlab-red: #ff3344;
         }
 
-        * {
-            box-sizing: border-box;
+        * { 
+            box-sizing: border-box; 
             -webkit-tap-highlight-color: transparent;
         }
 
-        body {
-            background-color: var(--bg-page);
-            color: var(--text-primary);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.5;
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            font-family: 'Courier New', Courier, monospace; 
+            margin: 0; 
+            padding: 15px; 
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
-
-        /* Top Enterprise Header Bar */
-        .topbar {
-            max-width: 1400px;
-            margin: 0 auto 20px auto;
-            padding: 18px 24px;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .topbar-brand-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.01em;
-        }
-
-        .topbar-brand-sub {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        .topbar-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            align-items: center;
-        }
-
-        .status-pill {
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 999px;
-            background: var(--bg-subtle);
-            color: var(--text-secondary);
-            border: 1px solid var(--border-light);
-        }
-
-        .status-pill.gold {
-            background: var(--accent-gold-bg);
-            color: var(--accent-gold);
-            border-color: #fde68a;
-        }
-
-        /* Main 2-Column Layout */
-        .dashboard-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-            align-items: start;
+        
+        .dashboard-container { 
+            display: grid; 
+            grid-template-columns: 2fr 1fr; 
+            gap: 15px; 
+            max-width: 1400px; 
+            margin: auto; 
         }
 
         @media (max-width: 992px) {
-            .dashboard-container {
-                grid-template-columns: 1fr;
-            }
-            body {
-                padding: 12px;
-            }
-            .topbar {
-                padding: 14px 16px;
-            }
+            .dashboard-container { grid-template-columns: 1fr; }
+            body { padding: 10px; }
         }
 
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .card { 
+            background: var(--card-bg); 
+            border: 1px solid var(--border-color); 
+            padding: 20px; 
+            margin-bottom: 15px;
+            content-visibility: auto;
+            contain-intrinsic-size: 200px;
+        }
+        
+        h2 { 
+            text-align: center; 
+            color: #fff; 
+            margin-top: 0; 
+            font-size: 1.1em; 
+            letter-spacing: 1px;
+        }
+        
+        .account-title { 
+            font-family: 'Courier New', monospace; 
+            font-size: 0.85em; 
+            color: #888; 
+            margin-bottom: 5px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            text-align: center; 
         }
 
-        /* Enterprise Card */
-        .card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            padding: 22px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+        .account-address { 
+            font-family: 'Courier New', monospace; 
+            font-size: 0.95em; 
+            color: #fff; 
+            word-break: break-all; 
+            margin-bottom: 20px; 
+            background: rgba(255,255,255,0.04); 
+            padding: 12px; 
+            border-left: 3px solid var(--accent-gold); 
+            text-align: center; 
         }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.88em; }
+        td { padding: 10px; border: 1px solid #222; color: #ccc; }
+        strong { color: #fff; }
+        a { color: var(--neon-link); text-decoration: none; text-shadow: 0 0 5px var(--neon-link); }
+        
+        .right-column { display: flex; flex-direction: column; gap: 15px; }
 
-        .right-column .card {
-            margin-bottom: 0;
-        }
-
-        h2 {
-            margin: 0 0 14px 0;
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            text-align: center;
-            color: var(--text-primary);
-        }
-
-        .account-title {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            text-align: center;
-        }
-
-        .account-address {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 0.88rem;
-            color: var(--text-primary);
-            word-break: break-all;
-            margin-bottom: 22px;
-            background: var(--bg-subtle);
-            padding: 13px 16px;
-            border: 1px solid var(--border-light);
-            border-left: 4px solid var(--accent-blue);
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        a:hover {
-            color: var(--accent-blue-hover);
-            text-decoration: underline;
-        }
-
-        code {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            background: var(--bg-subtle);
-            padding: 3px 7px;
-            border-radius: 5px;
-            border: 1px solid var(--border-light);
-            color: var(--text-primary);
-            font-size: 0.85em;
-        }
-
-        /* Structured Tables */
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin-top: 12px;
-            font-size: 0.88rem;
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        td {
-            padding: 12px 14px;
-            border-bottom: 1px solid var(--border-light);
-            color: var(--text-secondary);
-            background: var(--bg-surface);
-            vertical-align: top;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:hover td {
-            background: var(--bg-subtle);
-        }
-
-        strong {
-            color: var(--text-primary);
-        }
-
-        /* Fancy Enterprise & Action Buttons */
-        .fancy-btn {
-            appearance: none;
-            border: 1px solid var(--border-strong);
-            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-            color: var(--text-primary);
-            padding: 10px 14px;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            cursor: pointer;
-            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-            transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease, border-color 0.14s ease, color 0.14s ease;
-        }
-
-        .fancy-btn:hover {
-            transform: translateY(-1px);
-            background: var(--bg-hover);
-            border-color: #94a3b8;
-            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
-        }
-
-        .fancy-btn:active {
-            transform: translateY(0);
-            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
-        }
-
-        .fancy-btn.active {
-            background: linear-gradient(180deg, #1d4ed8 0%, #1e40af 100%);
-            color: #ffffff;
-            border-color: #1e3a8a;
-            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
-        }
-
-        .btn-bandlab {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            background: linear-gradient(180deg, #dc2626 0%, #b91c1c 100%);
-            border: 1px solid #991b1b;
-            color: #ffffff;
-            padding: 12px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.82rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            box-shadow: 0 3px 10px rgba(185, 28, 28, 0.22);
-            transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
-        }
-
-        .btn-bandlab:hover {
-            color: #ffffff;
-            text-decoration: none;
-            transform: translateY(-1px);
-            filter: brightness(1.05);
-            box-shadow: 0 6px 14px rgba(185, 28, 28, 0.3);
-        }
-
-        /* BandLab Profile Card */
+        /* BandLab Profile Card Styling */
         .bandlab-card {
-            background: linear-gradient(180deg, #ffffff 0%, #fffafa 100%);
-            border: 1px solid #fecaca;
+            background: linear-gradient(135deg, #18080a 0%, #0a0a0a 100%);
+            border: 1px solid var(--bandlab-red);
             text-align: center;
         }
 
         .bandlab-avatar {
-            width: 90px;
-            height: 90px;
+            width: 88px;
+            height: 88px;
             border-radius: 50%;
-            border: 3px solid var(--accent-crimson);
+            border: 2px solid var(--bandlab-red);
             object-fit: cover;
             margin: 0 auto 10px auto;
             display: block;
-            box-shadow: 0 4px 12px rgba(185, 28, 28, 0.18);
-            background-color: var(--accent-crimson-bg);
+            box-shadow: 0 0 15px rgba(255, 51, 68, 0.4);
+            background-color: #1a0000;
         }
 
         .bandlab-fallback {
-            width: 90px;
-            height: 90px;
+            width: 88px;
+            height: 88px;
             border-radius: 50%;
-            border: 3px solid var(--accent-crimson);
-            background: var(--accent-crimson-bg);
-            color: var(--accent-crimson);
-            font-weight: 800;
-            font-size: 0.85rem;
+            border: 2px solid var(--bandlab-red);
+            background: #240609;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.9em;
             display: none;
             align-items: center;
             justify-content: center;
             margin: 0 auto 10px auto;
-            box-shadow: 0 4px 12px rgba(185, 28, 28, 0.15);
+            box-shadow: 0 0 15px rgba(255, 51, 68, 0.4);
         }
+
+        .btn-bandlab {
+            background: #280508;
+            border: 1px solid var(--bandlab-red);
+            color: #ffffff;
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: background 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .btn-bandlab:hover, .btn-bandlab:active {
+            background: var(--bandlab-red);
+            color: #000000;
+            box-shadow: 0 0 15px var(--bandlab-red);
+        }
+
+        .btn { 
+            background: #1a1a1a; 
+            border: 1px solid #444; 
+            color: #fff; 
+            padding: 9px; 
+            text-align: center; 
+            cursor: pointer; 
+            font-size: 0.76em; 
+            font-family: 'Courier New', monospace; 
+            text-transform: uppercase; 
+            transition: all 0.15s ease;
+        }
+        .btn:hover, .btn:active { background: #333; border-color: var(--accent-gold); color: var(--accent-gold); }
 
         .dossier-header-sub {
             text-align: center;
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            margin-bottom: 14px;
-            padding: 10px 12px;
-            background: var(--bg-subtle);
-            border: 1px solid var(--border-light);
-            border-radius: 8px;
-        }
-
-        .dossier-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 14px;
-        }
-
-        .dossier-tabs .fancy-btn {
-            flex: 1;
-            min-width: 90px;
+            font-size: 0.8em;
+            color: #aaa;
+            margin-bottom: 12px;
+            line-height: 1.5;
         }
 
         .dossier-rights {
             margin-top: 14px;
-            padding-top: 12px;
-            border-top: 1px solid var(--border-light);
-            font-size: 0.75rem;
-            color: var(--text-muted);
+            padding-top: 10px;
+            border-top: 1px solid #222;
+            font-size: 0.74em;
+            color: #888;
             text-align: center;
+            line-height: 1.45;
         }
 
-        footer {
-            max-width: 1400px;
-            margin: 32px auto 0 auto;
-            text-align: center;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-light);
-            padding-top: 20px;
-            font-size: 0.8rem;
-        }
+        footer { text-align: center; margin-top: 40px; color: #444; border-top: 1px solid #1a1a1a; padding-top: 20px; font-size: 0.8em; }
     </style>
 </head>
 <body>
 
-    <header class="topbar">
-        <div>
-            <div class="topbar-brand-title">Floss Integrations &amp; Securities LLC</div>
-            <div class="topbar-brand-sub">Executive Command Center &bull; Principal: Jesse Reynolds &bull; Brand: DOA Floss</div>
-        </div>
-        <div class="topbar-badges">
-            <span class="status-pill gold">Ladson, SC</span>
-            <span class="status-pill">Stellar &amp; Media Operations</span>
-        </div>
-    </header>
+<div class="dashboard-container">
 
-    <div class="dashboard-container">
-
-        <!-- LEFT COLUMN -->
-        <div>
-            <div class="card">
-                <div class="account-title">FLOSS INTEGRATIONS &amp; SECURITIES LLC</div>
-                <div class="account-address">
-                    <a href="https://stellar.expert/explorer/public/account/GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM" target="_blank" rel="noopener">
-                        GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM
-                    </a>
-                </div>
-
-                <h2>Active Liquidity Pools (swap lumens for eXCH and hold)</h2>
-                <table>
-                    <tr>
-                        <td><strong>eXCH / XLM Pool</strong></td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU" target="_blank" rel="noopener"><code>LBOIY6...M6VU</code></a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>eXCH / yXLM Pool</strong></td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBM3J3RIN2PX66UJTUDN7IGJBX7TDBAI5FWST3EMGCG7PR32RHCQERT7" target="_blank" rel="noopener"><code>LBM3J3...ERT7</code></a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>eXCH / BTC Pool</strong></td>
-                        <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBHNX3OH53ZBLF7D2X3PDH5YVA2WLDVIZOAB4QURPCYCJQ334KNQEYOC" target="_blank" rel="noopener"><code>LBHNX3...EYOC</code></a></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <div class="right-column">
-            <div class="card" style="padding: 0; overflow: hidden;">
-                <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
-                <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="light" style="width: 100%"></tv-ticker-tape>
-            </div>
-
-            <!-- BANDLAB PROFILE CARD -->
-            <div class="card bandlab-card">
-                <h2>BANDLAB PROFILE</h2>
-                <!-- Replace ./bandlab-avatar.jpg with your hosted photo file path or direct image URL -->
-                <img src="./bandlab-avatar.jpg"
-                     onerror="this.style.display='none'; document.getElementById('bandlabFallback').style.display='flex';"
-                     alt="DOA FLOSS Profile Photo"
-                     class="bandlab-avatar">
-                <div id="bandlabFallback" class="bandlab-fallback">DOA FLOSS</div>
-                <div style="font-weight:700; color:#0f172a; font-size:0.98rem; margin-bottom:2px;">DOA FLOSS</div>
-                <div style="color:#64748b; font-size:0.78rem; margin-bottom:14px;">Mobile Recording &amp; Distribution Studio</div>
-
-                <a href="https://www.bandlab.com/doafloss" target="_blank" rel="noopener" class="btn-bandlab">
-                    Listen on BandLab
+    <!-- LEFT COLUMN -->
+    <div>
+        <div class="card">
+            <div class="account-title">FLOSS INTEGRATIONS & SECURITIES LLC</div>
+            <div class="account-address">
+                <a href="https://stellar.expert/explorer/public/account/GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM" target="_blank" rel="noopener">
+                   GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM
                 </a>
             </div>
-
-            <div class="card">
-                <h2>DOA FLOSS (CREATOR)</h2>
-                <p style="font-size:0.84rem; color:#475569; margin:0; text-align:center;">
-                    Independent artist, producer, and creator brand led by <strong>Jesse Reynolds</strong>.
-                </p>
-            </div>
-
-            <!-- BUSINESS & CREATOR DOSSIER RIGHT BELOW DOA FLOSS (CREATOR) -->
-            <div class="card" id="businessDossierCard">
-                <h2>DOA FLOSS THE CREATOR</h2>
-                <div class="dossier-header-sub">
-                    <strong style="color:#b45309;">Floss Integrations &amp; Securities LLC</strong><br>
-                    Brand: <strong>DOA Floss</strong> &bull; Principal: <strong>Jesse Reynolds</strong>
-                </div>
-                <div class="dossier-tabs" role="tablist" aria-label="Business Dossier Sections">
-                    <button type="button" class="fancy-btn active" id="tab-btn-business" onclick="showDossierSection('business')">Business</button>
-                    <button type="button" class="fancy-btn" id="tab-btn-people" onclick="showDossierSection('people')">Team &amp; Net</button>
-                    <button type="button" class="fancy-btn" id="tab-btn-worth" onclick="showDossierSection('worth')">Worth &amp; Assets</button>
-                </div>
-                <div id="flossDossierBody"></div>
-                <div class="dossier-rights">
-                    &copy; 2026 Jesse Reynolds &bull; DOA Floss &bull; Floss Integrations &amp; Securities LLC. All Rights Reserved.
-                </div>
-            </div>
+            
+            <h2>Active Liquidity Pools (swap lumens for eXCH and hold)</h2>
+            <table>
+                <tr>
+                    <td><strong>eXCH / XLM Pool</strong></td>
+                    <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU" target="_blank" rel="noopener"><code>LBOIY6...M6VU</code></a></td>
+                </tr>
+                <tr>
+                    <td><strong>eXCH / yXLM Pool</strong></td>
+                    <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBM3J3RIN2PX66UJTUDN7IGJBX7TDBAI5FWST3EMGCG7PR32RHCQERT7" target="_blank" rel="noopener"><code>LBM3J3...ERT7</code></a></td>
+                </tr>
+                <tr>
+                    <td><strong>eXCH / BTC Pool</strong></td>
+                    <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBHNX3OH53ZBLF7D2X3PDH5YVA2WLDVIZOAB4QURPCYCJQ334KNQEYOC" target="_blank" rel="noopener"><code>LBHNX3...EYOC</code></a></td>
+                </tr>
+            </table>
         </div>
-
     </div>
 
-    <footer>
-        &copy; 2026 Jesse Reynolds &bull; 2026 DOA FLOSS &bull; Floss Integrations &amp; Securities LLC. All Rights Reserved.
-    </footer>
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+            <tv-ticker-tape symbols="CRYPTOCAP:BTC,CRYPTOCAP:XLM,COINBASE:BTCUSD" theme="dark" style="width: 100%"></tv-ticker-tape>
+        </div>
 
-    <script>
-        const FLOSS_ENTITY_DATA = {
-            brand: "DOA Floss (Creator & Brand)",
-            business: "Floss Integrations & Securities LLC (Business & Holding Entity — distinct from unestablished DBA Floss Innovations & Accounting LLC)",
-            principal: "Jesse Reynolds",
-            base: "Ladson, South Carolina",
-            whatWeDo: [
-                { service: "Music & Media", detail: "Recording, production, beat licensing, master/publishing rights management, and releases (Cyberfloss, Bandoa, I Get Paper, Eclipse)." },
-                { service: "Scrap & Recovery", detail: "Sorting, disassembling, and processing copper, aluminum, brass, steel, HVAC coils, and electronics/e-scrap for recycling yards and kiosks." },
-                { service: "Liquidity & Assets", detail: "Managing Stellar liquidity pools (eXCH/XLM, eXCH/yXLM, eXCH/BTC) connected to entity account GDL4IW...INIM." }
-            ],
-            howConducted: "Principal-led operations with separate record-keeping and account tracking across music/media catalogs, material recovery/logistics, and financial accounts.",
-            employees: "No traditional salaried W-2 payroll staff; principal-operated by Jesse Reynolds with roster and project collaborators.",
-            roster: [
-                "Slot 1: grimm1(therealone)",
-                "Slot 15: Coldblime",
-                "Slot 17 (Lead Producer): DOA Floss",
-                "Slot 18 (International Division): Tyreek Ain't No Saint"
-            ],
-            networks: [
-                "Music & Producers: DJ Pain 1 (Painkillers Radio), Anno Domini, Ben Jones, DJ Flippp & 808 Kartel, Deemarc, ATLien Infamous",
-                "Platforms & Rights: BandLab, BeatStars, ReverbNation, Passes, BMI",
-                "Banking & Funding Channels: U.S. Bank, American Express, CLIMB Fund workshops, SBA lending channels"
-            ],
-            netWorthNote: "Internal / Unaudited — Public Net
+        <!-- BANDLAB PROFILE CARD -->
+        <div class="card bandlab-card">
+            <h2>BANDLAB PROFILE</h2>
+            <!-- Replace ./bandlab-avatar.jpg with your hosted photo file path or direct image URL -->
+            <img src="./bandlab-avatar.jpg"
+                 onerror="this.style.display='none'; document.getElementById('bandlabFallback').style.display='flex';"
+                 alt="DOA FLOSS Profile Photo"
+                 class="bandlab-avatar">
+            <div id="bandlabFallback" class="bandlab-fallback">DOA FLOSS</div>
+            <div style="font-weight:bold; color:#fff; font-size:0.95em; margin-bottom:3px;">DOA FLOSS 💀🪽</div>
+            <div style="color:#aaa; font-size:0.75em; margin-bottom:12px;">Mobile Recording & Distribution Studio</div>
+            
+            <a href="https://www.bandlab.com/doafloss" target="_blank" rel="noopener" class="btn-bandlab">
+                🎧 LISTEN ON BANDLAB
+            </a>
+        </div>
+
+        <div class="card">
+            <h2>DOA FLOSS (CREATOR)</h2>
+            <p style="font-size:0.8em; color:#ccc; line-height:1.5; margin-bottom:0;">
+                Independent hip-hop &amp; trap artist, producer, and creator brand led by <strong>Jesse Reynolds</strong>.
+            </p>
+        </div>
+
+        <!-- BUSINESS & CREATOR DOSSIER RIGHT BELOW DOA FLOSS (CREATOR) -->
+        <div class="card" id="businessDossierCard">
+            <h2>DOA FLOSS THE CREATOR</h2>
+            <div class="dossier-header-sub">
+                <strong style="color:var(--accent-gold);">Floss Integrations &amp; Securities LLC</strong><br>
+                Brand: <strong>DOA Floss</strong> &bull; Principal: <strong>Jesse Reynolds</strong>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px;">
+                <button type="button" class="btn" style="flex:1; min-width:85px;" onclick="showDossierSection('business')">Business</button>
+                <button type="button" class="btn" style="flex:1; min-width:85px;" onclick="showDossierSection('people')">Team &amp; Net</button>
+                <button type="button" class="btn" style="flex:1; min-width:85px;" onclick="showDossierSection('worth')">Worth &amp; Assets</button>
+            </div>
+            <div id="flossDossierBody"></div>
+            <div class="dossier-rights">
+                &copy; 2026 Jesse Reynolds &bull; DOA Floss &bull; Floss Integrations &amp; Securities LLC. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Jesse Reynolds &bull; 2026 DOA FLOSS &bull; Floss Integrations &amp; Securities LLC. All Rights Reserved.<br>
+</footer>
+
+<script>
+    const FLOSS_ENTITY_DATA = {
+        brand: "DOA Floss (Creator & Brand)",
+        business: "Floss Integrations & Securities LLC (Business & Holding Entity — distinct from unestablished DBA Floss Innovations & Accounting LLC)",
+        principal: "Jesse Reynolds",
+        base: "Ladson, South Carolina",
+        whatWeDo: [
+            { service: "Music & Media", detail: "Recording, production, beat licensing, master/publishing rights management, and releases (Cyberfloss, Bandoa, I Get Paper, Eclipse)." },
+            { service: "Scrap & Recovery", detail: "Sorting, disassembling, and processing copper, aluminum, brass, steel, HVAC coils, and electronics/e-scrap for recycling yards and kiosks." },
+            { service: "Liquidity & Assets", detail: "Managing Stellar liquidity pools (eXCH/XLM, eXCH/yXLM, eXCH/BTC) connected to entity account GDL4IW...INIM." }
+        ],
+        howConducted: "Principal-led operations with separate record-keeping and account tracking across music/media catalogs, material recovery/logistics, and financial accounts.",
+        employees: "No traditional salaried W-2 payroll staff; principal-operated by Jesse Reynolds with roster and project collaborators.",
+        roster: [
+            "Slot 1: grimm1(therealone)",
+            "Slot 15: Coldblime",
+            "Slot 17 (Lead Producer): DOA Floss",
+            "Slot 18 (International Division): Tyreek Ain't No Saint"
+        ],
+        networks: [
+            "Music & Producers: DJ Pain 1 (Painkillers Radio), Anno Domini, Ben Jones, DJ Flippp & 808 Kartel, Deemarc, ATLien Infamous",
+            "Platforms & Rights: BandLab, BeatStars, ReverbNation, Passes, BMI",
+            "Banking & Capital Channels: U.S. Bank, American Express, CLIMB Fund workshops, SBA lending channels"
+        ],
+        netWorthNote: "Internal / Unaudited — Public Net Worth Not Published",
+        assetsAndNotes: [
+            "Entity Account: GDL4IW2SBNV3XH24ZT3ZUSSSCVH6BX4DX4ATJMDMYJVZHY47VCPLINIM",
+            "Tracked Stellar Pools: eXCH/XLM, eXCH/yXLM, and eXCH/BTC",
+            "Funding Context: Past SBA 7(a) loan applications met lender risk/credit thresholds; operations lean on internal cashflow, material recovery, and partnerships."
+        ]
+    };
+
+    function showDossierSection(section) {
+        const target = document.getElementById("flossDossierBody");
+        if (!target) return;
+
+        if (section === "business") {
+            const rows = FLOSS_ENTITY_DATA.whatWeDo.map(item =>
+                `<tr><td><strong>${item.service}</strong></td><td>${item.detail}</td></tr>`
+            ).join("");
+            target.innerHTML = `
+                <p style="font-size:0.79em; color:#ccc; line-height:1.5; margin-top:0;">
+                    <strong>Brand vs. Business:</strong> ${FLOSS_ENTITY_DATA.brand} is the creative brand; ${FLOSS_ENTITY_DATA.business} is the business.<br>
+                    <strong>Location:</strong> ${FLOSS_ENTITY_DATA.base}
+                </p>
+                <table>${rows}</table>
+                <p style="font-size:0.77em; color:#aaa; line-height:1.45; margin-bottom:0;">
+                    <strong>How Services Are Conducted:</strong> ${FLOSS_ENTITY_DATA.howConducted}
+                </p>
+            `;
+        } else if (section === "people") {
+            const rosterHtml = FLOSS_ENTITY_DATA.roster.map(r => `<li>${r}</li>`).join("");
+            const netHtml = FLOSS_ENTITY_DATA.networks.map(n => `<li>${n}</li>`).join("");
+            target.innerHTML = `
+                <p style="font-size:0.79em; color:#ccc; line-height:1.5; margin-top:0;">
+                    <strong>Principal:</strong> ${FLOSS_ENTITY_DATA.principal}<br>
+                    <strong>Employees:</strong> ${FLOSS_ENTITY_DATA.employees}
+                </p>
+                <div style="font-size:0.79em; color:#fff; margin-top:8px;"><strong>Roster Slots</strong></div>
+                <ul style="font-size:0.77em; color:#ccc; padding-left:16px; margin:5px 0 10px 0; line-height:1.45;">${rosterHtml}</ul>
+                <div style="font-size:0.79em; color:#fff;"><strong>Partners &amp; Involved Networks</strong></div>
+                <ul style="font-size:0.77em; color:#ccc; padding-left:16px; margin:5px 0 0 0; line-height:1.45;">${netHtml}</ul>
+            `;
+        } else {
+            const assetHtml = FLOSS_ENTITY_DATA.assetsAndNotes.map(a => `<li>${a}</li>`).join("");
+            target.innerHTML = `
+                <p style="font-size:0.79em; color:var(--accent-gold); line-height:1.45; margin-top:0;">
+                    <strong>Net Worth:</strong> ${FLOSS_ENTITY_DATA.netWorthNote}
+                </p>
+                <div style="font-size:0.79em; color:#fff;"><strong>Accounts, Pools &amp; Capital Notes</strong></div>
+                <ul style="font-size:0.77em; color:#ccc; padding-left:16px; margin:5px 0 0 0; line-height:1.45;">${assetHtml}</ul>
+            `;
+        }
+    }
+
+    showDossierSection("business");
+</script>
+
+</body>
+</html>
