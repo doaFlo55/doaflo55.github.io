@@ -89,60 +89,6 @@
         a { color: var(--neon-link); text-decoration: none; text-shadow: 0 0 5px var(--neon-link); }
         
         .right-column { display: flex; flex-direction: column; gap: 15px; }
-        
-        /* Slim Toggle Storefront */
-        .store-toggle-bar {
-            background: #181818;
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
-            padding: 14px;
-            text-align: center;
-            cursor: pointer;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.88em;
-            user-select: none;
-            transition: background 0.15s ease;
-        }
-        .store-toggle-bar:active, .store-toggle-bar:hover { background: #2a2200; }
-        
-        .store-panel { display: none; margin-top: 10px; border-top: 1px dashed #333; padding-top: 15px; }
-        .store-panel.active { display: block; }
-
-        .slim-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 15px; }
-        @media (max-width: 768px) { .slim-tiers { grid-template-columns: 1fr; } }
-        
-        .slim-tier-box { background: #080808; border: 1px solid #222; padding: 12px; font-size: 0.8em; text-align: center; }
-        .slim-tier-box.featured { border-color: var(--accent-gold); background: #0e0c00; }
-
-        .btn { 
-            background: #1a1a1a; 
-            border: 1px solid #444; 
-            color: #fff; 
-            padding: 10px; 
-            text-align: center; 
-            cursor: pointer; 
-            font-size: 0.8em; 
-            font-family: 'Courier New', monospace; 
-            text-transform: uppercase; 
-            width: 100%; 
-            margin-top: 8px; 
-            transition: all 0.15s ease;
-        }
-        .btn:hover, .btn:active { background: #333; border-color: var(--accent-gold); color: var(--accent-gold); }
-        
-        .btn-buy-all { 
-            background: #332a00; 
-            border: 1px solid var(--accent-gold); 
-            color: var(--accent-gold); 
-            font-weight: bold; 
-        }
-        .btn-buy-all:hover, .btn-buy-all:active { background: var(--accent-gold); color: #000; }
-
-        .slim-builder { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 0.8em; margin-top: 10px; }
-        .builder-chip { background: #0a0a0a; border: 1px solid #222; padding: 10px; cursor: pointer; display: flex; justify-content: space-between; user-select: none; }
-        .builder-chip.selected { border-color: var(--neon-link); background: #001f1f; }
 
         /* BandLab Profile Card Styling */
         .bandlab-card {
@@ -152,8 +98,8 @@
         }
 
         .bandlab-avatar {
-            width: 80px;
-            height: 80px;
+            width: 88px;
+            height: 88px;
             border-radius: 50%;
             border: 2px solid var(--bandlab-red);
             object-fit: cover;
@@ -161,6 +107,22 @@
             display: block;
             box-shadow: 0 0 15px rgba(255, 51, 68, 0.4);
             background-color: #1a0000;
+        }
+
+        .bandlab-fallback {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            border: 2px solid var(--bandlab-red);
+            background: #240609;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 0.9em;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px auto;
+            box-shadow: 0 0 15px rgba(255, 51, 68, 0.4);
         }
 
         .btn-bandlab {
@@ -183,30 +145,6 @@
             box-shadow: 0 0 15px var(--bandlab-red);
         }
 
-        /* Modal */
-        .modal { 
-            display: none; 
-            position: fixed; 
-            top: 0; left: 0; width: 100%; height: 100%; 
-            background: rgba(0,0,0,0.88); 
-            z-index: 999; 
-            justify-content: center; 
-            align-items: center; 
-            padding: 15px; 
-            backdrop-filter: blur(4px);
-        }
-
-        .modal-content { 
-            background: #0a0a0a; 
-            border: 2px solid var(--accent-gold); 
-            padding: 20px; 
-            max-width: 550px; 
-            width: 100%; 
-            font-size: 0.85em; 
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
-            -webkit-overflow-scrolling: touch;
-        }
-
         footer { text-align: center; margin-top: 40px; color: #444; border-top: 1px solid #1a1a1a; padding-top: 20px; font-size: 0.8em; }
     </style>
 </head>
@@ -224,61 +162,21 @@
                 </a>
             </div>
             
-            <h2>Active Liquidity Pool - eXCH</h2>
+            <h2>Active Liquidity Pools</h2>
             <table>
                 <tr>
                     <td><strong>eXCH / XLM Pool</strong></td>
                     <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBOIY6VCUHXNHI5T2EMDU6265CIWCYWRDSOJ7YVQWZZFXZETS43TM6VU" target="_blank" rel="noopener"><code>LBOIY6...M6VU</code></a></td>
                 </tr>
+                <tr>
+                    <td><strong>Liquidity Pool #2</strong></td>
+                    <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBM3J3RIN2PX66UJTUDN7IGJBX7TDBAI5FWST3EMGCG7PR32RHCQERT7" target="_blank" rel="noopener"><code>LBM3J3...ERT7</code></a></td>
+                </tr>
+                <tr>
+                    <td><strong>Liquidity Pool #3</strong></td>
+                    <td><a href="https://stellar.expert/explorer/public/liquidity-pool/LBHNX3OH53ZBLF7D2X3PDH5YVA2WLDVIZOAB4QURPCYCJQ334KNQEYOC" target="_blank" rel="noopener"><code>LBHNX3...EYOC</code></a></td>
+                </tr>
             </table>
-        </div>
-
-        <!-- SLIM LINE STORE MODULE -->
-        <div class="card">
-            <div class="store-toggle-bar" onclick="toggleStore()">
-                ⚡ DIRECT CATALOG & STORE (CLICK TO EXPAND) ⚡
-            </div>
-
-            <div class="store-panel" id="storePanel">
-                <div class="slim-tiers">
-                    <div class="slim-tier-box">
-                        <strong>STANDARD</strong>
-                        <div style="color:var(--accent-green); font-size:1.1em; margin:5px 0;">$19.99</div>
-                        <span style="color:#888;">MP3 (320kbps)</span>
-                        <button class="btn" onclick="selectTier('standard')">Select</button>
-                    </div>
-                    <div class="slim-tier-box">
-                        <strong>DELUXE MVP</strong>
-                        <div style="color:var(--accent-green); font-size:1.1em; margin:5px 0;">$49.99</div>
-                        <span style="color:#888;">WAV + USB Card</span>
-                        <button class="btn" onclick="selectTier('deluxe')">Select</button>
-                    </div>
-                    <div class="slim-tier-box featured">
-                        <strong style="color:var(--accent-gold);">EXECUTIVE</strong>
-                        <div style="color:var(--accent-green); font-size:1.1em; margin:5px 0;">$79.99</div>
-                        <span style="color:#888;">FLAC Stems + CD</span>
-                        <button class="btn btn-buy-all" onclick="triggerBuyAll()">BUY ALL</button>
-                    </div>
-                </div>
-
-                <div style="font-size:0.8em; color:#aaa; margin-top:10px; text-align:center;">A La Carte Builder (Max Cap: $79.99)</div>
-                <div class="slim-builder">
-                    <div class="builder-chip" onclick="toggleItem('mp3', 19.99)" id="c-mp3"><span>MP3 Album</span><strong>$19.99</strong></div>
-                    <div class="builder-chip" onclick="toggleItem('wav', 29.99)" id="c-wav"><span>WAV Album</span><strong>$29.99</strong></div>
-                    <div class="builder-chip" onclick="toggleItem('flac', 39.99)" id="c-flac"><span>FLAC Stems</span><strong>$39.99</strong></div>
-                    <div class="builder-chip" onclick="toggleItem('cd', 15.00)" id="c-cd"><span>Physical CD</span><strong>$15.00</strong></div>
-                    <div class="builder-chip" onclick="toggleItem('usb', 15.00)" id="c-usb"><span>16GB USB</span><strong>$15.00</strong></div>
-                    <div class="builder-chip" onclick="toggleItem('signed', 10.00)" id="c-signed"><span>Signed Card</span><strong>$10.00</strong></div>
-                </div>
-
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:15px; background:#050505; padding:10px; border:1px solid #222;">
-                    <div>
-                        <span style="font-size:0.75em; color:#888;">TOTAL:</span>
-                        <span id="slimTotal" style="color:var(--accent-green); font-weight:bold; font-size:1.2em;">$0.00</span>
-                    </div>
-                    <button class="btn btn-buy-all" style="width:auto; padding:8px 16px; margin:0;" onclick="openReceipt()">CHECKOUT / RECEIPT</button>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -292,14 +190,15 @@
         <!-- BANDLAB PROFILE CARD -->
         <div class="card bandlab-card">
             <h2>BANDLAB PROFILE</h2>
-            <img src="https://picture.bandlab.com/user/avatar/doafloss.jpg" 
-                 onerror="this.onerror=null;this.src='https://www.reverbnation.com/widget_code/html_widget/artist_8579729';" 
-                 alt="Doa Floss BandLab" 
+            <!-- Replace ./bandlab-avatar.jpg with your hosted photo file path or direct image URL -->
+            <img src="./bandlab-avatar.jpg"
+                 onerror="this.style.display='none'; document.getElementById('bandlabFallback').style.display='flex';"
+                 alt="DOA FLOSS Profile Photo"
                  class="bandlab-avatar">
+            <div id="bandlabFallback" class="bandlab-fallback">DOA FLOSS</div>
             <div style="font-weight:bold; color:#fff; font-size:0.95em; margin-bottom:3px;">DOA FLOSS 💀🪽</div>
             <div style="color:#aaa; font-size:0.75em; margin-bottom:12px;">Mobile Recording & Distribution Studio</div>
             
-            <!-- Direct Web Link optimized for Mobile Chrome -->
             <a href="https://www.bandlab.com/doafloss" target="_blank" rel="noopener" class="btn-bandlab">
                 🎧 LISTEN ON BANDLAB
             </a>
@@ -313,76 +212,9 @@
 
 </div>
 
-<!-- Modal -->
-<div class="modal" id="receiptModal">
-    <div class="modal-content">
-        <h3 style="text-align:center; color:var(--accent-gold); margin-top:0;">FLOSS INTEGRATIONS & SECURITIES LLC</h3>
-        <p style="text-align:center; color:#888; font-size:0.8em; margin-bottom:15px;">DIGITAL MASTER RECEIPT & USAGE CERTIFICATE</p>
-        <p><strong>TX ID:</strong> <span id="recTxId" style="color:var(--neon-link);"></span></p>
-        <p><strong>TIMESTAMP:</strong> <span id="recDate"></span></p>
-        <p><strong>TOTAL PAID:</strong> <span id="recAmount" style="color:var(--accent-green); font-weight:bold;"></span></p>
-        <hr style="border-color:#222; margin:15px 0;">
-        <button class="btn" onclick="document.getElementById('receiptModal').style.display='none'">CLOSE WINDOW</button>
-    </div>
-</div>
-
 <footer>
     2026 DOA FLOSS. All Rights Reserved.<br>
 </footer>
-
-<script>
-    function toggleStore() {
-        document.getElementById('storePanel').classList.toggle('active');
-    }
-
-    let items = {};
-    const CEILING = 79.99;
-
-    function updateSlimCart() {
-        let t = 0;
-        for (let k in items) t += items[k];
-        if (t >= CEILING) t = CEILING;
-        document.getElementById('slimTotal').innerText = '$' + t.toFixed(2);
-    }
-
-    function toggleItem(id, price) {
-        const el = document.getElementById('c-' + id);
-        if (items[id]) { 
-            delete items[id]; 
-            el.classList.remove('selected'); 
-        } else { 
-            items[id] = price; 
-            el.classList.add('selected'); 
-        }
-        updateSlimCart();
-    }
-
-    function triggerBuyAll() {
-        items = { 'mp3': 19.99, 'wav': 29.99, 'flac': 39.99, 'cd': 15.00, 'usb': 15.00, 'signed': 10.00 };
-        document.querySelectorAll('.builder-chip').forEach(el => el.classList.add('selected'));
-        updateSlimCart();
-        openReceipt();
-    }
-
-    function selectTier(t) {
-        items = {};
-        document.querySelectorAll('.builder-chip').forEach(el => el.classList.remove('selected'));
-        if(t === 'standard') toggleItem('mp3', 19.99);
-        if(t === 'deluxe') { toggleItem('wav', 29.99); toggleItem('usb', 15.00); toggleItem('signed', 10.00); }
-        openReceipt();
-    }
-
-    function openReceipt() {
-        let t = 0;
-        for (let k in items) t += items[k];
-        if (t === 0) { alert('Select an item first.'); return; }
-        if (t > CEILING) t = CEILING;
-        document.getElementById('recAmount').innerText = '$' + t.toFixed(2);
-        document.getElementById('recDate').innerText = new Date().toUTCString();
-        document.getElementById('recTxId').innerText = 'FIS-' + Math.random().toString(36).substring(2,9).toUpperCase();
-        document.getElementById('receiptModal').style.display = 'flex';
-    }
-</script>
 
 </body>
 </html>
